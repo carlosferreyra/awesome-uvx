@@ -16,8 +16,8 @@
         <img src="https://badges.pufler.dev/visits/carlosferreyra/awesome-uvx" alt="Visits">
         <img src="https://img.shields.io/github/stars/carlosferreyra/awesome-uvx" alt="Stars">
     </p>
-    <a href="https://github.com/carlosferreyra/awesome-uvx/actions/workflows/ci.yml">
-        <img src="https://github.com/carlosferreyra/awesome-uvx/actions/workflows/ci.yml/badge.svg" alt="Test Packages">
+    <a href="https://github.com/carlosferreyra/awesome-uvx/actions/workflows/main.yml">
+        <img src="https://github.com/carlosferreyra/awesome-uvx/actions/workflows/main.yml/badge.svg" alt="Test Packages">
     </a>
 </div>
 
