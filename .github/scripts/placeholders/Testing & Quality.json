@@ -1,0 +1,44 @@
+{
+  "testing-quality": {
+    "coverage": {
+      "description": "Code coverage measurement",
+      "url": "https://coverage.readthedocs.io/",
+      "execs": [
+        "coverage",
+        "coverage-3.13",
+        "coverage3"
+      ]
+    },
+    "nox": {
+      "description": "Flexible test automation",
+      "url": "https://nox.thea.codes/",
+      "execs": [
+        "nox",
+        "tox-to-nox"
+      ]
+    },
+    "pytest": {
+      "description": "Testing framework",
+      "url": "https://docs.pytest.org/",
+      "execs": [
+        "py.test",
+        "pytest"
+      ]
+    },
+    "schemathesis": {
+      "description": "Property-based testing for APIs",
+      "url": "https://schemathesis.readthedocs.io/",
+      "execs": [
+        "schemathesis",
+        "st"
+      ]
+    },
+    "tox": {
+      "description": "Automate and standardize testing",
+      "url": "https://tox.wiki/",
+      "execs": [
+        "tox"
+      ]
+    }
+  }
+}

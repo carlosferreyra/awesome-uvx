@@ -1,0 +1,18 @@
+{
+  "documentation": {
+    "markdown": {
+      "description": "Python implementation of Markdown",
+      "url": "https://python-markdown.github.io/",
+      "execs": [
+        "markdown_py"
+      ]
+    },
+    "pdoc": {
+      "description": "Auto-generate API documentation for Python projects",
+      "url": "https://pdoc.dev/",
+      "execs": [
+        "pdoc"
+      ]
+    }
+  }
+}

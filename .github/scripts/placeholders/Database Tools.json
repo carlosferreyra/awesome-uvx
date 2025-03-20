@@ -1,0 +1,53 @@
+{
+  "database-tools": {
+    "fake2db": {
+      "description": "Fake2db is a fake database generator for testing purposes.",
+      "url": "https://github.com/emirozer/fake2db",
+      "execs": [
+        "fake2db"
+      ]
+    },
+    "iredis": {
+      "description": "Iredis is a Redis terminal client with auto-completion and syntax highlighting.",
+      "url": "https://github.com/laixintao/iredis",
+      "execs": [
+        "iredis"
+      ]
+    },
+    "litecli": {
+      "description": "Litecli is a command line interface for SQLite with auto-completion and syntax highlighting.",
+      "url": "https://litecli.com/",
+      "execs": [
+        "litecli"
+      ]
+    },
+    "mycli": {
+      "description": "Mycli is a command line interface for MySQL with auto-completion and syntax highlighting.",
+      "url": "https://www.mycli.net/",
+      "execs": [
+        "mycli"
+      ]
+    },
+    "peewee": {
+      "description": "Peewee is a small, expressive ORM for Python.",
+      "url": "http://docs.peewee-orm.com/",
+      "execs": [
+        "pwiz.py"
+      ]
+    },
+    "pgcli": {
+      "description": "Pgcli is a command line interface for PostgreSQL with auto-completion and syntax highlighting.",
+      "url": "https://www.pgcli.com/",
+      "execs": [
+        "pgcli"
+      ]
+    },
+    "sqlparse": {
+      "description": "Sqlparse is a non-validating SQL parser for Python.",
+      "url": "https://github.com/andialbrecht/sqlparse",
+      "execs": [
+        "sqlformat"
+      ]
+    }
+  }
+}

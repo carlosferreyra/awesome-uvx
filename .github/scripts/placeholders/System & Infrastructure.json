@@ -1,0 +1,35 @@
+{
+  "system-and-infrastructure": {
+    "ansible": {
+      "description": "Automation tool for IT infrastructure",
+      "url": "https://www.ansible.com/",
+      "execs": [
+        "ansible-community"
+      ]
+    },
+    "mamba": {
+      "description": "Fast, cross-platform package manager",
+      "url": "https://github.com/mamba-org/mamba",
+      "execs": [
+        "mamba"
+      ]
+    },
+    "pipx": {
+      "description": "Install and run Python applications in isolated environments",
+      "url": "https://pypa.github.io/pipx/",
+      "execs": [
+        "pipx"
+      ]
+    },
+    "xonsh": {
+      "description": "Python-powered shell",
+      "url": "https://xon.sh/",
+      "execs": [
+        "xonsh",
+        "xonsh-cat",
+        "xonsh-uname",
+        "xonsh-uptime"
+      ]
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "utilities": {
+    "celery": {
+      "description": "Distributed task queue",
+      "url": "https://docs.celeryq.dev/",
+      "execs": [
+        "celery"
+      ]
+    },
+    "cookiecutter": {
+      "description": "Project template tool",
+      "url": "https://cookiecutter.readthedocs.io/",
+      "execs": [
+        "cookiecutter"
+      ]
+    },
+    "copier": {
+      "description": "Library for rendering project templates",
+      "url": "https://copier.readthedocs.io/",
+      "execs": [
+        "copier"
+      ]
+    },
+    "doitlive": {
+      "description": "Tool for live presentations in the terminal",
+      "url": "https://doitlive.readthedocs.io/",
+      "execs": [
+        "doitlive"
+      ]
+    },
+    "faker": {
+      "description": "Generator for fake data",
+      "url": "https://faker.readthedocs.io/",
+      "execs": [
+        "faker"
+      ]
+    },
+    "howdoi": {
+      "description": "Instant coding answers via the command line",
+      "url": "https://github.com/gleitz/howdoi",
+      "execs": [
+        "howdoi"
+      ]
+    },
+    "html2text": {
+      "description": "Convert HTML to Markdown-formatted text",
+      "url": "https://github.com/Alir3z4/html2text/",
+      "execs": [
+        "html2text"
+      ]
+    },
+    "plan": {
+      "description": "Crontab file manager",
+      "url": "https://github.com/fengsp/plan",
+      "execs": [
+        "plan-quickstart"
+      ]
+    },
+    "prefect": {
+      "description": "Workflow management system",
+      "url": "https://www.prefect.io/",
+      "execs": [
+        "prefect"
+      ]
+    },
+    "rq": {
+      "description": "Simple job queues for Python",
+      "url": "https://python-rq.org/",
+      "execs": [
+        "rq",
+        "rqinfo",
+        "rqworker"
+      ]
+    },
+    "typer": {
+      "description": "Build CLI applications",
+      "url": "https://typer.tiangolo.com/",
+      "execs": [
+        "typer"
+      ]
+    },
+    "unp": {
+      "description": "Command line tool that can unpack archives",
+      "url": "https://github.com/mitsuhiko/unp",
+      "execs": [
+        "unp"
+      ]
+    },
+    "youtube-dl": {
+      "description": "Download videos from YouTube and other video sites",
+      "url": "https://youtube-dl.org/",
+      "execs": [
+        "youtube-dl"
+      ]
+    }
+  }
+}

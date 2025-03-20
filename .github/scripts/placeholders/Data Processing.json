@@ -1,0 +1,52 @@
+{
+  "data-processing": {
+    "csvkit": {
+      "description": "Suite of command-line tools for CSV files",
+      "url": "https://csvkit.readthedocs.io/",
+      "execs": [
+        "csvclean",
+        "csvcut",
+        "csvformat",
+        "csvgrep",
+        "csvjoin",
+        "csvjson",
+        "csvlook",
+        "csvpy",
+        "csvsort",
+        "csvsql",
+        "csvstack",
+        "csvstat",
+        "in2csv",
+        "sql2csv"
+      ]
+    },
+    "easyocr": {
+      "description": "Ready-to-use OCR with 80+ languages supported",
+      "url": "https://www.jaided.ai/easyocr/",
+      "execs": [
+        "easyocr"
+      ]
+    },
+    "qrcode": {
+      "description": "Pure Python QR Code generator",
+      "url": "https://github.com/lincolnloop/python-qrcode",
+      "execs": [
+        "qr"
+      ]
+    },
+    "shortuuid": {
+      "description": "Generator for concise, unambiguous, URL-safe UUIDs",
+      "url": "https://github.com/skorokithakis/shortuuid",
+      "execs": [
+        "shortuuid"
+      ]
+    },
+    "textract": {
+      "description": "Extract text from various document formats",
+      "url": "https://textract.readthedocs.io/",
+      "execs": [
+        "textract"
+      ]
+    }
+  }
+}

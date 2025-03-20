@@ -1,0 +1,48 @@
+{
+  "web-frameworks-and-tools": {
+    "django": {
+      "description": "High-level Python web framework",
+      "url": "https://www.djangoproject.com/",
+      "execs": [
+        "django-admin"
+      ]
+    },
+    "fastapi[standard]": {
+      "description": "Modern, fast web framework for building APIs",
+      "url": "https://fastapi.tiangolo.com/",
+      "execs": [
+        "fastapi"
+      ]
+    },
+    "flask": {
+      "description": "Lightweight WSGI web application framework",
+      "url": "https://flask.palletsprojects.com/",
+      "execs": [
+        "flask"
+      ]
+    },
+    "httpie": {
+      "description": "User-friendly command-line HTTP client",
+      "url": "https://httpie.io/",
+      "execs": [
+        "http",
+        "httpie",
+        "https"
+      ]
+    },
+    "uvicorn": {
+      "description": "Lightning-fast ASGI server",
+      "url": "https://www.uvicorn.org/",
+      "execs": [
+        "uvicorn"
+      ]
+    },
+    "websockets": {
+      "description": "Library for building WebSocket servers and clients",
+      "url": "https://github.com/aaugustin/websockets",
+      "execs": [
+        "websockets"
+      ]
+    }
+  }
+}

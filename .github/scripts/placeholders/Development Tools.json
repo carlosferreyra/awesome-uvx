@@ -1,0 +1,82 @@
+{
+  "development-tools": {
+    "ipython": {
+      "description": "Enhanced interactive Python shell",
+      "url": "https://ipython.org/",
+      "execs": [
+        "ipython",
+        "ipython3"
+      ]
+    },
+    "jupyter-core": {
+      "description": "Core functionality for Jupyter projects",
+      "url": "https://jupyter.org/",
+      "execs": [
+        "jupyter",
+        "jupyter-migrate",
+        "jupyter-troubleshoot"
+      ]
+    },
+    "poetry": {
+      "description": "Python packaging and dependency management",
+      "url": "https://python-poetry.org/",
+      "execs": [
+        "poetry"
+      ]
+    },
+    "py2app": {
+      "description": "Create standalone Mac OS X applications",
+      "url": "https://py2app.readthedocs.io/",
+      "execs": [
+        "py2applet"
+      ]
+    },
+    "pyarmor": {
+      "description": "Tool for obfuscating Python scripts",
+      "url": "https://pyarmor.dashingsoft.com/",
+      "execs": [
+        "pyarmor",
+        "pyarmor-7",
+        "pyarmor-8",
+        "pyarmor-auth"
+      ]
+    },
+    "pyinstaller": {
+      "description": "Convert Python programs into stand-alone executables",
+      "url": "https://www.pyinstaller.org/",
+      "execs": [
+        "pyi-archive_viewer",
+        "pyi-bindepend",
+        "pyi-grab_version",
+        "pyi-makespec",
+        "pyi-set_version",
+        "pyinstaller"
+      ]
+    },
+    "pyright": {
+      "description": "Static type checker for Python",
+      "url": "https://github.com/microsoft/pyright",
+      "execs": [
+        "pyright",
+        "pyright-langserver",
+        "pyright-python",
+        "pyright-python-langserver"
+      ]
+    },
+    "ruff": {
+      "description": "An extremely fast Python linter",
+      "url": "https://github.com/astral-sh/ruff",
+      "execs": [
+        "ruff"
+      ]
+    },
+    "shiv": {
+      "description": "Build fully self-contained Python zipapps",
+      "url": "https://github.com/linkedin/shiv",
+      "execs": [
+        "shiv",
+        "shiv-info"
+      ]
+    }
+  }
+}

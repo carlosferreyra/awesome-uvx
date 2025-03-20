@@ -1,0 +1,25 @@
+{
+  "security--penetration-testing": {
+    "fsociety": {
+      "description": "Modular penetration testing framework",
+      "url": "https://github.com/fsociety-team/fsociety",
+      "execs": [
+        "fsociety"
+      ]
+    },
+    "scapy": {
+      "description": "Packet manipulation program",
+      "url": "https://scapy.net/",
+      "execs": [
+        "scapy"
+      ]
+    },
+    "sqlmap": {
+      "description": "Automatic SQL injection and database takeover tool",
+      "url": "https://sqlmap.org/",
+      "execs": [
+        "sqlmap"
+      ]
+    }
+  }
+}
