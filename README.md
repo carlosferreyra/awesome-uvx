@@ -13,6 +13,8 @@ own favorite tools.
 
 ![Contributors](https://img.shields.io/github/contributors/carlosferreyra/awesome-uvx)![](https://img.shields.io/github/license/carlosferreyra/awesome-uvx)![](https://badges.pufler.dev/visits/carlosferreyra/awesome-uvx)![](https://img.shields.io/github/stars/carlosferreyra/awesome-uvx)
 
+[![Test Packages](https://github.com/carlosferreyra/awesome-uvx/actions/workflows/ci.yml/badge.svg)](https://github.com/carlosferreyra/awesome-uvx/actions/workflows/ci.yml)
+
 </div>
 
 ## Contents
