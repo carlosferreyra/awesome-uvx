@@ -1,20 +1,24 @@
 # Awesome-UVX
 
 <div align="center">
-	<img width="500" height="350" src="https://github.com/sindresorhus/awesome/raw/main/media/logo.svg" alt="Awesome">
-
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-
-A collection of Awesome Python CLI Tools available from UVX/PIPX.
-
-you can use this list to find useful Python CLI tools that are available for installation via UVX or
-PIPX. The list is curated and maintained by the community, so feel free to contribute by adding your
-own favorite tools.
-
-![Contributors](https://img.shields.io/github/contributors/carlosferreyra/awesome-uvx)![](https://img.shields.io/github/license/carlosferreyra/awesome-uvx)![](https://badges.pufler.dev/visits/carlosferreyra/awesome-uvx)![](https://img.shields.io/github/stars/carlosferreyra/awesome-uvx)
-
-[![Test Packages](https://github.com/carlosferreyra/awesome-uvx/actions/workflows/ci.yml/badge.svg)](https://github.com/carlosferreyra/awesome-uvx/actions/workflows/ci.yml)
-
+    <img width="500" height="350" src="https://github.com/sindresorhus/awesome/raw/main/media/logo.svg" alt="Awesome">
+    <br>
+    <a href="https://awesome.re">
+        <img src="https://awesome.re/badge.svg" alt="Awesome">
+    </a>
+    <p>A collection of Awesome Python CLI Tools available from UVX/PIPX.</p>
+    <p>you can use this list to find useful Python CLI tools that are available for installation via UVX or
+    PIPX. The list is curated and maintained by the community, so feel free to contribute by adding your
+    own favorite tools.</p>
+    <p>
+        <img src="https://img.shields.io/github/contributors/carlosferreyra/awesome-uvx" alt="Contributors">
+        <img src="https://img.shields.io/github/license/carlosferreyra/awesome-uvx" alt="License">
+        <img src="https://badges.pufler.dev/visits/carlosferreyra/awesome-uvx" alt="Visits">
+        <img src="https://img.shields.io/github/stars/carlosferreyra/awesome-uvx" alt="Stars">
+    </p>
+    <a href="https://github.com/carlosferreyra/awesome-uvx/actions/workflows/ci.yml">
+        <img src="https://github.com/carlosferreyra/awesome-uvx/actions/workflows/ci.yml/badge.svg" alt="Test Packages">
+    </a>
 </div>
 
 ## Contents
