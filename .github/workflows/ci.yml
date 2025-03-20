@@ -30,8 +30,8 @@ jobs:
         uses: astral-sh/setup-uv@v5
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Install dependencies
-        run: uv sync
+      - name: Install dependencies as tools
+        run: uv tool install 
       - name: Test packages
         run: |
           uvx
