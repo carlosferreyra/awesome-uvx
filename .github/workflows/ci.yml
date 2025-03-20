@@ -4,15 +4,16 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'README.md'
+      - 'pyproject.toml'
+
   pull_request:
     branches:
       - main
-  workflow_dispatch:
-    inputs:
-      package:
-        description: 'Package to test'
-        required: true
-        default: 'all'
+    paths:
+      - 'README.md'
+      - 'pyproject.toml'
 
 jobs:
   install:
@@ -30,4 +31,7 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
-        run: uv run scripts/install.py
+        run: uv sync
+      - name: Test packages
+        run: |
+          uvx
