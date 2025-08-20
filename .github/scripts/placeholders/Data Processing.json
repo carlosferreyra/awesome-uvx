@@ -20,11 +20,25 @@
         "sql2csv"
       ]
     },
+    "dvc": {
+      "description": "Command-line tool for version control over data used in machine learning projects",
+      "url": "https://github.com/iterative/dvc",
+      "execs": [
+        "dvc"
+      ]
+    },
     "easyocr": {
       "description": "Ready-to-use OCR with 80+ languages supported",
       "url": "https://www.jaided.ai/easyocr/",
       "execs": [
         "easyocr"
+      ]
+    },
+    "mlflow": {
+      "description": "Open source platform for managing the end-to-end machine learning lifecycle",
+      "url": "https://github.com/mlflow/mlflow",
+      "execs": [
+        "mlflow"
       ]
     },
     "qrcode": {

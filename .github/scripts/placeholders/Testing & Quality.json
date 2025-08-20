@@ -33,6 +33,13 @@
         "st"
       ]
     },
+    "tavern": {
+      "description": "pytest plugin, command-line tool, and Python library for automated testing of APIs",
+      "url": "https://github.com/taverntesting/tavern",
+      "execs": [
+        "tavern-ci"
+      ]
+    },
     "tox": {
       "description": "Automate and standardize testing",
       "url": "https://tox.wiki/",

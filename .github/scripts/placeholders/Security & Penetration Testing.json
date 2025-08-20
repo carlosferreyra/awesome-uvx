@@ -1,10 +1,24 @@
 {
   "security--penetration-testing": {
+    "detect-secrets": {
+      "description": "Enterprise-friendly CLI for auditing, detecting, and preventing secrets in code",
+      "url": "https://github.com/Yelp/detect-secrets",
+      "execs": [
+        "detect-secrets"
+      ]
+    },
     "fsociety": {
       "description": "Modular penetration testing framework",
       "url": "https://github.com/fsociety-team/fsociety",
       "execs": [
         "fsociety"
+      ]
+    },
+    "pyinstxtractor": {
+      "description": "Tool to extract the contents of a PyInstaller generated Windows executable file",
+      "url": "https://github.com/extremecoders-re/pyinstxtractor",
+      "execs": [
+        "pyinstxtractor"
       ]
     },
     "scapy": {
@@ -19,6 +33,13 @@
       "url": "https://sqlmap.org/",
       "execs": [
         "sqlmap"
+      ]
+    },
+    "uncompyle6": {
+      "description": "Native Python cross-version decompiler that translates Python bytecode back into equivalent Python source code",
+      "url": "https://github.com/rocky/python-uncompyle6",
+      "execs": [
+        "uncompyle6"
       ]
     }
   }

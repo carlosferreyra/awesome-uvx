@@ -30,6 +30,15 @@
         "https"
       ]
     },
+    "mitmproxy": {
+      "description": "Free and open source interactive HTTPS proxy for penetration testers and software developers",
+      "url": "https://github.com/mitmproxy/mitmproxy",
+      "execs": [
+        "mitmproxy",
+        "mitmdump",
+        "mitmweb"
+      ]
+    },
     "uvicorn": {
       "description": "Lightning-fast ASGI server",
       "url": "https://www.uvicorn.org/",

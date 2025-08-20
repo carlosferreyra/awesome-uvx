@@ -49,6 +49,13 @@
         "html2text"
       ]
     },
+    "magic-wormhole": {
+      "description": "Tool to get things from one computer to another, safely",
+      "url": "https://github.com/magic-wormhole/magic-wormhole",
+      "execs": [
+        "wormhole"
+      ]
+    },
     "plan": {
       "description": "Crontab file manager",
       "url": "https://github.com/fengsp/plan",
@@ -70,6 +77,13 @@
         "prefect"
       ]
     },
+    "ranger": {
+      "description": "Console file manager with VI key bindings",
+      "url": "https://github.com/ranger/ranger",
+      "execs": [
+        "ranger"
+      ]
+    },
     "rq": {
       "description": "Simple job queues for Python",
       "url": "https://python-rq.org/",
@@ -77,6 +91,14 @@
         "rq",
         "rqinfo",
         "rqworker"
+      ]
+    },
+    "thefuck": {
+      "description": "Magnificent application that corrects your previous console command",
+      "url": "https://github.com/nvbn/thefuck",
+      "execs": [
+        "thefuck",
+        "fuck"
       ]
     },
     "typer": {
@@ -91,6 +113,29 @@
       "url": "https://github.com/mitsuhiko/unp",
       "execs": [
         "unp"
+      ]
+    },
+    "speedtest-cli": {
+      "description": "Command line interface for testing internet bandwidth using speedtest.net",
+      "url": "https://github.com/sivel/speedtest-cli",
+      "execs": [
+        "speedtest",
+        "speedtest-cli"
+      ]
+    },
+    "streamlink": {
+      "description": "CLI utility that pipes video streams from various services into a video player",
+      "url": "https://github.com/streamlink/streamlink",
+      "execs": [
+        "streamlink"
+      ]
+    },
+    "visidata": {
+      "description": "Interactive multitool for exploring, analyzing, and converting datasets in the terminal",
+      "url": "https://github.com/saulpw/visidata",
+      "execs": [
+        "vd",
+        "visidata"
       ]
     },
     "youtube-dl": {

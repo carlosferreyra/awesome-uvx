@@ -7,6 +7,48 @@
         "ansible-community"
       ]
     },
+    "aws-cli": {
+      "description": "Official command-line interface for Amazon Web Services",
+      "url": "https://aws.amazon.com/cli/",
+      "execs": [
+        "aws"
+      ]
+    },
+    "bpytop": {
+      "description": "Resource monitor that shows usage and stats for processor, memory, disks, network, and processes",
+      "url": "https://github.com/aristocratos/bpytop",
+      "execs": [
+        "bpytop"
+      ]
+    },
+    "conda": {
+      "description": "OS-agnostic, system-level binary package and environment manager",
+      "url": "https://github.com/conda/conda",
+      "execs": [
+        "conda"
+      ]
+    },
+    "dockly": {
+      "description": "Immersive terminal interface for managing Docker containers and services",
+      "url": "https://github.com/lirantal/dockly",
+      "execs": [
+        "dockly"
+      ]
+    },
+    "glances": {
+      "description": "Cross-platform monitoring tool with curses or Web based interface",
+      "url": "https://github.com/nicolargo/glances",
+      "execs": [
+        "glances"
+      ]
+    },
+    "k9s": {
+      "description": "Terminal-based UI to manage Kubernetes clusters",
+      "url": "https://github.com/derailed/k9s",
+      "execs": [
+        "k9s"
+      ]
+    },
     "mamba": {
       "description": "Fast, cross-platform package manager",
       "url": "https://github.com/mamba-org/mamba",
@@ -19,6 +61,21 @@
       "url": "https://pypa.github.io/pipx/",
       "execs": [
         "pipx"
+      ]
+    },
+    "platformio": {
+      "description": "Open source ecosystem for IoT development with cross-platform IDE and unified debugger",
+      "url": "https://github.com/platformio/platformio-core",
+      "execs": [
+        "platformio",
+        "pio"
+      ]
+    },
+    "spack": {
+      "description": "Language-independent package manager for supercomputers, Mac, and Linux",
+      "url": "https://github.com/spack/spack",
+      "execs": [
+        "spack"
       ]
     },
     "xonsh": {

@@ -7,6 +7,13 @@
         "fake2db"
       ]
     },
+    "harlequin": {
+      "description": "The SQL IDE for your terminal. A TUI for DuckDB, SQLite, Postgres, and more",
+      "url": "https://github.com/tconbeer/harlequin",
+      "execs": [
+        "harlequin"
+      ]
+    },
     "iredis": {
       "description": "Iredis is a Redis terminal client with auto-completion and syntax highlighting.",
       "url": "https://github.com/laixintao/iredis",
@@ -47,6 +54,13 @@
       "url": "https://github.com/andialbrecht/sqlparse",
       "execs": [
         "sqlformat"
+      ]
+    },
+    "sqlite-utils": {
+      "description": "Python CLI utility and library for manipulating SQLite databases",
+      "url": "https://github.com/simonw/sqlite-utils",
+      "execs": [
+        "sqlite-utils"
       ]
     }
   }
