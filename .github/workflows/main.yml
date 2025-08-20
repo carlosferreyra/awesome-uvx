@@ -56,6 +56,7 @@ on:
       - 'pyproject.toml'
       - '.github/scripts/**'
       - '.github/scripts/placeholders/*.json'
+  workflow_dispatch:
 
 permissions:
   contents: read
