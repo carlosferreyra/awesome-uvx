@@ -56,6 +56,13 @@
         "plan-quickstart"
       ]
     },
+    "pyclean": {
+      "description": "Pure Python cross-platform pycache cleaner",
+      "url": "https://github.com/bittner/pyclean",
+      "execs": [
+        "pyclean"
+      ]
+    },
     "prefect": {
       "description": "Workflow management system",
       "url": "https://www.prefect.io/",
