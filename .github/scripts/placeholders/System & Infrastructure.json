@@ -57,13 +57,6 @@
         "pio"
       ]
     },
-    "spack": {
-      "description": "Language-independent package manager for supercomputers, Mac, and Linux",
-      "url": "https://github.com/spack/spack",
-      "execs": [
-        "spack"
-      ]
-    },
     "xonsh": {
       "description": "Python-powered shell",
       "url": "https://xon.sh/",

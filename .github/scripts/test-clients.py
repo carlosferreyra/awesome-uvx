@@ -95,7 +95,7 @@ def main():
             print(f"Testing: {package_name} ({exec_name})")
 
             # Test method 1: uv tool install package-name
-            command1 = f"uv tool install {package_name}"
+            command1 = f"uv tool install --force {package_name}"
             success1, output1, error1 = run_command_safe(command1)
 
             # Test method 2: uvx --from package-name cli-entrypoint -h

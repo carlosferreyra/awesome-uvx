@@ -65,7 +65,7 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 |:-----|:------------|:--------------|
 | [coverage](https://coverage.readthedocs.io/) | Code coverage measurement | ```coverage```, ```coverage-3.13```, ```coverage3``` |
 | [nox](https://nox.thea.codes/) | Flexible test automation | ```nox```, ```tox-to-nox``` |
-| [pytest](https://docs.pytest.org/) | Testing framework | ```pytest``` |
+| [pytest](https://docs.pytest.org/) | Testing framework | ```pytest```, ```py.test``` |
 | [schemathesis](https://schemathesis.readthedocs.io/) | Property-based testing for APIs | ```schemathesis```, ```st``` |
 | [tavern](https://github.com/taverntesting/tavern) | pytest plugin, command-line tool, and Python library for automated testing of APIs | ```tavern-ci``` |
 | [tox](https://tox.wiki/) | Automate and standardize testing | ```tox``` |
@@ -159,7 +159,6 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 | [mamba](https://github.com/mamba-org/mamba) | Fast, cross-platform package manager | ```mamba``` |
 | [pipx](https://pypa.github.io/pipx/) | Install and run Python applications in isolated environments | ```pipx``` |
 | [platformio](https://github.com/platformio/platformio-core) | Open source ecosystem for IoT development with cross-platform IDE and unified debugger | ```platformio```, ```pio``` |
-| [spack](https://github.com/spack/spack) | Language-independent package manager for supercomputers, Mac, and Linux | ```spack``` |
 | [xonsh](https://xon.sh/) | Python-powered shell | ```xonsh```, ```xonsh-cat```, ```xonsh-uname```, ```xonsh-uptime``` |
 
 

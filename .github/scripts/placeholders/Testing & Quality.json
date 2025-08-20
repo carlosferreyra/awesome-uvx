@@ -21,7 +21,8 @@
       "description": "Testing framework",
       "url": "https://docs.pytest.org/",
       "execs": [
-        "pytest"
+        "pytest",
+        "py.test"
       ]
     },
     "schemathesis": {
