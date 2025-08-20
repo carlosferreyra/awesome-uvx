@@ -14,13 +14,6 @@
         "fsociety"
       ]
     },
-    "pyinstxtractor": {
-      "description": "Tool to extract the contents of a PyInstaller generated Windows executable file",
-      "url": "https://github.com/extremecoders-re/pyinstxtractor",
-      "execs": [
-        "pyinstxtractor"
-      ]
-    },
     "scapy": {
       "description": "Packet manipulation program",
       "url": "https://scapy.net/",

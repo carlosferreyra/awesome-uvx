@@ -7,7 +7,7 @@
         "ansible-community"
       ]
     },
-    "aws-cli": {
+    "awscli": {
       "description": "Official command-line interface for Amazon Web Services",
       "url": "https://aws.amazon.com/cli/",
       "execs": [
@@ -21,20 +21,6 @@
         "bpytop"
       ]
     },
-    "conda": {
-      "description": "OS-agnostic, system-level binary package and environment manager",
-      "url": "https://github.com/conda/conda",
-      "execs": [
-        "conda"
-      ]
-    },
-    "dockly": {
-      "description": "Immersive terminal interface for managing Docker containers and services",
-      "url": "https://github.com/lirantal/dockly",
-      "execs": [
-        "dockly"
-      ]
-    },
     "glances": {
       "description": "Cross-platform monitoring tool with curses or Web based interface",
       "url": "https://github.com/nicolargo/glances",
@@ -42,11 +28,11 @@
         "glances"
       ]
     },
-    "k9s": {
+    "k9": {
       "description": "Terminal-based UI to manage Kubernetes clusters",
       "url": "https://github.com/derailed/k9s",
       "execs": [
-        "k9s"
+        "k9"
       ]
     },
     "mamba": {

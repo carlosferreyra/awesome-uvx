@@ -65,7 +65,7 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 |:-----|:------------|:--------------|
 | [coverage](https://coverage.readthedocs.io/) | Code coverage measurement | ```coverage```, ```coverage-3.13```, ```coverage3``` |
 | [nox](https://nox.thea.codes/) | Flexible test automation | ```nox```, ```tox-to-nox``` |
-| [pytest](https://docs.pytest.org/) | Testing framework | ```py.test```, ```pytest``` |
+| [pytest](https://docs.pytest.org/) | Testing framework | ```pytest``` |
 | [schemathesis](https://schemathesis.readthedocs.io/) | Property-based testing for APIs | ```schemathesis```, ```st``` |
 | [tavern](https://github.com/taverntesting/tavern) | pytest plugin, command-line tool, and Python library for automated testing of APIs | ```tavern-ci``` |
 | [tox](https://tox.wiki/) | Automate and standardize testing | ```tox``` |
@@ -78,7 +78,6 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 |:-----|:------------|:--------------|
 | [detect-secrets](https://github.com/Yelp/detect-secrets) | Enterprise-friendly CLI for auditing, detecting, and preventing secrets in code | ```detect-secrets``` |
 | [fsociety](https://github.com/fsociety-team/fsociety) | Modular penetration testing framework | ```fsociety``` |
-| [pyinstxtractor](https://github.com/extremecoders-re/pyinstxtractor) | Tool to extract the contents of a PyInstaller generated Windows executable file | ```pyinstxtractor``` |
 | [scapy](https://scapy.net/) | Packet manipulation program | ```scapy``` |
 | [sqlmap](https://sqlmap.org/) | Automatic SQL injection and database takeover tool | ```sqlmap``` |
 | [uncompyle6](https://github.com/rocky/python-uncompyle6) | Native Python cross-version decompiler that translates Python bytecode back into equivalent Python source code | ```uncompyle6``` |
@@ -100,12 +99,11 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 | [plan](https://github.com/fengsp/plan) | Crontab file manager | ```plan-quickstart``` |
 | [pyclean](https://github.com/bittner/pyclean) | Pure Python cross-platform pycache cleaner | ```pyclean``` |
 | [prefect](https://www.prefect.io/) | Workflow management system | ```prefect``` |
-| [ranger](https://github.com/ranger/ranger) | Console file manager with VI key bindings | ```ranger``` |
 | [rq](https://python-rq.org/) | Simple job queues for Python | ```rq```, ```rqinfo```, ```rqworker``` |
 | [thefuck](https://github.com/nvbn/thefuck) | Magnificent application that corrects your previous console command | ```thefuck```, ```fuck``` |
 | [typer](https://typer.tiangolo.com/) | Build CLI applications | ```typer``` |
 | [unp](https://github.com/mitsuhiko/unp) | Command line tool that can unpack archives | ```unp``` |
-| [speedtest-cli](https://github.com/sivel/speedtest-cli) | Command line interface for testing internet bandwidth using speedtest.net | ```speedtest```, ```speedtest-cli``` |
+| [speedtest-cli](https://github.com/sivel/speedtest-cli) | Command line interface for testing internet bandwidth using speedtest.net | ```speedtest-cli``` |
 | [streamlink](https://github.com/streamlink/streamlink) | CLI utility that pipes video streams from various services into a video player | ```streamlink``` |
 | [visidata](https://github.com/saulpw/visidata) | Interactive multitool for exploring, analyzing, and converting datasets in the terminal | ```vd```, ```visidata``` |
 | [youtube-dl](https://youtube-dl.org/) | Download videos from YouTube and other video sites | ```youtube-dl``` |
@@ -144,6 +142,8 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 | [ruff](https://github.com/astral-sh/ruff) | An extremely fast Python linter | ```ruff``` |
 | [shiv](https://github.com/linkedin/shiv) | Build fully self-contained Python zipapps | ```shiv```, ```shiv-info``` |
 | [uv](https://github.com/astral-sh/uv) | Extremely fast Python package installer and resolver, written in Rust | ```uv``` |
+| [ty](https://github.com/astral-sh/ty) | An extremely fast Python type checker and language server | ```ty``` |
+| [mypy](https://mypy.readthedocs.io/) | Optional static typing for Python | ```mypy```, ```mypy-langserver``` |
 
 
 
@@ -152,12 +152,10 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 | Name | Description | Executable(s) |
 |:-----|:------------|:--------------|
 | [ansible](https://www.ansible.com/) | Automation tool for IT infrastructure | ```ansible-community``` |
-| [aws-cli](https://aws.amazon.com/cli/) | Official command-line interface for Amazon Web Services | ```aws``` |
+| [awscli](https://aws.amazon.com/cli/) | Official command-line interface for Amazon Web Services | ```aws``` |
 | [bpytop](https://github.com/aristocratos/bpytop) | Resource monitor that shows usage and stats for processor, memory, disks, network, and processes | ```bpytop``` |
-| [conda](https://github.com/conda/conda) | OS-agnostic, system-level binary package and environment manager | ```conda``` |
-| [dockly](https://github.com/lirantal/dockly) | Immersive terminal interface for managing Docker containers and services | ```dockly``` |
 | [glances](https://github.com/nicolargo/glances) | Cross-platform monitoring tool with curses or Web based interface | ```glances``` |
-| [k9s](https://github.com/derailed/k9s) | Terminal-based UI to manage Kubernetes clusters | ```k9s``` |
+| [k9](https://github.com/derailed/k9s) | Terminal-based UI to manage Kubernetes clusters | ```k9``` |
 | [mamba](https://github.com/mamba-org/mamba) | Fast, cross-platform package manager | ```mamba``` |
 | [pipx](https://pypa.github.io/pipx/) | Install and run Python applications in isolated environments | ```pipx``` |
 | [platformio](https://github.com/platformio/platformio-core) | Open source ecosystem for IoT development with cross-platform IDE and unified debugger | ```platformio```, ```pio``` |

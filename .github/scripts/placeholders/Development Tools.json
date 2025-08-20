@@ -113,6 +113,21 @@
       "execs": [
         "uv"
       ]
+    },
+    "ty": {
+      "description": "An extremely fast Python type checker and language server",
+      "url": "https://github.com/astral-sh/ty",
+      "execs": [
+        "ty"
+      ]
+    },
+    "mypy": {
+      "description": "Optional static typing for Python",
+      "url": "https://mypy.readthedocs.io/",
+      "execs": [
+        "mypy",
+        "mypy-langserver"
+      ]
     }
   }
 }

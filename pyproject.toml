@@ -1,9 +1,7 @@
 [project]
-name = "awesome-uvx"
-version = "0.1.0"
-requires-python = ">=3.10"
-description = "Awesome Python CLI tools"
-dependencies = [
-    "jinja2",
-]
-readme = "README.md"
+    dependencies    = ["jinja2"]
+    description     = "Awesome Python CLI tools"
+    name            = "awesome-uvx"
+    readme          = "README.md"
+    requires-python = ">=3.12"
+    version         = "0.1.0"

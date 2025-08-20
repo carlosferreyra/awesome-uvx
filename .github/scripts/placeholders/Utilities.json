@@ -77,13 +77,6 @@
         "prefect"
       ]
     },
-    "ranger": {
-      "description": "Console file manager with VI key bindings",
-      "url": "https://github.com/ranger/ranger",
-      "execs": [
-        "ranger"
-      ]
-    },
     "rq": {
       "description": "Simple job queues for Python",
       "url": "https://python-rq.org/",
@@ -119,7 +112,6 @@
       "description": "Command line interface for testing internet bandwidth using speedtest.net",
       "url": "https://github.com/sivel/speedtest-cli",
       "execs": [
-        "speedtest",
         "speedtest-cli"
       ]
     },

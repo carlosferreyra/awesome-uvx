@@ -21,7 +21,6 @@
       "description": "Testing framework",
       "url": "https://docs.pytest.org/",
       "execs": [
-        "py.test",
         "pytest"
       ]
     },
