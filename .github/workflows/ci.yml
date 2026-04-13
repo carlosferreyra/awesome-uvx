@@ -5,7 +5,6 @@ on:
     branches:
       - main
     paths:
-      - 'README.md'
       - 'tools.json'
       - 'scripts/**'
       - 'template/**'
@@ -72,7 +71,7 @@ jobs:
       - name: Commit README if changed
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore(readme): regenerate from tools.json [skip ci]"
+          commit_message: 'chore(readme): regenerate from tools.json [skip ci]'
           file_pattern: README.md
 
       - name: Fail job if any tools failed
