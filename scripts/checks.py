@@ -31,6 +31,14 @@ def check_tools():
             name = category.get("name", "<unnamed>")
             logging.info(f"Checking category: {name}")
 
+            unknown_keys = set(category.keys()) - {"name", "slug", "tools"}
+            if unknown_keys:
+                all_valid = False
+                logging.error(
+                    f"Category '{name}' has unexpected top-level keys: {sorted(unknown_keys)}. "
+                    f"Tools must be placed inside the 'tools' object."
+                )
+
             if not category.get("slug"):
                 all_valid = False
                 logging.error(f"Category '{name}' is missing 'slug'")
