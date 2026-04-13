@@ -30,7 +30,7 @@ jobs:
         id: diff
         run: |
           set +e
-          TOOLS=$(uv run scripts/diff_tools.py --base origin/main)
+          TOOLS=$(uv run scripts/diff_tools.py --base origin/${{ github.base_ref }})
           EXIT=$?
           set -e
           if [ $EXIT -eq 2 ]; then
