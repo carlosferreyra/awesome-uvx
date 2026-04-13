@@ -1,4 +1,4 @@
-name: Monthly Validation
+name: Validation and Sync
 
 on:
   push:
