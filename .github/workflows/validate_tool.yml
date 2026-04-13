@@ -29,6 +29,7 @@ jobs:
       - name: Extract added tools from diff
         id: diff
         run: |
+          git fetch origin ${{ github.base_ref }}
           set +e
           TOOLS=$(uv run scripts/diff_tools.py --base origin/${{ github.base_ref }})
           EXIT=$?
