@@ -25,6 +25,7 @@ def generate_readme():
         total_tools = sum(len(cat["tools"]) for cat in categories)
 
         env = Environment(loader=FileSystemLoader(template_dir))
+        env.filters["escape_pipe"] = lambda s: s.replace("|", "&#124;")
         template = env.get_template("README.md.jinja2")
 
         readme_content = template.render(
