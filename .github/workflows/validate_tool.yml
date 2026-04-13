@@ -24,10 +24,13 @@ jobs:
         uses: astral-sh/setup-uv@v7
 
       - name: Validate tools.json schema
+        id: schema
+        continue-on-error: true
         run: uv run scripts/checks.py
 
       - name: Extract added tools from diff
         id: diff
+        if: steps.schema.outcome == 'success'
         run: |
           git fetch origin ${{ github.base_ref }}
           set +e
@@ -45,7 +48,9 @@ jobs:
           fi
 
       - name: Test new tools via uvx
-        if: steps.diff.outputs.no_new_tools != 'true' && steps.diff.outputs.diff_error != 'true'
+        if:
+          steps.schema.outcome == 'success' && steps.diff.outputs.no_new_tools != 'true' &&
+          steps.diff.outputs.diff_error != 'true'
         id: test
         continue-on-error: true
         run: |
@@ -54,52 +59,74 @@ jobs:
             --output output.log
 
       - name: Comment on PR — tool failure
-        if: steps.test.outcome == 'failure'
+        if: steps.schema.outcome == 'failure' || steps.test.outcome == 'failure'
         uses: actions/github-script@v7
         with:
           script: |
             const fs = require('fs');
-            let failures = [];
-            try {
-              failures = JSON.parse(fs.readFileSync('output.log', 'utf8'));
-            } catch (e) {
-              failures = [{ package: 'unknown', reason: 'execution_error' }];
+            const schemaFailed = '${{ steps.schema.outcome }}' === 'failure';
+
+            let body;
+            if (schemaFailed) {
+              let logContent = '';
+              try {
+                logContent = fs.readFileSync('checks.log', 'utf8');
+              } catch (e) {}
+              body = [
+                '## ❌ Schema validation failed',
+                '',
+                'The `tools.json` file does not match the required schema.',
+                '',
+                '> ❌ Common causes: missing required fields, unexpected keys at the category level,',
+                '> or a tool entry placed outside the `tools` object.',
+                '> Please check the [contribution guidelines](CONTRIBUTING.md) and fix the structure.',
+                '',
+                '---',
+                '_Please amend your PR and push again. The workflow will re-run automatically._',
+              ].join('\n');
+            } else {
+              let failures = [];
+              try {
+                failures = JSON.parse(fs.readFileSync('output.log', 'utf8'));
+              } catch (e) {
+                failures = [{ package: 'unknown', reason: 'execution_error' }];
+              }
+
+              const reasonMessages = {
+                network: [
+                  '> ⚠️ This may be a transient PyPI outage.',
+                  '> Please re-run the workflow before amending your PR.',
+                ].join('\n'),
+                not_found: [
+                  '> ❌ The package name does not exist on PyPI.',
+                  '> Please double-check the package name and try again.',
+                ].join('\n'),
+                wrong_binary: [
+                  '> ❌ The package installed but the declared binary was not found.',
+                  '> Please verify the `execs` field matches the actual binary name.',
+                ].join('\n'),
+                execution_error: [
+                  '> ❌ The tool ran but exited with an error.',
+                  '> Please verify the package works with `uvx --from <package> <binary> --help`.',
+                ].join('\n'),
+              };
+
+              const lines = failures.map(f => {
+                const hint = reasonMessages[f.reason] ?? reasonMessages.execution_error;
+                return `### \`${f.package}\` — ${f.reason.replace('_', ' ')}\n${hint}`;
+              }).join('\n\n');
+
+              body = [
+                '## ❌ Tool validation failed',
+                '',
+                'The following tool(s) proposed in this PR could not be validated:',
+                '',
+                lines,
+                '',
+                '---',
+                '_Please amend your PR and push again. The workflow will re-run automatically._',
+              ].join('\n');
             }
-
-            const reasonMessages = {
-              network: [
-                '> ⚠️ This may be a transient PyPI outage.',
-                '> Please re-run the workflow before amending your PR.',
-              ].join('\n'),
-              not_found: [
-                '> ❌ The package name does not exist on PyPI.',
-                '> Please double-check the package name and try again.',
-              ].join('\n'),
-              wrong_binary: [
-                '> ❌ The package installed but the declared binary was not found.',
-                '> Please verify the `execs` field matches the actual binary name.',
-              ].join('\n'),
-              execution_error: [
-                '> ❌ The tool ran but exited with an error.',
-                '> Please verify the package works with `uvx --from <package> <binary> --help`.',
-              ].join('\n'),
-            };
-
-            const lines = failures.map(f => {
-              const hint = reasonMessages[f.reason] ?? reasonMessages.execution_error;
-              return `### \`${f.package}\` — ${f.reason.replace('_', ' ')}\n${hint}`;
-            }).join('\n\n');
-
-            const body = [
-              '## ❌ Tool validation failed',
-              '',
-              'The following tool(s) proposed in this PR could not be validated:',
-              '',
-              lines,
-              '',
-              '---',
-              '_Please amend your PR and push again. The workflow will re-run automatically._',
-            ].join('\n');
 
             await github.rest.issues.createComment({
               owner: context.repo.owner,
@@ -109,7 +136,9 @@ jobs:
             });
 
       - name: Auto-approve PR
-        if: steps.test.outcome == 'success' || steps.diff.outputs.no_new_tools == 'true'
+        if:
+          steps.schema.outcome == 'success' && (steps.test.outcome == 'success' ||
+          steps.diff.outputs.no_new_tools == 'true')
         uses: actions/github-script@v7
         with:
           script: |
@@ -121,6 +150,6 @@ jobs:
               body: '✅ All proposed tools validated successfully via `uvx`. Ready for merge.',
             });
 
-      - name: Fail job if tool tests failed
-        if: steps.test.outcome == 'failure'
+      - name: Fail job if schema or tool tests failed
+        if: steps.schema.outcome == 'failure' || steps.test.outcome == 'failure'
         run: exit 1
