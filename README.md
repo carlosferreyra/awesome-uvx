@@ -43,6 +43,8 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 
 - [Web Frameworks & Tools](#web-frameworks-and-tools)
 
+- [Miscellaneous](#miscellaneous)
+
 
 
 ## Data Processing
@@ -186,6 +188,14 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 | [mitmproxy](https://github.com/mitmproxy/mitmproxy) | Free and open source interactive HTTPS proxy for penetration testers and software developers | ```mitmproxy```, ```mitmdump```, ```mitmweb``` |
 | [uvicorn](https://www.uvicorn.org/) | Lightning-fast ASGI server | ```uvicorn``` |
 | [websockets](https://github.com/aaugustin/websockets) | Library for building WebSocket servers and clients | ```websockets``` |
+
+
+
+## Miscellaneous
+
+| Name | Description | Executable(s) |
+|:-----|:------------|:--------------|
+| [carlosferreyra](https://github.com/carlosferreyra/carlosferreyra) | Interactive CLI business card for Carlos Ferreyra<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx carlosferreyra --open github` — Open GitHub profile directly<br></details> | ```carlosferreyra``` |
 
 
 
