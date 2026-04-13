@@ -25,7 +25,11 @@ jobs:
         with:
           name: validation-report-${{ matrix.os }}-py${{ matrix.python-version }}
           path: checks.log
-          retention-days: 14
+          retention-days: 30
+
+      - if: always()
+        name: Remove checks.log from workspace
+        run: rm -f checks.log
 
       - if: steps.validation.outcome == 'failure'
         name: Check validation status
@@ -53,6 +57,8 @@ on:
       - 'tools.json'
       - 'scripts/**'
       - 'template/**'
+  schedule:
+    - cron: '0 0 1 * *'
   workflow_dispatch:
 
 permissions:
