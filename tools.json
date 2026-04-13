@@ -757,6 +757,23 @@
           ]
         }
       }
+    },
+    {
+      "name": "Miscellaneous",
+      "slug": "miscellaneous",
+      "tools": {
+        "carlosferreyra": {
+          "description": "Interactive CLI business card for Carlos Ferreyra",
+          "url": "https://github.com/carlosferreyra/carlosferreyra",
+          "execs": ["carlosferreyra"],
+          "examples": [
+            {
+              "cmd": "uvx carlosferreyra --open github",
+              "description": "Open GitHub profile directly"
+            }
+          ]
+        }
+      }
     }
   ]
 }
