@@ -22,6 +22,8 @@ def generate_readme():
         template_dir = repo_root / "template"
 
         categories = load_tools(tools_path)
+        for cat in categories:
+            cat["tools"] = dict(sorted(cat["tools"].items(), key=lambda x: x[0].lower()))
         total_tools = sum(len(cat["tools"]) for cat in categories)
 
         env = Environment(loader=FileSystemLoader(template_dir))
