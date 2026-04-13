@@ -51,15 +51,51 @@ below).
 
 **Field reference:**
 
-| Field         | Required | Description                                                    |
-| :------------ | :------: | :------------------------------------------------------------- |
-| `description` | yes      | One-line description of what the tool does                     |
-| `url`         | yes      | Link to official docs or repo (`http://` or `https://` only)   |
-| `execs`       | yes      | Non-empty list of binary names installed by the package        |
+| Field        | Required | Description                                                   |
+| :----------- | :------: | :------------------------------------------------------------ |
+| `description`| yes      | One-line description of what the tool does                    |
+| `url`        | yes      | Link to official docs or repo (`http://` or `https://` only)  |
+| `execs`      | yes      | Non-empty list of binary names installed by the package       |
+| `examples`   | no       | List of example objects (see below)                           |
 
 > **Tip:** The package name key is what gets passed to `uvx --from <package>`. If the binary name
 > differs from the package name (e.g. package `qrcode` installs binary `qr`), make sure `execs`
 > reflects the actual binary name.
+
+### Adding Examples
+
+The `examples` field is optional but encouraged when the invocation is non-obvious — for example
+when the package name differs from the binary, piped input is required, or a subcommand is needed
+to do anything useful.
+
+Each example is an object with a required `cmd` and an optional `description`:
+
+```json
+"your-package-name": {
+  "description": "...",
+  "url": "...",
+  "execs": ["binary-name"],
+  "examples": [
+    {
+      "cmd": "uvx --from your-package-name binary-name --some-flag",
+      "description": "What this example does"
+    }
+  ]
+}
+```
+
+**Example field reference:**
+
+| Field         | Required | Description                                        |
+| :------------ | :------: | :------------------------------------------------- |
+| `cmd`         | yes      | Full shell command the user can copy and run       |
+| `description` | no       | One-line explanation of what the command does      |
+
+Guidelines for writing good examples:
+
+- Always use the full `uvx --from <package> <binary>` form so the command works out of the box
+- Prefer short, realistic commands over exhaustive flag lists
+- Add multiple examples only when they demonstrate meaningfully different use cases
 
 ### Adding a New Category
 
