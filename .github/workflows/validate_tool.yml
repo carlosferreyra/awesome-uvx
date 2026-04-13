@@ -29,8 +29,10 @@ jobs:
       - name: Extract added tools from diff
         id: diff
         run: |
+          set +e
           TOOLS=$(uv run scripts/diff_tools.py --base origin/main)
           EXIT=$?
+          set -e
           if [ $EXIT -eq 2 ]; then
             echo "no_new_tools=true" >> $GITHUB_OUTPUT
             echo "No new tools in this PR — schema-only change."
