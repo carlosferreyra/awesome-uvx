@@ -55,7 +55,7 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 | [dvc](https://github.com/iterative/dvc) | Command-line tool for version control over data used in machine learning projects | ```dvc``` |
 | [easyocr](https://www.jaided.ai/easyocr/) | Ready-to-use OCR with 80+ languages supported | ```easyocr``` |
 | [mlflow](https://github.com/mlflow/mlflow) | Open source platform for managing the end-to-end machine learning lifecycle | ```mlflow``` |
-| [qrcode](https://github.com/lincolnloop/python-qrcode) | Pure Python QR Code generator<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`echo 'https://example.com' &#124; uvx --from qrcode qr` — Generate a QR code from a URL<br></details> | ```qr``` |
+| [qrcode](https://github.com/lincolnloop/python-qrcode) | Pure Python QR Code generator<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`echo 'https://example.com' \| uvx --from qrcode qr` — Generate a QR code from a URL<br></details> | ```qr``` |
 | [shortuuid](https://github.com/skorokithakis/shortuuid) | Generator for concise, unambiguous, URL-safe UUIDs | ```shortuuid``` |
 | [textract](https://textract.readthedocs.io/) | Extract text from various document formats | ```textract``` |
 
