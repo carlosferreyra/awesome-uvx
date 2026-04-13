@@ -24,17 +24,17 @@
 Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>.
 
 
-{% for section_name, section in sections.items() %}
-- [{{ section_name }}](#{{ section.slug }})
+{% for category in categories %}
+- [{{ category.name }}](#{{ category.slug }})
 {% endfor %}
 
-{% for section_name, section in sections.items() %}
-## {{ section_name }}
+{% for category in categories %}
+## {{ category.name }}
 
 | Name | Description | Executable(s) |
 |:-----|:------------|:--------------|
-{% for pkg_name, pkg in section.items() %}{% if pkg_name != "slug" %}| [{{ pkg_name }}]({{ pkg.url }}) | {{ pkg.description }} | {% for exec in pkg.execs %}```{{ exec }}```{% if not loop.last %}, {% endif %}{% endfor %} |
-{% endif %}{% endfor %}
+{% for pkg_name, pkg in category.tools.items() %}| [{{ pkg_name }}]({{ pkg.url }}) | {{ pkg.description }} | {% for exec in pkg.execs %}```{{ exec }}```{% if not loop.last %}, {% endif %}{% endfor %} |
+{% endfor %}
 
 {% endfor %}
 
