@@ -71,6 +71,27 @@ def check_tools():
                         f"Tool '{pkg_name}' in '{name}' has invalid URL format"
                     )
 
+                # Optional examples field validation
+                if "examples" in pkg_data:
+                    if not isinstance(pkg_data["examples"], list):
+                        all_valid = False
+                        logging.error(
+                            f"Tool '{pkg_name}' in '{name}': 'examples' must be a list"
+                        )
+                    else:
+                        for i, example in enumerate(pkg_data["examples"]):
+                            if not isinstance(example, dict):
+                                all_valid = False
+                                logging.error(
+                                    f"Tool '{pkg_name}' in '{name}': examples[{i}] must be an object"
+                                )
+                                continue
+                            if not example.get("cmd"):
+                                all_valid = False
+                                logging.error(
+                                    f"Tool '{pkg_name}' in '{name}': examples[{i}] is missing 'cmd'"
+                                )
+
         if all_valid:
             logging.info("All checks passed successfully!")
             return 0
