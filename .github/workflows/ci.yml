@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   validate:
@@ -22,6 +22,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up UV
         uses: astral-sh/setup-uv@v7
@@ -63,6 +65,21 @@ jobs:
       - name: Remove logs from workspace
         if: always()
         run: rm -f checks.log output.log
+
+      - name: Generate README
+        run: uv run scripts/readme.py
+
+      - name: Commit README if changed
+        run: |
+          if git diff --quiet README.md; then
+            echo "README unchanged, skipping commit."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add README.md
+            git commit -m "chore(readme): regenerate from tools.json [skip ci]"
+            git push
+          fi
 
       - name: Fail job if any tools failed
         if: steps.test.outcome == 'failure'
