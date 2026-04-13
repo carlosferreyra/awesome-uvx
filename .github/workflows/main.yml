@@ -1,11 +1,6 @@
-name: Test Packages
+name: Monthly Validation
 
 on:
-  pull_request:
-    branches:
-      - main
-    paths:
-      - 'tools.json'
   push:
     branches:
       - main
@@ -20,45 +15,55 @@ on:
 
 permissions:
   contents: read
-  pull-requests: write
 
 jobs:
   validate:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: ['ubuntu-latest', 'windows-latest', 'macos-latest']
-        python-version: ['3.12', '3.13', '3.14']
+    runs-on: ubuntu-slim
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
 
       - name: Set up UV
         uses: astral-sh/setup-uv@v7
-        with:
-          python-version: ${{ matrix.python-version }}
 
-      - if: runner.os != 'Windows'
-        name: Make check script executable
-        run: chmod +x scripts/checks.py
-
-      - continue-on-error: true
-        id: validation
-        name: Run validation checks
+      - name: Validate tools.json schema
         run: uv run scripts/checks.py
 
-      - if: always()
-        name: Upload validation report
+      - name: Build full tools list
+        id: tools
+        run: |
+          TOOLS=$(uv run - <<'EOF'
+          import json, sys
+          with open("tools.json") as f:
+              cats = json.load(f)["categories"]
+          tools = [{"package": k, "execs": v["execs"]} for c in cats for k, v in c["tools"].items()]
+          print(json.dumps(tools))
+          EOF
+          )
+          echo "json=$TOOLS" >> $GITHUB_OUTPUT
+
+      - name: Test all tools via uvx
+        continue-on-error: true
+        id: test
+        run: |
+          uv run scripts/test-clients.py \
+            --tools '${{ steps.tools.outputs.json }}' \
+            --output output.log
+
+      - name: Upload validation report
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: validation-report-${{ matrix.os }}-py${{ matrix.python-version }}
-          path: checks.log
+          name: validation-report
+          path: |
+            checks.log
+            output.log
           retention-days: 30
 
-      - if: always()
-        name: Remove checks.log from workspace
-        run: rm -f checks.log
+      - name: Remove logs from workspace
+        if: always()
+        run: rm -f checks.log output.log
 
-      - if: steps.validation.outcome == 'failure'
-        name: Check validation status
+      - name: Fail job if any tools failed
+        if: steps.test.outcome == 'failure'
         run: exit 1
