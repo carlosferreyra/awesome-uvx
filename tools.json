@@ -22,6 +22,16 @@
             "csvstat",
             "in2csv",
             "sql2csv"
+          ],
+          "examples": [
+            {
+              "cmd": "uvx --from csvkit csvlook data.csv",
+              "description": "Pretty-print a CSV file as a table"
+            },
+            {
+              "cmd": "uvx --from csvkit csvcut -c 1,3 data.csv",
+              "description": "Extract columns 1 and 3 from a CSV file"
+            }
           ]
         },
         "dvc": {
@@ -42,7 +52,13 @@
         "qrcode": {
           "description": "Pure Python QR Code generator",
           "url": "https://github.com/lincolnloop/python-qrcode",
-          "execs": ["qr"]
+          "execs": ["qr"],
+          "examples": [
+            {
+              "cmd": "echo 'https://example.com' | uvx --from qrcode qr",
+              "description": "Generate a QR code from a URL"
+            }
+          ]
         },
         "shortuuid": {
           "description": "Generator for concise, unambiguous, URL-safe UUIDs",
@@ -88,7 +104,13 @@
         "peewee": {
           "description": "Peewee is a small, expressive ORM for Python.",
           "url": "http://docs.peewee-orm.com/",
-          "execs": ["pwiz.py"]
+          "execs": ["pwiz.py"],
+          "examples": [
+            {
+              "cmd": "uvx --from peewee pwiz.py -e sqlite mydb.db",
+              "description": "Introspect a SQLite database and generate model code"
+            }
+          ]
         },
         "pgcli": {
           "description": "Pgcli is a command line interface for PostgreSQL with auto-completion and syntax highlighting.",
@@ -98,7 +120,13 @@
         "sqlparse": {
           "description": "Sqlparse is a non-validating SQL parser for Python.",
           "url": "https://github.com/andialbrecht/sqlparse",
-          "execs": ["sqlformat"]
+          "execs": ["sqlformat"],
+          "examples": [
+            {
+              "cmd": "uvx --from sqlparse sqlformat --reindent --keywords upper query.sql",
+              "description": "Reformat a SQL file with uppercase keywords and indentation"
+            }
+          ]
         },
         "sqlite-utils": {
           "description": "Python CLI utility and library for manipulating SQLite databases",
@@ -129,7 +157,13 @@
         "jupyter-core": {
           "description": "Core functionality for Jupyter projects",
           "url": "https://jupyter.org/",
-          "execs": ["jupyter", "jupyter-migrate", "jupyter-troubleshoot"]
+          "execs": ["jupyter", "jupyter-migrate", "jupyter-troubleshoot"],
+          "examples": [
+            {
+              "cmd": "uvx --from jupyter-core jupyter notebook",
+              "description": "Launch the Jupyter notebook server"
+            }
+          ]
         },
         "mypy": {
           "description": "Optional static typing for Python",
@@ -154,7 +188,13 @@
         "py2app": {
           "description": "Create standalone Mac OS X applications",
           "url": "https://py2app.readthedocs.io/",
-          "execs": ["py2applet"]
+          "execs": ["py2applet"],
+          "examples": [
+            {
+              "cmd": "uvx --from py2app py2applet --make-setup myscript.py",
+              "description": "Generate a setup.py for bundling a script into a Mac app"
+            }
+          ]
         },
         "pyarmor": {
           "description": "Tool for obfuscating Python scripts",
@@ -171,6 +211,12 @@
             "pyi-makespec",
             "pyi-set_version",
             "pyinstaller"
+          ],
+          "examples": [
+            {
+              "cmd": "uvx --from pyinstaller pyinstaller --onefile myscript.py",
+              "description": "Bundle a script into a single standalone executable"
+            }
           ]
         },
         "pyright": {
@@ -212,7 +258,13 @@
         "markdown": {
           "description": "Python implementation of Markdown",
           "url": "https://python-markdown.github.io/",
-          "execs": ["markdown_py"]
+          "execs": ["markdown_py"],
+          "examples": [
+            {
+              "cmd": "uvx --from markdown markdown_py README.md > README.html",
+              "description": "Convert a Markdown file to HTML"
+            }
+          ]
         },
         "pdoc": {
           "description": "Auto-generate API documentation for Python projects",
@@ -259,7 +311,13 @@
         "ansible": {
           "description": "Automation tool for IT infrastructure",
           "url": "https://www.ansible.com/",
-          "execs": ["ansible-community"]
+          "execs": ["ansible-community"],
+          "examples": [
+            {
+              "cmd": "uvx --from ansible ansible-community --version",
+              "description": "Check the installed Ansible community version"
+            }
+          ]
         },
         "awscli": {
           "description": "Official command-line interface for Amazon Web Services",
@@ -381,7 +439,17 @@
         "magic-wormhole": {
           "description": "Tool to get things from one computer to another, safely",
           "url": "https://github.com/magic-wormhole/magic-wormhole",
-          "execs": ["wormhole"]
+          "execs": ["wormhole"],
+          "examples": [
+            {
+              "cmd": "uvx --from magic-wormhole wormhole send myfile.txt",
+              "description": "Send a file to another computer via a one-time code"
+            },
+            {
+              "cmd": "uvx --from magic-wormhole wormhole receive",
+              "description": "Receive a file using the one-time code from the sender"
+            }
+          ]
         },
         "plan": {
           "description": "Crontab file manager",
@@ -431,7 +499,13 @@
         "visidata": {
           "description": "Interactive multitool for exploring, analyzing, and converting datasets in the terminal",
           "url": "https://github.com/saulpw/visidata",
-          "execs": ["vd", "visidata"]
+          "execs": ["vd", "visidata"],
+          "examples": [
+            {
+              "cmd": "uvx --from visidata vd data.csv",
+              "description": "Open a CSV file in the interactive terminal UI"
+            }
+          ]
         },
         "youtube-dl": {
           "description": "Download videos from YouTube and other video sites",
@@ -447,7 +521,13 @@
         "django": {
           "description": "High-level Python web framework",
           "url": "https://www.djangoproject.com/",
-          "execs": ["django-admin"]
+          "execs": ["django-admin"],
+          "examples": [
+            {
+              "cmd": "uvx --from django django-admin startproject myproject",
+              "description": "Create a new Django project scaffold"
+            }
+          ]
         },
         "fastapi[standard]": {
           "description": "Modern, fast web framework for building APIs",
@@ -462,7 +542,17 @@
         "httpie": {
           "description": "User-friendly command-line HTTP client",
           "url": "https://httpie.io/",
-          "execs": ["http", "httpie", "https"]
+          "execs": ["http", "httpie", "https"],
+          "examples": [
+            {
+              "cmd": "uvx --from httpie http GET https://httpbin.org/get",
+              "description": "Make a GET request and pretty-print the response"
+            },
+            {
+              "cmd": "uvx --from httpie http POST https://httpbin.org/post name=alice",
+              "description": "Send a POST request with a JSON body field"
+            }
+          ]
         },
         "mitmproxy": {
           "description": "Free and open source interactive HTTPS proxy for penetration testers and software developers",
