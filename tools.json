@@ -37,22 +37,30 @@
         "dvc": {
           "description": "Command-line tool for version control over data used in machine learning projects",
           "url": "https://github.com/iterative/dvc",
-          "execs": ["dvc"]
+          "execs": [
+            "dvc"
+          ]
         },
         "easyocr": {
           "description": "Ready-to-use OCR with 80+ languages supported",
           "url": "https://www.jaided.ai/easyocr/",
-          "execs": ["easyocr"]
+          "execs": [
+            "easyocr"
+          ]
         },
         "mlflow": {
           "description": "Open source platform for managing the end-to-end machine learning lifecycle",
           "url": "https://github.com/mlflow/mlflow",
-          "execs": ["mlflow"]
+          "execs": [
+            "mlflow"
+          ]
         },
         "qrcode": {
           "description": "Pure Python QR Code generator",
           "url": "https://github.com/lincolnloop/python-qrcode",
-          "execs": ["qr"],
+          "execs": [
+            "qr"
+          ],
           "examples": [
             {
               "cmd": "echo 'https://example.com' | uvx --from qrcode qr",
@@ -63,12 +71,16 @@
         "shortuuid": {
           "description": "Generator for concise, unambiguous, URL-safe UUIDs",
           "url": "https://github.com/skorokithakis/shortuuid",
-          "execs": ["shortuuid"]
+          "execs": [
+            "shortuuid"
+          ]
         },
         "textract": {
           "description": "Extract text from various document formats",
           "url": "https://textract.readthedocs.io/",
-          "execs": ["textract"]
+          "execs": [
+            "textract"
+          ]
         }
       }
     },
@@ -79,32 +91,44 @@
         "fake2db": {
           "description": "Fake2db is a fake database generator for testing purposes.",
           "url": "https://github.com/emirozer/fake2db",
-          "execs": ["fake2db"]
+          "execs": [
+            "fake2db"
+          ]
         },
         "harlequin": {
           "description": "The SQL IDE for your terminal. A TUI for DuckDB, SQLite, Postgres, and more",
           "url": "https://github.com/tconbeer/harlequin",
-          "execs": ["harlequin"]
+          "execs": [
+            "harlequin"
+          ]
         },
         "iredis": {
           "description": "Iredis is a Redis terminal client with auto-completion and syntax highlighting.",
           "url": "https://github.com/laixintao/iredis",
-          "execs": ["iredis"]
+          "execs": [
+            "iredis"
+          ]
         },
         "litecli": {
           "description": "Litecli is a command line interface for SQLite with auto-completion and syntax highlighting.",
           "url": "https://litecli.com/",
-          "execs": ["litecli"]
+          "execs": [
+            "litecli"
+          ]
         },
         "mycli": {
           "description": "Mycli is a command line interface for MySQL with auto-completion and syntax highlighting.",
           "url": "https://www.mycli.net/",
-          "execs": ["mycli"]
+          "execs": [
+            "mycli"
+          ]
         },
         "peewee": {
           "description": "Peewee is a small, expressive ORM for Python.",
           "url": "http://docs.peewee-orm.com/",
-          "execs": ["pwiz.py"],
+          "execs": [
+            "pwiz.py"
+          ],
           "examples": [
             {
               "cmd": "uvx --from peewee pwiz.py -e sqlite mydb.db",
@@ -115,12 +139,16 @@
         "pgcli": {
           "description": "Pgcli is a command line interface for PostgreSQL with auto-completion and syntax highlighting.",
           "url": "https://www.pgcli.com/",
-          "execs": ["pgcli"]
+          "execs": [
+            "pgcli"
+          ]
         },
         "sqlparse": {
           "description": "Sqlparse is a non-validating SQL parser for Python.",
           "url": "https://github.com/andialbrecht/sqlparse",
-          "execs": ["sqlformat"],
+          "execs": [
+            "sqlformat"
+          ],
           "examples": [
             {
               "cmd": "uvx --from sqlparse sqlformat --reindent --keywords upper query.sql",
@@ -131,7 +159,9 @@
         "sqlite-utils": {
           "description": "Python CLI utility and library for manipulating SQLite databases",
           "url": "https://github.com/simonw/sqlite-utils",
-          "execs": ["sqlite-utils"]
+          "execs": [
+            "sqlite-utils"
+          ]
         }
       }
     },
@@ -139,25 +169,44 @@
       "name": "Development Tools",
       "slug": "development-tools",
       "tools": {
+        "rich-cli": {
+          "description": "Render rich text, Markdown, JSON, and syntax-highlighted code in the terminal",
+          "url": "https://github.com/Textualize/rich-cli",
+          "execs": [
+            "rich"
+          ]
+        },
         "black": {
           "description": "The uncompromising Python code formatter",
           "url": "https://github.com/psf/black",
-          "execs": ["black"]
+          "execs": [
+            "black"
+          ]
         },
         "invoke": {
           "description": "Tool for managing shell-oriented subprocesses and organizing executable Python code into CLI-invokable tasks",
           "url": "https://github.com/pyinvoke/invoke",
-          "execs": ["invoke", "inv"]
+          "execs": [
+            "invoke",
+            "inv"
+          ]
         },
         "ipython": {
           "description": "Enhanced interactive Python shell",
           "url": "https://ipython.org/",
-          "execs": ["ipython", "ipython3"]
+          "execs": [
+            "ipython",
+            "ipython3"
+          ]
         },
         "jupyter-core": {
           "description": "Core functionality for Jupyter projects",
           "url": "https://jupyter.org/",
-          "execs": ["jupyter", "jupyter-migrate", "jupyter-troubleshoot"],
+          "execs": [
+            "jupyter",
+            "jupyter-migrate",
+            "jupyter-troubleshoot"
+          ],
           "examples": [
             {
               "cmd": "uvx --from jupyter-core jupyter notebook",
@@ -168,27 +217,38 @@
         "mypy": {
           "description": "Optional static typing for Python",
           "url": "https://mypy.readthedocs.io/",
-          "execs": ["mypy", "mypy-langserver"]
+          "execs": [
+            "mypy",
+            "mypy-langserver"
+          ]
         },
         "poetry": {
           "description": "Python packaging and dependency management",
           "url": "https://python-poetry.org/",
-          "execs": ["poetry"]
+          "execs": [
+            "poetry"
+          ]
         },
         "pre-commit": {
           "description": "Framework for managing and maintaining multi-language git hooks",
           "url": "https://github.com/pre-commit/pre-commit",
-          "execs": ["pre-commit"]
+          "execs": [
+            "pre-commit"
+          ]
         },
         "pudb": {
           "description": "Full-screen, console-based visual debugger for Python",
           "url": "https://github.com/inducer/pudb",
-          "execs": ["pudb"]
+          "execs": [
+            "pudb"
+          ]
         },
         "py2app": {
           "description": "Create standalone Mac OS X applications",
           "url": "https://py2app.readthedocs.io/",
-          "execs": ["py2applet"],
+          "execs": [
+            "py2applet"
+          ],
           "examples": [
             {
               "cmd": "uvx --from py2app py2applet --make-setup myscript.py",
@@ -199,7 +259,12 @@
         "pyarmor": {
           "description": "Tool for obfuscating Python scripts",
           "url": "https://pyarmor.dashingsoft.com/",
-          "execs": ["pyarmor", "pyarmor-7", "pyarmor-8", "pyarmor-auth"]
+          "execs": [
+            "pyarmor",
+            "pyarmor-7",
+            "pyarmor-8",
+            "pyarmor-auth"
+          ]
         },
         "pyinstaller": {
           "description": "Convert Python programs into stand-alone executables",
@@ -232,22 +297,31 @@
         "ruff": {
           "description": "An extremely fast Python linter",
           "url": "https://github.com/astral-sh/ruff",
-          "execs": ["ruff"]
+          "execs": [
+            "ruff"
+          ]
         },
         "shiv": {
           "description": "Build fully self-contained Python zipapps",
           "url": "https://github.com/linkedin/shiv",
-          "execs": ["shiv", "shiv-info"]
+          "execs": [
+            "shiv",
+            "shiv-info"
+          ]
         },
         "ty": {
           "description": "An extremely fast Python type checker and language server",
           "url": "https://github.com/astral-sh/ty",
-          "execs": ["ty"]
+          "execs": [
+            "ty"
+          ]
         },
         "uv": {
           "description": "Extremely fast Python package installer and resolver, written in Rust",
           "url": "https://github.com/astral-sh/uv",
-          "execs": ["uv"]
+          "execs": [
+            "uv"
+          ]
         }
       }
     },
@@ -258,7 +332,9 @@
         "markdown": {
           "description": "Python implementation of Markdown",
           "url": "https://python-markdown.github.io/",
-          "execs": ["markdown_py"],
+          "execs": [
+            "markdown_py"
+          ],
           "examples": [
             {
               "cmd": "uvx --from markdown markdown_py README.md > README.html",
@@ -269,7 +345,9 @@
         "pdoc": {
           "description": "Auto-generate API documentation for Python projects",
           "url": "https://pdoc.dev/",
-          "execs": ["pdoc"]
+          "execs": [
+            "pdoc"
+          ]
         }
       }
     },
@@ -280,27 +358,37 @@
         "detect-secrets": {
           "description": "Enterprise-friendly CLI for auditing, detecting, and preventing secrets in code",
           "url": "https://github.com/Yelp/detect-secrets",
-          "execs": ["detect-secrets"]
+          "execs": [
+            "detect-secrets"
+          ]
         },
         "fsociety": {
           "description": "Modular penetration testing framework",
           "url": "https://github.com/fsociety-team/fsociety",
-          "execs": ["fsociety"]
+          "execs": [
+            "fsociety"
+          ]
         },
         "scapy": {
           "description": "Packet manipulation program",
           "url": "https://scapy.net/",
-          "execs": ["scapy"]
+          "execs": [
+            "scapy"
+          ]
         },
         "sqlmap": {
           "description": "Automatic SQL injection and database takeover tool",
           "url": "https://sqlmap.org/",
-          "execs": ["sqlmap"]
+          "execs": [
+            "sqlmap"
+          ]
         },
         "uncompyle6": {
           "description": "Native Python cross-version decompiler that translates Python bytecode back into equivalent Python source code",
           "url": "https://github.com/rocky/python-uncompyle6",
-          "execs": ["uncompyle6"]
+          "execs": [
+            "uncompyle6"
+          ]
         }
       }
     },
@@ -311,7 +399,9 @@
         "ansible": {
           "description": "Automation tool for IT infrastructure",
           "url": "https://www.ansible.com/",
-          "execs": ["ansible-community"],
+          "execs": [
+            "ansible-community"
+          ],
           "examples": [
             {
               "cmd": "uvx --from ansible ansible-community --version",
@@ -322,42 +412,62 @@
         "awscli": {
           "description": "Official command-line interface for Amazon Web Services",
           "url": "https://aws.amazon.com/cli/",
-          "execs": ["aws"]
+          "execs": [
+            "aws"
+          ]
         },
         "bpytop": {
           "description": "Resource monitor that shows usage and stats for processor, memory, disks, network, and processes",
           "url": "https://github.com/aristocratos/bpytop",
-          "execs": ["bpytop"]
+          "execs": [
+            "bpytop"
+          ]
         },
         "glances": {
           "description": "Cross-platform monitoring tool with curses or Web based interface",
           "url": "https://github.com/nicolargo/glances",
-          "execs": ["glances"]
+          "execs": [
+            "glances"
+          ]
         },
         "k9": {
           "description": "Terminal-based UI to manage Kubernetes clusters",
           "url": "https://github.com/derailed/k9s",
-          "execs": ["k9"]
+          "execs": [
+            "k9"
+          ]
         },
         "mamba": {
           "description": "Fast, cross-platform package manager",
           "url": "https://github.com/mamba-org/mamba",
-          "execs": ["mamba"]
+          "execs": [
+            "mamba"
+          ]
         },
         "pipx": {
           "description": "Install and run Python applications in isolated environments",
           "url": "https://pypa.github.io/pipx/",
-          "execs": ["pipx"]
+          "execs": [
+            "pipx"
+          ]
         },
         "platformio": {
           "description": "Open source ecosystem for IoT development with cross-platform IDE and unified debugger",
           "url": "https://github.com/platformio/platformio-core",
-          "execs": ["platformio", "pio"]
+          "execs": [
+            "platformio",
+            "pio"
+          ]
         },
         "xonsh": {
           "description": "Python-powered shell",
           "url": "https://xon.sh/",
-          "execs": ["xonsh", "xonsh-cat", "xonsh-uname", "xonsh-uptime"]
+          "execs": [
+            "xonsh",
+            "xonsh-cat",
+            "xonsh-uname",
+            "xonsh-uptime"
+          ]
         }
       }
     },
@@ -368,32 +478,49 @@
         "coverage": {
           "description": "Code coverage measurement",
           "url": "https://coverage.readthedocs.io/",
-          "execs": ["coverage", "coverage-3.13", "coverage3"]
+          "execs": [
+            "coverage",
+            "coverage-3.13",
+            "coverage3"
+          ]
         },
         "nox": {
           "description": "Flexible test automation",
           "url": "https://nox.thea.codes/",
-          "execs": ["nox", "tox-to-nox"]
+          "execs": [
+            "nox",
+            "tox-to-nox"
+          ]
         },
         "pytest": {
           "description": "Testing framework",
           "url": "https://docs.pytest.org/",
-          "execs": ["pytest", "py.test"]
+          "execs": [
+            "pytest",
+            "py.test"
+          ]
         },
         "schemathesis": {
           "description": "Property-based testing for APIs",
           "url": "https://schemathesis.readthedocs.io/",
-          "execs": ["schemathesis", "st"]
+          "execs": [
+            "schemathesis",
+            "st"
+          ]
         },
         "tavern": {
           "description": "pytest plugin, command-line tool, and Python library for automated testing of APIs",
           "url": "https://github.com/taverntesting/tavern",
-          "execs": ["tavern-ci"]
+          "execs": [
+            "tavern-ci"
+          ]
         },
         "tox": {
           "description": "Automate and standardize testing",
           "url": "https://tox.wiki/",
-          "execs": ["tox"]
+          "execs": [
+            "tox"
+          ]
         }
       }
     },
@@ -404,42 +531,58 @@
         "celery": {
           "description": "Distributed task queue",
           "url": "https://docs.celeryq.dev/",
-          "execs": ["celery"]
+          "execs": [
+            "celery"
+          ]
         },
         "cookiecutter": {
           "description": "Project template tool",
           "url": "https://cookiecutter.readthedocs.io/",
-          "execs": ["cookiecutter"]
+          "execs": [
+            "cookiecutter"
+          ]
         },
         "copier": {
           "description": "Library for rendering project templates",
           "url": "https://copier.readthedocs.io/",
-          "execs": ["copier"]
+          "execs": [
+            "copier"
+          ]
         },
         "doitlive": {
           "description": "Tool for live presentations in the terminal",
           "url": "https://doitlive.readthedocs.io/",
-          "execs": ["doitlive"]
+          "execs": [
+            "doitlive"
+          ]
         },
         "faker": {
           "description": "Generator for fake data",
           "url": "https://faker.readthedocs.io/",
-          "execs": ["faker"]
+          "execs": [
+            "faker"
+          ]
         },
         "howdoi": {
           "description": "Instant coding answers via the command line",
           "url": "https://github.com/gleitz/howdoi",
-          "execs": ["howdoi"]
+          "execs": [
+            "howdoi"
+          ]
         },
         "html2text": {
           "description": "Convert HTML to Markdown-formatted text",
           "url": "https://github.com/Alir3z4/html2text/",
-          "execs": ["html2text"]
+          "execs": [
+            "html2text"
+          ]
         },
         "magic-wormhole": {
           "description": "Tool to get things from one computer to another, safely",
           "url": "https://github.com/magic-wormhole/magic-wormhole",
-          "execs": ["wormhole"],
+          "execs": [
+            "wormhole"
+          ],
           "examples": [
             {
               "cmd": "uvx --from magic-wormhole wormhole send myfile.txt",
@@ -454,52 +597,76 @@
         "plan": {
           "description": "Crontab file manager",
           "url": "https://github.com/fengsp/plan",
-          "execs": ["plan-quickstart"]
+          "execs": [
+            "plan-quickstart"
+          ]
         },
         "prefect": {
           "description": "Workflow management system",
           "url": "https://www.prefect.io/",
-          "execs": ["prefect"]
+          "execs": [
+            "prefect"
+          ]
         },
         "pyclean": {
           "description": "Pure Python cross-platform pycache cleaner",
           "url": "https://github.com/bittner/pyclean",
-          "execs": ["pyclean"]
+          "execs": [
+            "pyclean"
+          ]
         },
         "rq": {
           "description": "Simple job queues for Python",
           "url": "https://python-rq.org/",
-          "execs": ["rq", "rqinfo", "rqworker"]
+          "execs": [
+            "rq",
+            "rqinfo",
+            "rqworker"
+          ]
         },
         "speedtest-cli": {
           "description": "Command line interface for testing internet bandwidth using speedtest.net",
           "url": "https://github.com/sivel/speedtest-cli",
-          "execs": ["speedtest-cli"]
+          "execs": [
+            "speedtest-cli"
+          ]
         },
         "streamlink": {
           "description": "CLI utility that pipes video streams from various services into a video player",
           "url": "https://github.com/streamlink/streamlink",
-          "execs": ["streamlink"]
+          "execs": [
+            "streamlink"
+          ]
         },
         "thefuck": {
           "description": "Magnificent application that corrects your previous console command",
           "url": "https://github.com/nvbn/thefuck",
-          "execs": ["thefuck", "fuck"]
+          "execs": [
+            "thefuck",
+            "fuck"
+          ]
         },
         "typer": {
           "description": "Build CLI applications",
           "url": "https://typer.tiangolo.com/",
-          "execs": ["typer"]
+          "execs": [
+            "typer"
+          ]
         },
         "unp": {
           "description": "Command line tool that can unpack archives",
           "url": "https://github.com/mitsuhiko/unp",
-          "execs": ["unp"]
+          "execs": [
+            "unp"
+          ]
         },
         "visidata": {
           "description": "Interactive multitool for exploring, analyzing, and converting datasets in the terminal",
           "url": "https://github.com/saulpw/visidata",
-          "execs": ["vd", "visidata"],
+          "execs": [
+            "vd",
+            "visidata"
+          ],
           "examples": [
             {
               "cmd": "uvx --from visidata vd data.csv",
@@ -510,7 +677,9 @@
         "youtube-dl": {
           "description": "Download videos from YouTube and other video sites",
           "url": "https://youtube-dl.org/",
-          "execs": ["youtube-dl"]
+          "execs": [
+            "youtube-dl"
+          ]
         }
       }
     },
@@ -521,7 +690,9 @@
         "django": {
           "description": "High-level Python web framework",
           "url": "https://www.djangoproject.com/",
-          "execs": ["django-admin"],
+          "execs": [
+            "django-admin"
+          ],
           "examples": [
             {
               "cmd": "uvx --from django django-admin startproject myproject",
@@ -532,17 +703,25 @@
         "fastapi[standard]": {
           "description": "Modern, fast web framework for building APIs",
           "url": "https://fastapi.tiangolo.com/",
-          "execs": ["fastapi"]
+          "execs": [
+            "fastapi"
+          ]
         },
         "flask": {
           "description": "Lightweight WSGI web application framework",
           "url": "https://flask.palletsprojects.com/",
-          "execs": ["flask"]
+          "execs": [
+            "flask"
+          ]
         },
         "httpie": {
           "description": "User-friendly command-line HTTP client",
           "url": "https://httpie.io/",
-          "execs": ["http", "httpie", "https"],
+          "execs": [
+            "http",
+            "httpie",
+            "https"
+          ],
           "examples": [
             {
               "cmd": "uvx --from httpie http GET https://httpbin.org/get",
@@ -557,17 +736,25 @@
         "mitmproxy": {
           "description": "Free and open source interactive HTTPS proxy for penetration testers and software developers",
           "url": "https://github.com/mitmproxy/mitmproxy",
-          "execs": ["mitmproxy", "mitmdump", "mitmweb"]
+          "execs": [
+            "mitmproxy",
+            "mitmdump",
+            "mitmweb"
+          ]
         },
         "uvicorn": {
           "description": "Lightning-fast ASGI server",
           "url": "https://www.uvicorn.org/",
-          "execs": ["uvicorn"]
+          "execs": [
+            "uvicorn"
+          ]
         },
         "websockets": {
           "description": "Library for building WebSocket servers and clients",
           "url": "https://github.com/aaugustin/websockets",
-          "execs": ["websockets"]
+          "execs": [
+            "websockets"
+          ]
         }
       }
     }
