@@ -46,7 +46,7 @@ jobs:
         continue-on-error: true
         id: test
         run: |
-          uv run scripts/test-clients.py \
+          uv run scripts/test_clients.py \
             --tools '${{ steps.tools.outputs.json }}' \
             --output output.log
 

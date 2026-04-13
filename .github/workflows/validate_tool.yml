@@ -29,7 +29,7 @@ jobs:
       - name: Extract added tools from diff
         id: diff
         run: |
-          TOOLS=$(uv run scripts/diff-tools.py --base origin/main)
+          TOOLS=$(uv run scripts/diff_tools.py --base origin/main)
           EXIT=$?
           if [ $EXIT -eq 2 ]; then
             echo "no_new_tools=true" >> $GITHUB_OUTPUT
@@ -46,7 +46,7 @@ jobs:
         id: test
         continue-on-error: true
         run: |
-          uv run scripts/test-clients.py \
+          uv run scripts/test_clients.py \
             --tools '${{ steps.diff.outputs.tools }}' \
             --output output.log
 
