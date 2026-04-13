@@ -2,111 +2,157 @@
 # requires-python = ">=3.12"
 # dependencies = []
 # ///
+"""
+Test that tools in the list are installable and executable via uvx.
+
+Usage:
+    uv run scripts/test-clients.py --tools '<json>'
+
+The --tools argument accepts a JSON array of tool objects matching the
+tools.json schema. Each object must have at minimum:
+    {"package": "<name>", "execs": ["<binary>", ...]}
+
+Examples:
+    # Test a single tool (e.g. from a PR diff):
+    uv run scripts/test-clients.py --tools '[{"package":"ruff","execs":["ruff"]}]'
+
+    # Test all tools from tools.json (e.g. monthly run):
+    uv run scripts/test-clients.py --tools "$(python -c "
+    import json
+    with open('tools.json') as f:
+        cats = json.load(f)['categories']
+    tools = [{'package': k, 'execs': v['execs']} for c in cats for k, v in c['tools'].items()]
+    print(json.dumps(tools))
+    ")"
+"""
 
 import json
+import re
 import subprocess
 import sys
+from argparse import ArgumentParser
 from pathlib import Path
 
-uv_download = "curl -LsSf https://astral.sh/uv/install.sh | sh"
+# --- failure classification patterns ---
+
+NETWORK_PATTERNS = re.compile(
+    r"(failed to fetch|connection error|could not connect|network|timeout|timed out|"
+    r"ssl error|certificate|http 5\d\d|503|502|504)",
+    re.IGNORECASE,
+)
+NOT_FOUND_PATTERNS = re.compile(
+    r"(no solution found|not found|package .* doesn't exist|"
+    r"404|packagenotfound|no matching distribution)",
+    re.IGNORECASE,
+)
+BINARY_PATTERNS = re.compile(
+    r"(executable .* not found|no such file|command not found|"
+    r"which: no|not in.*path)",
+    re.IGNORECASE,
+)
 
 
-def run_command(command):
-    """Run a shell command and return the output."""
-    result = subprocess.run(command, shell=True, text=True, capture_output=True)
-    if result.returncode != 0:
-        print(f"Error running command: {command}\n{result.stderr}")
-        sys.exit(1)
-    return result.stdout.strip()
+def classify_failure(stdout: str, stderr: str) -> str:
+    combined = stdout + stderr
+    if NETWORK_PATTERNS.search(combined):
+        return "network"
+    if NOT_FOUND_PATTERNS.search(combined):
+        return "not_found"
+    if BINARY_PATTERNS.search(combined):
+        return "wrong_binary"
+    return "execution_error"
 
 
-def run_command_safe(command):
-    """Run a shell command and return (success, output, error)."""
+def run(command: str) -> tuple[bool, str, str]:
     result = subprocess.run(command, shell=True, text=True, capture_output=True)
     return result.returncode == 0, result.stdout.strip(), result.stderr.strip()
 
 
+def test_tool(package: str, exec_name: str) -> tuple[bool, str]:
+    """
+    Try two methods. Returns (success, failure_type).
+    failure_type is one of: network, not_found, wrong_binary, execution_error
+    On success, failure_type is empty string.
+    """
+    # Method 1: uv tool install
+    ok, out, err = run(f"uv tool install --force {package}")
+    if ok:
+        return True, ""
+
+    # Retry once on network errors before giving up
+    if NETWORK_PATTERNS.search(out + err):
+        ok, out, err = run(f"uv tool install --force {package}")
+        if ok:
+            return True, ""
+        return False, "network"
+
+    # Method 2: uvx --from
+    ok2, out2, err2 = run(f"uvx --from {package} {exec_name} --help")
+    if ok2:
+        return True, ""
+
+    # Classify based on combined output of both attempts
+    return False, classify_failure(out + out2, err + err2)
+
+
 def main():
-    print("Script started successfully!")
-    print("Running UVX test clients...")
+    parser = ArgumentParser(description="Test uvx tool installations.")
+    parser.add_argument(
+        "--tools",
+        required=True,
+        help='JSON array of {"package": str, "execs": [str, ...]} objects',
+    )
+    parser.add_argument(
+        "--output",
+        default="output.log",
+        help="Path to write failure log (default: output.log)",
+    )
+    args = parser.parse_args()
 
     try:
-        uv_version = run_command("uv --version")
-        print(f"UV version: {uv_version}")
-    except SystemExit:
-        print("UV not found, installing...")
-        run_command(uv_download)
-        print("UV installed successfully!")
+        tools = json.loads(args.tools)
+    except json.JSONDecodeError as e:
+        print(f"Error: --tools is not valid JSON: {e}", file=sys.stderr)
+        sys.exit(1)
 
-    tools_path = Path(__file__).parent.parent / "tools.json"
-    print(f"Loading tools from: {tools_path}")
-
-    with open(tools_path) as f:
-        data = json.load(f)
-
-    command_list = []
-    for category in data["categories"]:
-        for package_name, package_info in category["tools"].items():
-            match package_info:
-                case {"execs": [first_exec, *_]}:
-                    print(f"Found executable '{first_exec}' for package '{package_name}'")
-                    command_list.append((first_exec, package_name))
-                case {"execs": []}:
-                    print(f"No executables found for package '{package_name}'")
-                case _:
-                    print(f"Invalid package structure for '{package_name}'")
-
-    print(f"Total executables found: {len(command_list)}")
-
-    success_count = 0
-    failed_packages = []
-
-    output_log_path = Path("./output.log")
-    with open(output_log_path, "w") as log_file:
-        log_file.write("UVX Test Clients - Failed Executions Log\n")
-        log_file.write("=" * 50 + "\n\n")
-
-        for exec_name, package_name in command_list:
-            print(f"Testing: {package_name} ({exec_name})")
-
-            command1 = f"uv tool install --force {package_name}"
-            success1, output1, error1 = run_command_safe(command1)
-
-            command2 = f"uvx --from {package_name} {exec_name} -h"
-            success2, output2, error2 = run_command_safe(command2)
-
-            if success1 or success2:
-                success_count += 1
-                method = "uv tool install" if success1 else "uvx --from"
-                print(f"  ✓ Success with: {method}")
-            else:
-                failed_packages.append(package_name)
-                print("  ✗ Failed: both methods")
-
-                log_file.write(f"Package: {package_name}\n")
-                log_file.write(f"Executable: {exec_name}\n")
-                log_file.write("Status: FAILED\n\n")
-                log_file.write(f"Method 1 - Command: {command1}\n")
-                log_file.write(f"Method 1 - Success: {success1}\n")
-                log_file.write(f"Method 1 - Output: {output1}\n")
-                log_file.write(f"Method 1 - Error: {error1}\n\n")
-                log_file.write(f"Method 2 - Command: {command2}\n")
-                log_file.write(f"Method 2 - Success: {success2}\n")
-                log_file.write(f"Method 2 - Output: {output2}\n")
-                log_file.write(f"Method 2 - Error: {error2}\n")
-                log_file.write("-" * 50 + "\n\n")
-
-    print("\nExecution Summary:")
-    print(f"  Total packages tested: {len(command_list)}")
-    print(f"  Successful: {success_count}")
-    print(f"  Failed: {len(failed_packages)}")
-
-    if failed_packages:
-        print(f"  Failed packages logged to: {output_log_path.absolute()}")
+    # Ensure uv is available
+    ok, version, _ = run("uv --version")
+    if not ok:
+        print("uv not found. Installing...")
+        run("curl -LsSf https://astral.sh/uv/install.sh | sh")
     else:
-        print("  All packages succeeded! No log file created.")
-        if output_log_path.exists():
-            output_log_path.unlink()
+        print(f"uv {version}")
+
+    print(f"Testing {len(tools)} tool(s)...\n")
+
+    results: list[dict] = []
+
+    for tool in tools:
+        package = tool["package"]
+        exec_name = tool["execs"][0] if tool.get("execs") else package.split("[")[0]
+        print(f"  Testing: {package} ({exec_name})")
+
+        success, failure_type = test_tool(package, exec_name)
+
+        if success:
+            print(f"    ✓ ok")
+            results.append({"package": package, "success": True})
+        else:
+            print(f"    ✗ failed ({failure_type})")
+            results.append({"package": package, "success": False, "reason": failure_type})
+
+    # Summary
+    passed = [r for r in results if r["success"]]
+    failed = [r for r in results if not r["success"]]
+
+    print(f"\nResults: {len(passed)} passed, {len(failed)} failed")
+
+    if failed:
+        log_path = Path(args.output)
+        with open(log_path, "w") as f:
+            json.dump(failed, f, indent=2)
+        print(f"Failures written to {log_path}")
+        sys.exit(1)
 
 
 if __name__ == "__main__":
