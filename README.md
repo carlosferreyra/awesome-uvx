@@ -70,8 +70,8 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 | [mycli](https://www.mycli.net/) | Mycli is a command line interface for MySQL with auto-completion and syntax highlighting. | ```mycli``` |
 | [peewee](http://docs.peewee-orm.com/) | Peewee is a small, expressive ORM for Python.<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --from peewee pwiz.py -e sqlite mydb.db` — Introspect a SQLite database and generate model code<br></details> | ```pwiz.py``` |
 | [pgcli](https://www.pgcli.com/) | Pgcli is a command line interface for PostgreSQL with auto-completion and syntax highlighting. | ```pgcli``` |
-| [sqlparse](https://github.com/andialbrecht/sqlparse) | Sqlparse is a non-validating SQL parser for Python.<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --from sqlparse sqlformat --reindent --keywords upper query.sql` — Reformat a SQL file with uppercase keywords and indentation<br></details> | ```sqlformat``` |
 | [sqlite-utils](https://github.com/simonw/sqlite-utils) | Python CLI utility and library for manipulating SQLite databases | ```sqlite-utils``` |
+| [sqlparse](https://github.com/andialbrecht/sqlparse) | Sqlparse is a non-validating SQL parser for Python.<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --from sqlparse sqlformat --reindent --keywords upper query.sql` — Reformat a SQL file with uppercase keywords and indentation<br></details> | ```sqlformat``` |
 
 
 
@@ -79,7 +79,6 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 
 | Name | Description | Executable(s) |
 |:-----|:------------|:--------------|
-| [rich-cli](https://github.com/Textualize/rich-cli) | Render rich text, Markdown, JSON, and syntax-highlighted code in the terminal | ```rich``` |
 | [black](https://github.com/psf/black) | The uncompromising Python code formatter | ```black``` |
 | [invoke](https://github.com/pyinvoke/invoke) | Tool for managing shell-oriented subprocesses and organizing executable Python code into CLI-invokable tasks | ```invoke```, ```inv``` |
 | [ipython](https://ipython.org/) | Enhanced interactive Python shell | ```ipython```, ```ipython3``` |
@@ -92,6 +91,7 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 | [pyarmor](https://pyarmor.dashingsoft.com/) | Tool for obfuscating Python scripts | ```pyarmor```, ```pyarmor-7```, ```pyarmor-8```, ```pyarmor-auth``` |
 | [pyinstaller](https://www.pyinstaller.org/) | Convert Python programs into stand-alone executables<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --from pyinstaller pyinstaller --onefile myscript.py` — Bundle a script into a single standalone executable<br></details> | ```pyi-archive_viewer```, ```pyi-bindepend```, ```pyi-grab_version```, ```pyi-makespec```, ```pyi-set_version```, ```pyinstaller``` |
 | [pyright](https://github.com/microsoft/pyright) | Static type checker for Python | ```pyright```, ```pyright-langserver```, ```pyright-python```, ```pyright-python-langserver``` |
+| [rich-cli](https://github.com/Textualize/rich-cli) | Render rich text, Markdown, JSON, and syntax-highlighted code in the terminal | ```rich``` |
 | [ruff](https://github.com/astral-sh/ruff) | An extremely fast Python linter | ```ruff``` |
 | [shiv](https://github.com/linkedin/shiv) | Build fully self-contained Python zipapps | ```shiv```, ```shiv-info``` |
 | [ty](https://github.com/astral-sh/ty) | An extremely fast Python type checker and language server | ```ty``` |
