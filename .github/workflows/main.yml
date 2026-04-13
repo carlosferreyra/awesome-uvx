@@ -5,10 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'README.md'
       - 'tools.json'
-      - 'scripts/**'
-      - 'template/**'
   push:
     branches:
       - main
