@@ -3,24 +3,21 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Set up UV
-        uses: astral-sh/setup-uv@v5
+        uses: astral-sh/setup-uv@v7
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: Install dependencies
-        run: uv sync
-
       - if: runner.os != 'Windows'
         name: Make check script executable
-        run: chmod +x .github/scripts/checks.py
+        run: chmod +x scripts/checks.py
 
       - continue-on-error: true
         id: validation
         name: Run validation checks
-        run: uv run .github/scripts/checks.py
+        run: uv run scripts/checks.py
 
       - if: always()
         name: Upload validation report
@@ -45,17 +42,17 @@ on:
       - main
     paths:
       - 'README.md'
-      - 'pyproject.toml'
-      - '.github/scripts/**'
-      - '.github/scripts/placeholders/*.json'
+      - 'tools.json'
+      - 'scripts/**'
+      - 'template/**'
   push:
     branches:
       - main
     paths:
       - 'README.md'
-      - 'pyproject.toml'
-      - '.github/scripts/**'
-      - '.github/scripts/placeholders/*.json'
+      - 'tools.json'
+      - 'scripts/**'
+      - 'template/**'
   workflow_dispatch:
 
 permissions:
