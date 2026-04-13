@@ -49,11 +49,11 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 
 | Name | Description | Executable(s) |
 |:-----|:------------|:--------------|
-| [csvkit](https://csvkit.readthedocs.io/) | Suite of command-line tools for CSV files<br><details><summary>Examples</summary><br>`uvx --from csvkit csvlook data.csv` — Pretty-print a CSV file as a table<br>`uvx --from csvkit csvcut -c 1,3 data.csv` — Extract columns 1 and 3 from a CSV file<br></details> | ```csvclean```, ```csvcut```, ```csvformat```, ```csvgrep```, ```csvjoin```, ```csvjson```, ```csvlook```, ```csvpy```, ```csvsort```, ```csvsql```, ```csvstack```, ```csvstat```, ```in2csv```, ```sql2csv``` |
+| [csvkit](https://csvkit.readthedocs.io/) | Suite of command-line tools for CSV files<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --from csvkit csvlook data.csv` — Pretty-print a CSV file as a table<br>`uvx --from csvkit csvcut -c 1,3 data.csv` — Extract columns 1 and 3 from a CSV file<br></details> | ```csvclean```, ```csvcut```, ```csvformat```, ```csvgrep```, ```csvjoin```, ```csvjson```, ```csvlook```, ```csvpy```, ```csvsort```, ```csvsql```, ```csvstack```, ```csvstat```, ```in2csv```, ```sql2csv``` |
 | [dvc](https://github.com/iterative/dvc) | Command-line tool for version control over data used in machine learning projects | ```dvc``` |
 | [easyocr](https://www.jaided.ai/easyocr/) | Ready-to-use OCR with 80+ languages supported | ```easyocr``` |
 | [mlflow](https://github.com/mlflow/mlflow) | Open source platform for managing the end-to-end machine learning lifecycle | ```mlflow``` |
-| [qrcode](https://github.com/lincolnloop/python-qrcode) | Pure Python QR Code generator<br><details><summary>Examples</summary><br>`echo 'https://example.com' &#124; uvx --from qrcode qr` — Generate a QR code from a URL<br></details> | ```qr``` |
+| [qrcode](https://github.com/lincolnloop/python-qrcode) | Pure Python QR Code generator<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`echo 'https://example.com' &#124; uvx --from qrcode qr` — Generate a QR code from a URL<br></details> | ```qr``` |
 | [shortuuid](https://github.com/skorokithakis/shortuuid) | Generator for concise, unambiguous, URL-safe UUIDs | ```shortuuid``` |
 | [textract](https://textract.readthedocs.io/) | Extract text from various document formats | ```textract``` |
 
@@ -68,9 +68,9 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 | [iredis](https://github.com/laixintao/iredis) | Iredis is a Redis terminal client with auto-completion and syntax highlighting. | ```iredis``` |
 | [litecli](https://litecli.com/) | Litecli is a command line interface for SQLite with auto-completion and syntax highlighting. | ```litecli``` |
 | [mycli](https://www.mycli.net/) | Mycli is a command line interface for MySQL with auto-completion and syntax highlighting. | ```mycli``` |
-| [peewee](http://docs.peewee-orm.com/) | Peewee is a small, expressive ORM for Python.<br><details><summary>Examples</summary><br>`uvx --from peewee pwiz.py -e sqlite mydb.db` — Introspect a SQLite database and generate model code<br></details> | ```pwiz.py``` |
+| [peewee](http://docs.peewee-orm.com/) | Peewee is a small, expressive ORM for Python.<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --from peewee pwiz.py -e sqlite mydb.db` — Introspect a SQLite database and generate model code<br></details> | ```pwiz.py``` |
 | [pgcli](https://www.pgcli.com/) | Pgcli is a command line interface for PostgreSQL with auto-completion and syntax highlighting. | ```pgcli``` |
-| [sqlparse](https://github.com/andialbrecht/sqlparse) | Sqlparse is a non-validating SQL parser for Python.<br><details><summary>Examples</summary><br>`uvx --from sqlparse sqlformat --reindent --keywords upper query.sql` — Reformat a SQL file with uppercase keywords and indentation<br></details> | ```sqlformat``` |
+| [sqlparse](https://github.com/andialbrecht/sqlparse) | Sqlparse is a non-validating SQL parser for Python.<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --from sqlparse sqlformat --reindent --keywords upper query.sql` — Reformat a SQL file with uppercase keywords and indentation<br></details> | ```sqlformat``` |
 | [sqlite-utils](https://github.com/simonw/sqlite-utils) | Python CLI utility and library for manipulating SQLite databases | ```sqlite-utils``` |
 
 
@@ -82,14 +82,14 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 | [black](https://github.com/psf/black) | The uncompromising Python code formatter | ```black``` |
 | [invoke](https://github.com/pyinvoke/invoke) | Tool for managing shell-oriented subprocesses and organizing executable Python code into CLI-invokable tasks | ```invoke```, ```inv``` |
 | [ipython](https://ipython.org/) | Enhanced interactive Python shell | ```ipython```, ```ipython3``` |
-| [jupyter-core](https://jupyter.org/) | Core functionality for Jupyter projects<br><details><summary>Examples</summary><br>`uvx --from jupyter-core jupyter notebook` — Launch the Jupyter notebook server<br></details> | ```jupyter```, ```jupyter-migrate```, ```jupyter-troubleshoot``` |
+| [jupyter-core](https://jupyter.org/) | Core functionality for Jupyter projects<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --from jupyter-core jupyter notebook` — Launch the Jupyter notebook server<br></details> | ```jupyter```, ```jupyter-migrate```, ```jupyter-troubleshoot``` |
 | [mypy](https://mypy.readthedocs.io/) | Optional static typing for Python | ```mypy```, ```mypy-langserver``` |
 | [poetry](https://python-poetry.org/) | Python packaging and dependency management | ```poetry``` |
 | [pre-commit](https://github.com/pre-commit/pre-commit) | Framework for managing and maintaining multi-language git hooks | ```pre-commit``` |
 | [pudb](https://github.com/inducer/pudb) | Full-screen, console-based visual debugger for Python | ```pudb``` |
-| [py2app](https://py2app.readthedocs.io/) | Create standalone Mac OS X applications<br><details><summary>Examples</summary><br>`uvx --from py2app py2applet --make-setup myscript.py` — Generate a setup.py for bundling a script into a Mac app<br></details> | ```py2applet``` |
+| [py2app](https://py2app.readthedocs.io/) | Create standalone Mac OS X applications<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --from py2app py2applet --make-setup myscript.py` — Generate a setup.py for bundling a script into a Mac app<br></details> | ```py2applet``` |
 | [pyarmor](https://pyarmor.dashingsoft.com/) | Tool for obfuscating Python scripts | ```pyarmor```, ```pyarmor-7```, ```pyarmor-8```, ```pyarmor-auth``` |
-| [pyinstaller](https://www.pyinstaller.org/) | Convert Python programs into stand-alone executables<br><details><summary>Examples</summary><br>`uvx --from pyinstaller pyinstaller --onefile myscript.py` — Bundle a script into a single standalone executable<br></details> | ```pyi-archive_viewer```, ```pyi-bindepend```, ```pyi-grab_version```, ```pyi-makespec```, ```pyi-set_version```, ```pyinstaller``` |
+| [pyinstaller](https://www.pyinstaller.org/) | Convert Python programs into stand-alone executables<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --from pyinstaller pyinstaller --onefile myscript.py` — Bundle a script into a single standalone executable<br></details> | ```pyi-archive_viewer```, ```pyi-bindepend```, ```pyi-grab_version```, ```pyi-makespec```, ```pyi-set_version```, ```pyinstaller``` |
 | [pyright](https://github.com/microsoft/pyright) | Static type checker for Python | ```pyright```, ```pyright-langserver```, ```pyright-python```, ```pyright-python-langserver``` |
 | [ruff](https://github.com/astral-sh/ruff) | An extremely fast Python linter | ```ruff``` |
 | [shiv](https://github.com/linkedin/shiv) | Build fully self-contained Python zipapps | ```shiv```, ```shiv-info``` |
@@ -102,7 +102,7 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 
 | Name | Description | Executable(s) |
 |:-----|:------------|:--------------|
-| [markdown](https://python-markdown.github.io/) | Python implementation of Markdown<br><details><summary>Examples</summary><br>`uvx --from markdown markdown_py README.md > README.html` — Convert a Markdown file to HTML<br></details> | ```markdown_py``` |
+| [markdown](https://python-markdown.github.io/) | Python implementation of Markdown<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --from markdown markdown_py README.md > README.html` — Convert a Markdown file to HTML<br></details> | ```markdown_py``` |
 | [pdoc](https://pdoc.dev/) | Auto-generate API documentation for Python projects | ```pdoc``` |
 
 
@@ -123,7 +123,7 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 
 | Name | Description | Executable(s) |
 |:-----|:------------|:--------------|
-| [ansible](https://www.ansible.com/) | Automation tool for IT infrastructure<br><details><summary>Examples</summary><br>`uvx --from ansible ansible-community --version` — Check the installed Ansible community version<br></details> | ```ansible-community``` |
+| [ansible](https://www.ansible.com/) | Automation tool for IT infrastructure<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --from ansible ansible-community --version` — Check the installed Ansible community version<br></details> | ```ansible-community``` |
 | [awscli](https://aws.amazon.com/cli/) | Official command-line interface for Amazon Web Services | ```aws``` |
 | [bpytop](https://github.com/aristocratos/bpytop) | Resource monitor that shows usage and stats for processor, memory, disks, network, and processes | ```bpytop``` |
 | [glances](https://github.com/nicolargo/glances) | Cross-platform monitoring tool with curses or Web based interface | ```glances``` |
@@ -159,7 +159,7 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 | [faker](https://faker.readthedocs.io/) | Generator for fake data | ```faker``` |
 | [howdoi](https://github.com/gleitz/howdoi) | Instant coding answers via the command line | ```howdoi``` |
 | [html2text](https://github.com/Alir3z4/html2text/) | Convert HTML to Markdown-formatted text | ```html2text``` |
-| [magic-wormhole](https://github.com/magic-wormhole/magic-wormhole) | Tool to get things from one computer to another, safely<br><details><summary>Examples</summary><br>`uvx --from magic-wormhole wormhole send myfile.txt` — Send a file to another computer via a one-time code<br>`uvx --from magic-wormhole wormhole receive` — Receive a file using the one-time code from the sender<br></details> | ```wormhole``` |
+| [magic-wormhole](https://github.com/magic-wormhole/magic-wormhole) | Tool to get things from one computer to another, safely<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --from magic-wormhole wormhole send myfile.txt` — Send a file to another computer via a one-time code<br>`uvx --from magic-wormhole wormhole receive` — Receive a file using the one-time code from the sender<br></details> | ```wormhole``` |
 | [plan](https://github.com/fengsp/plan) | Crontab file manager | ```plan-quickstart``` |
 | [prefect](https://www.prefect.io/) | Workflow management system | ```prefect``` |
 | [pyclean](https://github.com/bittner/pyclean) | Pure Python cross-platform pycache cleaner | ```pyclean``` |
@@ -169,7 +169,7 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 | [thefuck](https://github.com/nvbn/thefuck) | Magnificent application that corrects your previous console command | ```thefuck```, ```fuck``` |
 | [typer](https://typer.tiangolo.com/) | Build CLI applications | ```typer``` |
 | [unp](https://github.com/mitsuhiko/unp) | Command line tool that can unpack archives | ```unp``` |
-| [visidata](https://github.com/saulpw/visidata) | Interactive multitool for exploring, analyzing, and converting datasets in the terminal<br><details><summary>Examples</summary><br>`uvx --from visidata vd data.csv` — Open a CSV file in the interactive terminal UI<br></details> | ```vd```, ```visidata``` |
+| [visidata](https://github.com/saulpw/visidata) | Interactive multitool for exploring, analyzing, and converting datasets in the terminal<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --from visidata vd data.csv` — Open a CSV file in the interactive terminal UI<br></details> | ```vd```, ```visidata``` |
 | [youtube-dl](https://youtube-dl.org/) | Download videos from YouTube and other video sites | ```youtube-dl``` |
 
 
@@ -178,10 +178,10 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 
 | Name | Description | Executable(s) |
 |:-----|:------------|:--------------|
-| [django](https://www.djangoproject.com/) | High-level Python web framework<br><details><summary>Examples</summary><br>`uvx --from django django-admin startproject myproject` — Create a new Django project scaffold<br></details> | ```django-admin``` |
+| [django](https://www.djangoproject.com/) | High-level Python web framework<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --from django django-admin startproject myproject` — Create a new Django project scaffold<br></details> | ```django-admin``` |
 | [fastapi[standard]](https://fastapi.tiangolo.com/) | Modern, fast web framework for building APIs | ```fastapi``` |
 | [flask](https://flask.palletsprojects.com/) | Lightweight WSGI web application framework | ```flask``` |
-| [httpie](https://httpie.io/) | User-friendly command-line HTTP client<br><details><summary>Examples</summary><br>`uvx --from httpie http GET https://httpbin.org/get` — Make a GET request and pretty-print the response<br>`uvx --from httpie http POST https://httpbin.org/post name=alice` — Send a POST request with a JSON body field<br></details> | ```http```, ```httpie```, ```https``` |
+| [httpie](https://httpie.io/) | User-friendly command-line HTTP client<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --from httpie http GET https://httpbin.org/get` — Make a GET request and pretty-print the response<br>`uvx --from httpie http POST https://httpbin.org/post name=alice` — Send a POST request with a JSON body field<br></details> | ```http```, ```httpie```, ```https``` |
 | [mitmproxy](https://github.com/mitmproxy/mitmproxy) | Free and open source interactive HTTPS proxy for penetration testers and software developers | ```mitmproxy```, ```mitmdump```, ```mitmweb``` |
 | [uvicorn](https://www.uvicorn.org/) | Lightning-fast ASGI server | ```uvicorn``` |
 | [websockets](https://github.com/aaugustin/websockets) | Library for building WebSocket servers and clients | ```websockets``` |
