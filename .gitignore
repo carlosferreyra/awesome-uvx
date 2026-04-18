@@ -160,10 +160,6 @@ activemq-data/
 # Environments
 .env
 .envrc
-
-# search_cli.py local run artifacts
-clis.txt
-.search_cursor
 .venv
 env/
 venv/
