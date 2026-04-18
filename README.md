@@ -131,7 +131,6 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 | [awscli](https://aws.amazon.com/cli/) | Official command-line interface for Amazon Web Services | ```aws``` | 1.44.81<br>2026-04-17 |
 | [bpytop](https://github.com/aristocratos/bpytop) | Resource monitor that shows usage and stats for processor, memory, disks, network, and processes | ```bpytop``` | 1.0.68<br>2021-12-22 |
 | [glances](https://github.com/nicolargo/glances) | Cross-platform monitoring tool with curses or Web based interface | ```glances``` | 4.5.3<br>2026-03-31 |
-| [k9](https://github.com/derailed/k9s) | Terminal-based UI to manage Kubernetes clusters | ```k9``` | 1.0.0<br>2022-10-12 |
 | [mamba](https://github.com/mamba-org/mamba) | Fast, cross-platform package manager | ```mamba``` | 0.11.3<br>2023-11-09 |
 | [pipx](https://pypa.github.io/pipx/) | Install and run Python applications in isolated environments | ```pipx``` | 1.11.1<br>2026-03-31 |
 | [platformio](https://github.com/platformio/platformio-core) | Open source ecosystem for IoT development with cross-platform IDE and unified debugger | ```platformio```, ```pio``` | 6.1.19<br>2026-02-04 |
