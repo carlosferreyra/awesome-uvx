@@ -16,8 +16,8 @@
         <img src="https://badges.pufler.dev/visits/carlosferreyra/awesome-uvx" alt="Visits">
         <img src="https://img.shields.io/github/stars/carlosferreyra/awesome-uvx" alt="Stars">
     </p>
-    <a href="https://github.com/carlosferreyra/awesome-uvx/actions/workflows/main.yml">
-        <img src="https://github.com/carlosferreyra/awesome-uvx/actions/workflows/main.yml/badge.svg" alt="Test Packages">
+    <a href="https://github.com/carlosferreyra/awesome-uvx/actions/workflows/ci.yml">
+        <img src="https://github.com/carlosferreyra/awesome-uvx/actions/workflows/ci.yml/badge.svg" alt="Validation and Sync">
     </a>
 </div>
 
@@ -82,6 +82,7 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 | Name | Description | Executable(s) |
 |:-----|:------------|:--------------|
 | [black](https://github.com/psf/black) | The uncompromising Python code formatter | ```black``` |
+| [cement](https://docs.builtoncement.com) | Advanced CLI Application Framework for Python | ```cement``` |
 | [invoke](https://github.com/pyinvoke/invoke) | Tool for managing shell-oriented subprocesses and organizing executable Python code into CLI-invokable tasks | ```invoke```, ```inv``` |
 | [ipython](https://ipython.org/) | Enhanced interactive Python shell | ```ipython```, ```ipython3``` |
 | [jupyter-core](https://jupyter.org/) | Core functionality for Jupyter projects<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --from jupyter-core jupyter notebook` — Launch the Jupyter notebook server<br></details> | ```jupyter```, ```jupyter-migrate```, ```jupyter-troubleshoot``` |
@@ -170,10 +171,12 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 | [speedtest-cli](https://github.com/sivel/speedtest-cli) | Command line interface for testing internet bandwidth using speedtest.net | ```speedtest-cli``` |
 | [streamlink](https://github.com/streamlink/streamlink) | CLI utility that pipes video streams from various services into a video player | ```streamlink``` |
 | [thefuck](https://github.com/nvbn/thefuck) | Magnificent application that corrects your previous console command | ```thefuck```, ```fuck``` |
+| [tmuxp](https://tmuxp.git-pull.com) | tmux session manager — save and load tmux sessions via config files<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx tmuxp load mysession.yaml` — Load a tmux session from a YAML config file<br></details> | ```tmuxp``` |
 | [typer](https://typer.tiangolo.com/) | Build CLI applications | ```typer``` |
 | [unp](https://github.com/mitsuhiko/unp) | Command line tool that can unpack archives | ```unp``` |
 | [visidata](https://github.com/saulpw/visidata) | Interactive multitool for exploring, analyzing, and converting datasets in the terminal<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --from visidata vd data.csv` — Open a CSV file in the interactive terminal UI<br></details> | ```vd```, ```visidata``` |
 | [youtube-dl](https://youtube-dl.org/) | Download videos from YouTube and other video sites | ```youtube-dl``` |
+| [yt-dlp](https://github.com/yt-dlp/yt-dlp) | Feature-rich audio/video downloader supporting thousands of sites — actively maintained fork of youtube-dl<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx yt-dlp https://www.youtube.com/watch?v=dQw4w9WgXcQ` — Download a YouTube video<br>`uvx yt-dlp -x --audio-format mp3 https://www.youtube.com/watch?v=dQw4w9WgXcQ` — Extract audio as MP3 from a YouTube video<br></details> | ```yt-dlp``` |
 
 
 
