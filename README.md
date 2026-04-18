@@ -155,6 +155,7 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 
 | Name | Description | Executable(s) | Latest Release |
 |:-----|:------------|:--------------|:--------------|
+| [asciinema](https://asciinema.org) | Terminal session recorder<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx asciinema rec demo.cast` — Record a terminal session to a .cast file<br>`uvx asciinema play demo.cast` — Play back a recorded terminal session<br>`uvx asciinema upload demo.cast` — Upload a recording to asciinema.org<br></details> | ```asciinema``` | 2.4.0<br>2023-10-23 |
 | [celery](https://docs.celeryq.dev/) | Distributed task queue | ```celery``` | 5.6.3<br>2026-03-26 |
 | [cookiecutter](https://cookiecutter.readthedocs.io/) | Project template tool | ```cookiecutter``` | 2.7.1<br>2026-03-04 |
 | [copier](https://copier.readthedocs.io/) | Library for rendering project templates | ```copier``` | 9.14.3<br>2026-04-10 |
@@ -169,6 +170,7 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 | [rq](https://python-rq.org/) | Simple job queues for Python | ```rq```, ```rqinfo```, ```rqworker``` | 2.8.0<br>2026-04-17 |
 | [speedtest-cli](https://github.com/sivel/speedtest-cli) | Command line interface for testing internet bandwidth using speedtest.net | ```speedtest-cli``` | 2.1.3<br>2021-04-08 |
 | [streamlink](https://github.com/streamlink/streamlink) | CLI utility that pipes video streams from various services into a video player | ```streamlink``` | 8.3.0<br>2026-04-10 |
+| [termtosvg](https://github.com/nbedos/termtosvg) | Record terminal sessions as SVG animations<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx termtosvg demo.svg` — Record a terminal session and save as SVG animation<br>`uvx termtosvg --template window_frame --screen-geometry 80x20 demo.svg` — Record with a window frame template at 80x20 geometry<br>`uvx termtosvg -c "ls -la" demo.svg` — Record a single command output as SVG<br></details> | ```termtosvg``` | 1.1.0<br>2020-01-18 |
 | [thefuck](https://github.com/nvbn/thefuck) | Magnificent application that corrects your previous console command | ```thefuck```, ```fuck``` | 3.32<br>2022-01-02 |
 | [tmuxp](https://tmuxp.git-pull.com) | tmux session manager — save and load tmux sessions via config files<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx tmuxp load mysession.yaml` — Load a tmux session from a YAML config file<br></details> | ```tmuxp``` | 1.67.0<br>2026-03-09 |
 | [typer](https://typer.tiangolo.com/) | Build CLI applications | ```typer``` | 0.24.1<br>2026-02-21 |
