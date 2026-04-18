@@ -638,6 +638,29 @@
       "name": "Utilities",
       "slug": "utilities",
       "tools": {
+        "asciinema": {
+          "description": "Terminal session recorder",
+          "url": "https://asciinema.org",
+          "execs": [
+            "asciinema"
+          ],
+          "examples": [
+            {
+              "cmd": "uvx asciinema rec demo.cast",
+              "description": "Record a terminal session to a .cast file"
+            },
+            {
+              "cmd": "uvx asciinema play demo.cast",
+              "description": "Play back a recorded terminal session"
+            },
+            {
+              "cmd": "uvx asciinema upload demo.cast",
+              "description": "Upload a recording to asciinema.org"
+            }
+          ],
+          "version": "2.4.0",
+          "last_release": "2023-10-23"
+        },
         "celery": {
           "description": "Distributed task queue",
           "url": "https://docs.celeryq.dev/",
@@ -776,6 +799,39 @@
           "version": "8.3.0",
           "last_release": "2026-04-10"
         },
+        "termtosvg": {
+          "description": "Record terminal sessions as SVG animations",
+          "url": "https://github.com/nbedos/termtosvg",
+          "execs": [
+            "termtosvg"
+          ],
+          "examples": [
+            {
+              "cmd": "uvx termtosvg demo.svg",
+              "description": "Record a terminal session and save as SVG animation"
+            },
+            {
+              "cmd": "uvx termtosvg --template window_frame --screen-geometry 80x20 demo.svg",
+              "description": "Record with a window frame template at 80x20 geometry"
+            },
+            {
+              "cmd": "uvx termtosvg -c \"ls -la\" demo.svg",
+              "description": "Record a single command output as SVG"
+            }
+          ],
+          "version": "1.1.0",
+          "last_release": "2020-01-18"
+        },
+        "thefuck": {
+          "description": "Magnificent application that corrects your previous console command",
+          "url": "https://github.com/nvbn/thefuck",
+          "execs": [
+            "thefuck",
+            "fuck"
+          ],
+          "version": "3.32",
+          "last_release": "2022-01-02"
+        },
         "tmuxp": {
           "description": "tmux session manager \u2014 save and load tmux sessions via config files",
           "url": "https://tmuxp.git-pull.com",
@@ -790,16 +846,6 @@
           ],
           "version": "1.67.0",
           "last_release": "2026-03-09"
-        },
-        "thefuck": {
-          "description": "Magnificent application that corrects your previous console command",
-          "url": "https://github.com/nvbn/thefuck",
-          "execs": [
-            "thefuck",
-            "fuck"
-          ],
-          "version": "3.32",
-          "last_release": "2022-01-02"
         },
         "typer": {
           "description": "Build CLI applications",
