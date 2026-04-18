@@ -176,6 +176,13 @@
             "rich"
           ]
         },
+        "cement": {
+          "description": "Advanced CLI Application Framework for Python",
+          "url": "https://docs.builtoncement.com",
+          "execs": [
+            "cement"
+          ]
+        },
         "black": {
           "description": "The uncompromising Python code formatter",
           "url": "https://github.com/psf/black",
@@ -638,6 +645,19 @@
             "streamlink"
           ]
         },
+        "tmuxp": {
+          "description": "tmux session manager — save and load tmux sessions via config files",
+          "url": "https://tmuxp.git-pull.com",
+          "execs": [
+            "tmuxp"
+          ],
+          "examples": [
+            {
+              "cmd": "uvx tmuxp load mysession.yaml",
+              "description": "Load a tmux session from a YAML config file"
+            }
+          ]
+        },
         "thefuck": {
           "description": "Magnificent application that corrects your previous console command",
           "url": "https://github.com/nvbn/thefuck",
@@ -679,6 +699,23 @@
           "url": "https://youtube-dl.org/",
           "execs": [
             "youtube-dl"
+          ]
+        },
+        "yt-dlp": {
+          "description": "Feature-rich audio/video downloader supporting thousands of sites — actively maintained fork of youtube-dl",
+          "url": "https://github.com/yt-dlp/yt-dlp",
+          "execs": [
+            "yt-dlp"
+          ],
+          "examples": [
+            {
+              "cmd": "uvx yt-dlp https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "description": "Download a YouTube video"
+            },
+            {
+              "cmd": "uvx yt-dlp -x --audio-format mp3 https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+              "description": "Extract audio as MP3 from a YouTube video"
+            }
           ]
         }
       }
