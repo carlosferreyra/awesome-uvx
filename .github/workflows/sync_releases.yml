@@ -2,7 +2,7 @@ name: Sync PyPI Release Metadata
 
 on:
   schedule:
-    - cron: '0 6 * * 1'  # every Monday at 06:00 UTC
+    - cron: '0 6 * * 1' # every Monday at 06:00 UTC
   workflow_dispatch:
 
 permissions:
@@ -10,13 +10,13 @@ permissions:
 
 jobs:
   sync:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Set up uv
-        uses: astral-sh/setup-uv@v5
+        uses: astral-sh/setup-uv@v7
 
       - name: Fetch latest release info from PyPI
         run: uv run scripts/latest_release.py
