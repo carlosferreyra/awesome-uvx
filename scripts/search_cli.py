@@ -21,7 +21,6 @@ import itertools
 import json
 import random
 import re
-import signal
 import string
 import subprocess
 import sys
@@ -30,18 +29,19 @@ from pathlib import Path
 
 import httpx
 
-
 # --- configuration ---
 
 MAX_SIZE: int = 10
 MIN_SIZE: int = 2
 ALPHABET: str = string.ascii_lowercase + "-"
 PYPI_URL: str = "https://pypi.org/pypi/{package}/json"
-OUTPUT_FILE: str = ".env.found"
-SLEEP_MIN: float = 0.5
-SLEEP_MAX: float = 1.0
+OUTPUT_FILE: str = "clis.txt"
+CURSOR_FILE: str = ".search_cursor"
+CURSOR_FLUSH_EVERY: int = 25
+SLEEP_MIN: float = 0.1
+SLEEP_MAX: float = 0.3
 HTTP_TIMEOUT: float = 10.0
-UVX_TIMEOUT: int = 45
+UVX_TIMEOUT: int = 1
 
 # Classifiers that strongly suggest a console-oriented package.
 CLI_CLASSIFIERS: frozenset[str] = frozenset(
@@ -166,11 +166,28 @@ def try_uvx(package: str) -> str | None:
     return None
 
 
-def iter_candidates(existing: set[str]):
-    """Yield candidate package names in increasing length order."""
+def load_cursor(cursor_path: Path) -> str | None:
+    """Read the last queried candidate so we can resume past it."""
+    if not cursor_path.exists():
+        return None
+    text = cursor_path.read_text().strip()
+    return text or None
+
+
+def save_cursor(cursor_path: Path, candidate: str) -> None:
+    cursor_path.write_text(candidate + "\n")
+
+
+def iter_candidates(existing: set[str], resume_after: str | None):
+    """Yield candidate names, skipping anything up to and including resume_after."""
+    skipping = resume_after is not None
     for length in range(MIN_SIZE, MAX_SIZE + 1):
         for combo in itertools.product(ALPHABET, repeat=length):
             candidate = "".join(combo)
+            if skipping:
+                if candidate == resume_after:
+                    skipping = False
+                continue
             if not is_valid_pypi_name(candidate):
                 continue
             if candidate.lower() in existing:
@@ -178,82 +195,95 @@ def iter_candidates(existing: set[str]):
             yield candidate
 
 
-def install_sigint_handler(output_path: Path) -> None:
-    def handler(signum, frame):
-        print(
-            f"\nExecution Interrupted by user [CTRL + C], "
-            f"check {output_path.name} for matches found so far"
-        )
-        sys.exit(0)
-
-    signal.signal(signal.SIGINT, handler)
+# SIGINT keeps Python's default behavior (raises KeyboardInterrupt), so it
+# unwinds out of `subprocess.run` immediately. The main loop catches it and
+# still prints the final stats / flushes the cursor.
 
 
 # --- main loop ---
 
 
 def main() -> int:
-    output_path = Path(__file__).parent.parent / OUTPUT_FILE
-    install_sigint_handler(output_path)
+    repo_root = Path(__file__).parent.parent
+    output_path = repo_root / OUTPUT_FILE
+    cursor_path = repo_root / CURSOR_FILE
 
     existing = load_existing_packages()
     already_found = load_already_found(output_path)
+    resume_after = load_cursor(cursor_path)
     print(f"Skipping {len(existing)} known packages from tools.json")
     print(f"Resuming with {len(already_found)} previously-found entries")
     print(f"Alphabet: {ALPHABET!r} | length range: {MIN_SIZE}..{MAX_SIZE}")
+    if resume_after:
+        print(f"Resuming after cursor: {resume_after!r}")
     print(f"Writing matches to {output_path}\n")
 
     queried = 0
     matches = 0
+    last_candidate: str | None = resume_after
+    interrupted = False
 
-    with httpx.Client(
-        timeout=HTTP_TIMEOUT,
-        follow_redirects=True,
-        headers={"User-Agent": "awesome-uvx-search/1.0"},
-    ) as client:
-        for candidate in iter_candidates(existing):
-            time.sleep(random.uniform(SLEEP_MIN, SLEEP_MAX))
-            url = PYPI_URL.format(package=candidate)
-            try:
-                response = client.get(url)
-            except httpx.HTTPError as e:
-                print(f"  [warn] {candidate}: {e}")
-                continue
+    try:
+        with httpx.Client(
+            timeout=HTTP_TIMEOUT,
+            follow_redirects=True,
+            headers={"User-Agent": "awesome-uvx-search/1.0"},
+        ) as client:
+            for candidate in iter_candidates(existing, resume_after):
+                last_candidate = candidate
+                time.sleep(random.uniform(SLEEP_MIN, SLEEP_MAX))
+                url = PYPI_URL.format(package=candidate)
+                try:
+                    response = client.get(url)
+                except httpx.HTTPError as e:
+                    print(f"  [warn] {candidate}: {e}")
+                    continue
 
-            queried += 1
+                queried += 1
+                if queried % CURSOR_FLUSH_EVERY == 0:
+                    save_cursor(cursor_path, candidate)
 
-            match response.status_code:
-                case 200:
-                    try:
-                        info = response.json().get("info", {}) or {}
-                    except ValueError:
-                        continue
-                    if not is_likely_cli(info):
-                        print(f"  [skip] {candidate}: metadata not CLI-like")
-                        continue
-                    print(f"  [probe] {candidate}: testing via uvx...")
-                    cmd = try_uvx(candidate)
-                    match cmd:
-                        case None:
-                            print(f"    x  no runnable binary found")
-                        case _ if cmd in already_found:
-                            print(f"    =  already recorded: {cmd}")
-                        case _:
-                            print(f"    +  match: {cmd}")
-                            with open(output_path, "a") as f:
-                                f.write(cmd + "\n")
-                            already_found.add(cmd)
-                            matches += 1
-                case 404:
-                    # Unknown package name — the common case, stay quiet.
-                    pass
-                case 429:
-                    print(f"  [rate-limit] backing off 10s...")
-                    time.sleep(10.0)
-                case code:
-                    print(f"  [http {code}] {candidate}")
+                match response.status_code:
+                    case 200:
+                        try:
+                            info = response.json().get("info", {}) or {}
+                        except ValueError:
+                            continue
+                        if not is_likely_cli(info):
+                            print(f"  [skip] {candidate}: metadata not CLI-like")
+                            continue
+                        print(f"  [probe] {candidate}: testing via uvx...")
+                        cmd = try_uvx(candidate)
+                        match cmd:
+                            case None:
+                                print("    x  no runnable binary found")
+                            case _ if cmd in already_found:
+                                print(f"    =  already recorded: {cmd}")
+                            case _:
+                                print(f"    +  match: {cmd}")
+                                with open(output_path, "a") as f:
+                                    f.write(cmd + "\n")
+                                already_found.add(cmd)
+                                matches += 1
+                    case 404:
+                        # Unknown package name — the common case, stay quiet.
+                        pass
+                    case 429:
+                        print("  [rate-limit] backing off 10s...")
+                        time.sleep(10.0)
+                    case code:
+                        print(f"  [http {code}] {candidate}")
+    except KeyboardInterrupt:
+        interrupted = True
 
-    print(f"\nDone. {matches} new match(es) across {queried} PyPI hits.")
+    if last_candidate is not None:
+        save_cursor(cursor_path, last_candidate)
+
+    reason = "interrupted" if interrupted else "completed"
+    print(
+        f"\nRun {reason}. matches={matches} queries={queried} "
+        f"last_candidate={last_candidate!r}"
+    )
     return 0
 
 
