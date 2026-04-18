@@ -1,0 +1,28 @@
+name: Sync PyPI Release Metadata
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'  # every Monday at 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Fetch latest release info from PyPI
+        run: uv run scripts/latest_release.py
+
+      - name: Commit changes if any
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'chore(tools): sync latest PyPI release metadata [skip ci]'
+          file_pattern: tools.json

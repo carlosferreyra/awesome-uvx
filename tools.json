@@ -32,28 +32,36 @@
               "cmd": "uvx --from csvkit csvcut -c 1,3 data.csv",
               "description": "Extract columns 1 and 3 from a CSV file"
             }
-          ]
+          ],
+          "version": "2.2.0",
+          "last_release": "2025-12-15"
         },
         "dvc": {
           "description": "Command-line tool for version control over data used in machine learning projects",
           "url": "https://github.com/iterative/dvc",
           "execs": [
             "dvc"
-          ]
+          ],
+          "version": "3.67.1",
+          "last_release": "2026-03-31"
         },
         "easyocr": {
           "description": "Ready-to-use OCR with 80+ languages supported",
           "url": "https://www.jaided.ai/easyocr/",
           "execs": [
             "easyocr"
-          ]
+          ],
+          "version": "1.7.2",
+          "last_release": "2024-09-24"
         },
         "mlflow": {
           "description": "Open source platform for managing the end-to-end machine learning lifecycle",
           "url": "https://github.com/mlflow/mlflow",
           "execs": [
             "mlflow"
-          ]
+          ],
+          "version": "3.11.1",
+          "last_release": "2026-04-07"
         },
         "qrcode": {
           "description": "Pure Python QR Code generator",
@@ -66,21 +74,27 @@
               "cmd": "echo 'https://example.com' | uvx --from qrcode qr",
               "description": "Generate a QR code from a URL"
             }
-          ]
+          ],
+          "version": "8.2",
+          "last_release": "2025-05-01"
         },
         "shortuuid": {
           "description": "Generator for concise, unambiguous, URL-safe UUIDs",
           "url": "https://github.com/skorokithakis/shortuuid",
           "execs": [
             "shortuuid"
-          ]
+          ],
+          "version": "1.0.13",
+          "last_release": "2024-03-11"
         },
         "textract": {
           "description": "Extract text from various document formats",
           "url": "https://textract.readthedocs.io/",
           "execs": [
             "textract"
-          ]
+          ],
+          "version": "1.6.5",
+          "last_release": "2022-03-10"
         }
       }
     },
@@ -93,35 +107,45 @@
           "url": "https://github.com/emirozer/fake2db",
           "execs": [
             "fake2db"
-          ]
+          ],
+          "version": "0.5.4",
+          "last_release": "2018-02-09"
         },
         "harlequin": {
           "description": "The SQL IDE for your terminal. A TUI for DuckDB, SQLite, Postgres, and more",
           "url": "https://github.com/tconbeer/harlequin",
           "execs": [
             "harlequin"
-          ]
+          ],
+          "version": "2.5.2",
+          "last_release": "2026-03-25"
         },
         "iredis": {
           "description": "Iredis is a Redis terminal client with auto-completion and syntax highlighting.",
           "url": "https://github.com/laixintao/iredis",
           "execs": [
             "iredis"
-          ]
+          ],
+          "version": "1.16.1",
+          "last_release": "2026-03-27"
         },
         "litecli": {
           "description": "Litecli is a command line interface for SQLite with auto-completion and syntax highlighting.",
           "url": "https://litecli.com/",
           "execs": [
             "litecli"
-          ]
+          ],
+          "version": "1.17.1",
+          "last_release": "2026-01-31"
         },
         "mycli": {
           "description": "Mycli is a command line interface for MySQL with auto-completion and syntax highlighting.",
           "url": "https://www.mycli.net/",
           "execs": [
             "mycli"
-          ]
+          ],
+          "version": "1.68.1",
+          "last_release": "2026-04-16"
         },
         "peewee": {
           "description": "Peewee is a small, expressive ORM for Python.",
@@ -134,14 +158,18 @@
               "cmd": "uvx --from peewee pwiz.py -e sqlite mydb.db",
               "description": "Introspect a SQLite database and generate model code"
             }
-          ]
+          ],
+          "version": "4.0.4",
+          "last_release": "2026-04-02"
         },
         "pgcli": {
           "description": "Pgcli is a command line interface for PostgreSQL with auto-completion and syntax highlighting.",
           "url": "https://www.pgcli.com/",
           "execs": [
             "pgcli"
-          ]
+          ],
+          "version": "4.4.0",
+          "last_release": "2025-12-24"
         },
         "sqlparse": {
           "description": "Sqlparse is a non-validating SQL parser for Python.",
@@ -154,14 +182,18 @@
               "cmd": "uvx --from sqlparse sqlformat --reindent --keywords upper query.sql",
               "description": "Reformat a SQL file with uppercase keywords and indentation"
             }
-          ]
+          ],
+          "version": "0.5.5",
+          "last_release": "2025-12-19"
         },
         "sqlite-utils": {
           "description": "Python CLI utility and library for manipulating SQLite databases",
           "url": "https://github.com/simonw/sqlite-utils",
           "execs": [
             "sqlite-utils"
-          ]
+          ],
+          "version": "3.39",
+          "last_release": "2025-11-24"
         }
       }
     },
@@ -174,21 +206,27 @@
           "url": "https://github.com/Textualize/rich-cli",
           "execs": [
             "rich"
-          ]
+          ],
+          "version": "1.8.1",
+          "last_release": "2025-07-04"
         },
         "cement": {
           "description": "Advanced CLI Application Framework for Python",
           "url": "https://docs.builtoncement.com",
           "execs": [
             "cement"
-          ]
+          ],
+          "version": "3.0.14",
+          "last_release": "2025-05-05"
         },
         "black": {
           "description": "The uncompromising Python code formatter",
           "url": "https://github.com/psf/black",
           "execs": [
             "black"
-          ]
+          ],
+          "version": "26.3.1",
+          "last_release": "2026-03-12"
         },
         "invoke": {
           "description": "Tool for managing shell-oriented subprocesses and organizing executable Python code into CLI-invokable tasks",
@@ -196,7 +234,9 @@
           "execs": [
             "invoke",
             "inv"
-          ]
+          ],
+          "version": "3.0.3",
+          "last_release": "2026-04-07"
         },
         "ipython": {
           "description": "Enhanced interactive Python shell",
@@ -204,7 +244,9 @@
           "execs": [
             "ipython",
             "ipython3"
-          ]
+          ],
+          "version": "9.12.0",
+          "last_release": "2026-03-27"
         },
         "jupyter-core": {
           "description": "Core functionality for Jupyter projects",
@@ -219,7 +261,9 @@
               "cmd": "uvx --from jupyter-core jupyter notebook",
               "description": "Launch the Jupyter notebook server"
             }
-          ]
+          ],
+          "version": "5.9.1",
+          "last_release": "2025-10-16"
         },
         "mypy": {
           "description": "Optional static typing for Python",
@@ -227,28 +271,36 @@
           "execs": [
             "mypy",
             "mypy-langserver"
-          ]
+          ],
+          "version": "1.20.1",
+          "last_release": "2026-04-13"
         },
         "poetry": {
           "description": "Python packaging and dependency management",
           "url": "https://python-poetry.org/",
           "execs": [
             "poetry"
-          ]
+          ],
+          "version": "2.3.4",
+          "last_release": "2026-04-12"
         },
         "pre-commit": {
           "description": "Framework for managing and maintaining multi-language git hooks",
           "url": "https://github.com/pre-commit/pre-commit",
           "execs": [
             "pre-commit"
-          ]
+          ],
+          "version": "4.5.1",
+          "last_release": "2025-12-16"
         },
         "pudb": {
           "description": "Full-screen, console-based visual debugger for Python",
           "url": "https://github.com/inducer/pudb",
           "execs": [
             "pudb"
-          ]
+          ],
+          "version": "2025.1.5",
+          "last_release": "2025-12-06"
         },
         "py2app": {
           "description": "Create standalone Mac OS X applications",
@@ -261,7 +313,9 @@
               "cmd": "uvx --from py2app py2applet --make-setup myscript.py",
               "description": "Generate a setup.py for bundling a script into a Mac app"
             }
-          ]
+          ],
+          "version": "0.28.10",
+          "last_release": "2026-02-13"
         },
         "pyarmor": {
           "description": "Tool for obfuscating Python scripts",
@@ -271,7 +325,9 @@
             "pyarmor-7",
             "pyarmor-8",
             "pyarmor-auth"
-          ]
+          ],
+          "version": "9.2.4",
+          "last_release": "2026-03-18"
         },
         "pyinstaller": {
           "description": "Convert Python programs into stand-alone executables",
@@ -289,7 +345,9 @@
               "cmd": "uvx --from pyinstaller pyinstaller --onefile myscript.py",
               "description": "Bundle a script into a single standalone executable"
             }
-          ]
+          ],
+          "version": "6.19.0",
+          "last_release": "2026-02-14"
         },
         "pyright": {
           "description": "Static type checker for Python",
@@ -299,14 +357,18 @@
             "pyright-langserver",
             "pyright-python",
             "pyright-python-langserver"
-          ]
+          ],
+          "version": "1.1.408",
+          "last_release": "2026-01-08"
         },
         "ruff": {
           "description": "An extremely fast Python linter",
           "url": "https://github.com/astral-sh/ruff",
           "execs": [
             "ruff"
-          ]
+          ],
+          "version": "0.15.11",
+          "last_release": "2026-04-16"
         },
         "shiv": {
           "description": "Build fully self-contained Python zipapps",
@@ -314,21 +376,27 @@
           "execs": [
             "shiv",
             "shiv-info"
-          ]
+          ],
+          "version": "1.0.8",
+          "last_release": "2024-11-01"
         },
         "ty": {
           "description": "An extremely fast Python type checker and language server",
           "url": "https://github.com/astral-sh/ty",
           "execs": [
             "ty"
-          ]
+          ],
+          "version": "0.0.31",
+          "last_release": "2026-04-15"
         },
         "uv": {
           "description": "Extremely fast Python package installer and resolver, written in Rust",
           "url": "https://github.com/astral-sh/uv",
           "execs": [
             "uv"
-          ]
+          ],
+          "version": "0.11.7",
+          "last_release": "2026-04-15"
         }
       }
     },
@@ -347,14 +415,18 @@
               "cmd": "uvx --from markdown markdown_py README.md > README.html",
               "description": "Convert a Markdown file to HTML"
             }
-          ]
+          ],
+          "version": "3.10.2",
+          "last_release": "2026-02-09"
         },
         "pdoc": {
           "description": "Auto-generate API documentation for Python projects",
           "url": "https://pdoc.dev/",
           "execs": [
             "pdoc"
-          ]
+          ],
+          "version": "16.0.0",
+          "last_release": "2025-10-27"
         }
       }
     },
@@ -367,35 +439,45 @@
           "url": "https://github.com/Yelp/detect-secrets",
           "execs": [
             "detect-secrets"
-          ]
+          ],
+          "version": "1.5.0",
+          "last_release": "2024-05-06"
         },
         "fsociety": {
           "description": "Modular penetration testing framework",
           "url": "https://github.com/fsociety-team/fsociety",
           "execs": [
             "fsociety"
-          ]
+          ],
+          "version": "3.2.9",
+          "last_release": "2023-06-16"
         },
         "scapy": {
           "description": "Packet manipulation program",
           "url": "https://scapy.net/",
           "execs": [
             "scapy"
-          ]
+          ],
+          "version": "2.7.0",
+          "last_release": "2025-12-26"
         },
         "sqlmap": {
           "description": "Automatic SQL injection and database takeover tool",
           "url": "https://sqlmap.org/",
           "execs": [
             "sqlmap"
-          ]
+          ],
+          "version": "1.10.4",
+          "last_release": "2026-04-09"
         },
         "uncompyle6": {
           "description": "Native Python cross-version decompiler that translates Python bytecode back into equivalent Python source code",
           "url": "https://github.com/rocky/python-uncompyle6",
           "execs": [
             "uncompyle6"
-          ]
+          ],
+          "version": "3.9.3",
+          "last_release": "2025-09-29"
         }
       }
     },
@@ -414,49 +496,63 @@
               "cmd": "uvx --from ansible ansible-community --version",
               "description": "Check the installed Ansible community version"
             }
-          ]
+          ],
+          "version": "13.5.0",
+          "last_release": "2026-03-25"
         },
         "awscli": {
           "description": "Official command-line interface for Amazon Web Services",
           "url": "https://aws.amazon.com/cli/",
           "execs": [
             "aws"
-          ]
+          ],
+          "version": "1.44.81",
+          "last_release": "2026-04-17"
         },
         "bpytop": {
           "description": "Resource monitor that shows usage and stats for processor, memory, disks, network, and processes",
           "url": "https://github.com/aristocratos/bpytop",
           "execs": [
             "bpytop"
-          ]
+          ],
+          "version": "1.0.68",
+          "last_release": "2021-12-22"
         },
         "glances": {
           "description": "Cross-platform monitoring tool with curses or Web based interface",
           "url": "https://github.com/nicolargo/glances",
           "execs": [
             "glances"
-          ]
+          ],
+          "version": "4.5.3",
+          "last_release": "2026-03-31"
         },
         "k9": {
           "description": "Terminal-based UI to manage Kubernetes clusters",
           "url": "https://github.com/derailed/k9s",
           "execs": [
             "k9"
-          ]
+          ],
+          "version": "1.0.0",
+          "last_release": "2022-10-12"
         },
         "mamba": {
           "description": "Fast, cross-platform package manager",
           "url": "https://github.com/mamba-org/mamba",
           "execs": [
             "mamba"
-          ]
+          ],
+          "version": "0.11.3",
+          "last_release": "2023-11-09"
         },
         "pipx": {
           "description": "Install and run Python applications in isolated environments",
           "url": "https://pypa.github.io/pipx/",
           "execs": [
             "pipx"
-          ]
+          ],
+          "version": "1.11.1",
+          "last_release": "2026-03-31"
         },
         "platformio": {
           "description": "Open source ecosystem for IoT development with cross-platform IDE and unified debugger",
@@ -464,7 +560,9 @@
           "execs": [
             "platformio",
             "pio"
-          ]
+          ],
+          "version": "6.1.19",
+          "last_release": "2026-02-04"
         },
         "xonsh": {
           "description": "Python-powered shell",
@@ -474,7 +572,9 @@
             "xonsh-cat",
             "xonsh-uname",
             "xonsh-uptime"
-          ]
+          ],
+          "version": "0.22.8",
+          "last_release": "2026-03-17"
         }
       }
     },
@@ -489,7 +589,9 @@
             "coverage",
             "coverage-3.13",
             "coverage3"
-          ]
+          ],
+          "version": "7.13.5",
+          "last_release": "2026-03-17"
         },
         "nox": {
           "description": "Flexible test automation",
@@ -497,7 +599,9 @@
           "execs": [
             "nox",
             "tox-to-nox"
-          ]
+          ],
+          "version": "2026.4.10",
+          "last_release": "2026-04-10"
         },
         "pytest": {
           "description": "Testing framework",
@@ -505,7 +609,9 @@
           "execs": [
             "pytest",
             "py.test"
-          ]
+          ],
+          "version": "9.0.3",
+          "last_release": "2026-04-07"
         },
         "schemathesis": {
           "description": "Property-based testing for APIs",
@@ -513,21 +619,27 @@
           "execs": [
             "schemathesis",
             "st"
-          ]
+          ],
+          "version": "4.15.2",
+          "last_release": "2026-04-14"
         },
         "tavern": {
           "description": "pytest plugin, command-line tool, and Python library for automated testing of APIs",
           "url": "https://github.com/taverntesting/tavern",
           "execs": [
             "tavern-ci"
-          ]
+          ],
+          "version": "3.3.3",
+          "last_release": "2026-04-08"
         },
         "tox": {
           "description": "Automate and standardize testing",
           "url": "https://tox.wiki/",
           "execs": [
             "tox"
-          ]
+          ],
+          "version": "4.53.0",
+          "last_release": "2026-04-14"
         }
       }
     },
@@ -540,49 +652,63 @@
           "url": "https://docs.celeryq.dev/",
           "execs": [
             "celery"
-          ]
+          ],
+          "version": "5.6.3",
+          "last_release": "2026-03-26"
         },
         "cookiecutter": {
           "description": "Project template tool",
           "url": "https://cookiecutter.readthedocs.io/",
           "execs": [
             "cookiecutter"
-          ]
+          ],
+          "version": "2.7.1",
+          "last_release": "2026-03-04"
         },
         "copier": {
           "description": "Library for rendering project templates",
           "url": "https://copier.readthedocs.io/",
           "execs": [
             "copier"
-          ]
+          ],
+          "version": "9.14.3",
+          "last_release": "2026-04-10"
         },
         "doitlive": {
           "description": "Tool for live presentations in the terminal",
           "url": "https://doitlive.readthedocs.io/",
           "execs": [
             "doitlive"
-          ]
+          ],
+          "version": "5.2.1",
+          "last_release": "2026-02-16"
         },
         "faker": {
           "description": "Generator for fake data",
           "url": "https://faker.readthedocs.io/",
           "execs": [
             "faker"
-          ]
+          ],
+          "version": "40.15.0",
+          "last_release": "2026-04-17"
         },
         "howdoi": {
           "description": "Instant coding answers via the command line",
           "url": "https://github.com/gleitz/howdoi",
           "execs": [
             "howdoi"
-          ]
+          ],
+          "version": "2.0.20",
+          "last_release": "2022-10-03"
         },
         "html2text": {
           "description": "Convert HTML to Markdown-formatted text",
           "url": "https://github.com/Alir3z4/html2text/",
           "execs": [
             "html2text"
-          ]
+          ],
+          "version": "2025.4.15",
+          "last_release": "2025-04-15"
         },
         "magic-wormhole": {
           "description": "Tool to get things from one computer to another, safely",
@@ -599,28 +725,36 @@
               "cmd": "uvx --from magic-wormhole wormhole receive",
               "description": "Receive a file using the one-time code from the sender"
             }
-          ]
+          ],
+          "version": "0.23.0",
+          "last_release": "2026-03-10"
         },
         "plan": {
           "description": "Crontab file manager",
           "url": "https://github.com/fengsp/plan",
           "execs": [
             "plan-quickstart"
-          ]
+          ],
+          "version": "0.5",
+          "last_release": "2015-02-16"
         },
         "prefect": {
           "description": "Workflow management system",
           "url": "https://www.prefect.io/",
           "execs": [
             "prefect"
-          ]
+          ],
+          "version": "3.6.27",
+          "last_release": "2026-04-17"
         },
         "pyclean": {
           "description": "Pure Python cross-platform pycache cleaner",
           "url": "https://github.com/bittner/pyclean",
           "execs": [
             "pyclean"
-          ]
+          ],
+          "version": "3.6.0",
+          "last_release": "2026-03-30"
         },
         "rq": {
           "description": "Simple job queues for Python",
@@ -629,24 +763,30 @@
             "rq",
             "rqinfo",
             "rqworker"
-          ]
+          ],
+          "version": "2.8.0",
+          "last_release": "2026-04-17"
         },
         "speedtest-cli": {
           "description": "Command line interface for testing internet bandwidth using speedtest.net",
           "url": "https://github.com/sivel/speedtest-cli",
           "execs": [
             "speedtest-cli"
-          ]
+          ],
+          "version": "2.1.3",
+          "last_release": "2021-04-08"
         },
         "streamlink": {
           "description": "CLI utility that pipes video streams from various services into a video player",
           "url": "https://github.com/streamlink/streamlink",
           "execs": [
             "streamlink"
-          ]
+          ],
+          "version": "8.3.0",
+          "last_release": "2026-04-10"
         },
         "tmuxp": {
-          "description": "tmux session manager — save and load tmux sessions via config files",
+          "description": "tmux session manager \u2014 save and load tmux sessions via config files",
           "url": "https://tmuxp.git-pull.com",
           "execs": [
             "tmuxp"
@@ -656,7 +796,9 @@
               "cmd": "uvx tmuxp load mysession.yaml",
               "description": "Load a tmux session from a YAML config file"
             }
-          ]
+          ],
+          "version": "1.67.0",
+          "last_release": "2026-03-09"
         },
         "thefuck": {
           "description": "Magnificent application that corrects your previous console command",
@@ -664,21 +806,27 @@
           "execs": [
             "thefuck",
             "fuck"
-          ]
+          ],
+          "version": "3.32",
+          "last_release": "2022-01-02"
         },
         "typer": {
           "description": "Build CLI applications",
           "url": "https://typer.tiangolo.com/",
           "execs": [
             "typer"
-          ]
+          ],
+          "version": "0.24.1",
+          "last_release": "2026-02-21"
         },
         "unp": {
           "description": "Command line tool that can unpack archives",
           "url": "https://github.com/mitsuhiko/unp",
           "execs": [
             "unp"
-          ]
+          ],
+          "version": "0.3",
+          "last_release": "2014-08-24"
         },
         "visidata": {
           "description": "Interactive multitool for exploring, analyzing, and converting datasets in the terminal",
@@ -692,17 +840,21 @@
               "cmd": "uvx --from visidata vd data.csv",
               "description": "Open a CSV file in the interactive terminal UI"
             }
-          ]
+          ],
+          "version": "3.3",
+          "last_release": "2025-09-08"
         },
         "youtube-dl": {
           "description": "Download videos from YouTube and other video sites",
           "url": "https://youtube-dl.org/",
           "execs": [
             "youtube-dl"
-          ]
+          ],
+          "version": "2021.12.17",
+          "last_release": "2021-12-16"
         },
         "yt-dlp": {
-          "description": "Feature-rich audio/video downloader supporting thousands of sites — actively maintained fork of youtube-dl",
+          "description": "Feature-rich audio/video downloader supporting thousands of sites \u2014 actively maintained fork of youtube-dl",
           "url": "https://github.com/yt-dlp/yt-dlp",
           "execs": [
             "yt-dlp"
@@ -716,7 +868,9 @@
               "cmd": "uvx yt-dlp -x --audio-format mp3 https://www.youtube.com/watch?v=dQw4w9WgXcQ",
               "description": "Extract audio as MP3 from a YouTube video"
             }
-          ]
+          ],
+          "version": "2026.3.17",
+          "last_release": "2026-03-17"
         }
       }
     },
@@ -735,21 +889,27 @@
               "cmd": "uvx --from django django-admin startproject myproject",
               "description": "Create a new Django project scaffold"
             }
-          ]
+          ],
+          "version": "6.0.4",
+          "last_release": "2026-04-07"
         },
         "fastapi[standard]": {
           "description": "Modern, fast web framework for building APIs",
           "url": "https://fastapi.tiangolo.com/",
           "execs": [
             "fastapi"
-          ]
+          ],
+          "version": "0.136.0",
+          "last_release": "2026-04-16"
         },
         "flask": {
           "description": "Lightweight WSGI web application framework",
           "url": "https://flask.palletsprojects.com/",
           "execs": [
             "flask"
-          ]
+          ],
+          "version": "3.1.3",
+          "last_release": "2026-02-19"
         },
         "httpie": {
           "description": "User-friendly command-line HTTP client",
@@ -768,7 +928,9 @@
               "cmd": "uvx --from httpie http POST https://httpbin.org/post name=alice",
               "description": "Send a POST request with a JSON body field"
             }
-          ]
+          ],
+          "version": "3.2.4",
+          "last_release": "2024-11-01"
         },
         "mitmproxy": {
           "description": "Free and open source interactive HTTPS proxy for penetration testers and software developers",
@@ -777,21 +939,27 @@
             "mitmproxy",
             "mitmdump",
             "mitmweb"
-          ]
+          ],
+          "version": "12.2.2",
+          "last_release": "2026-04-12"
         },
         "uvicorn": {
           "description": "Lightning-fast ASGI server",
           "url": "https://www.uvicorn.org/",
           "execs": [
             "uvicorn"
-          ]
+          ],
+          "version": "0.44.0",
+          "last_release": "2026-04-06"
         },
         "websockets": {
           "description": "Library for building WebSocket servers and clients",
           "url": "https://github.com/aaugustin/websockets",
           "execs": [
             "websockets"
-          ]
+          ],
+          "version": "16.0",
+          "last_release": "2026-01-10"
         }
       }
     },
@@ -802,13 +970,17 @@
         "carlosferreyra": {
           "description": "Interactive CLI business card for Carlos Ferreyra",
           "url": "https://github.com/carlosferreyra/carlosferreyra",
-          "execs": ["carlosferreyra"],
+          "execs": [
+            "carlosferreyra"
+          ],
           "examples": [
             {
               "cmd": "uvx carlosferreyra --open github",
               "description": "Open GitHub profile directly"
             }
-          ]
+          ],
+          "version": "1.2.11",
+          "last_release": "2026-04-13"
         }
       }
     }
