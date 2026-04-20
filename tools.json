@@ -524,8 +524,8 @@
           "execs": [
             "glances"
           ],
-          "version": "4.5.3",
-          "last_release": "2026-03-31"
+          "version": "4.5.4",
+          "last_release": "2026-04-19"
         },
         "mamba": {
           "description": "Fast, cross-platform package manager",
