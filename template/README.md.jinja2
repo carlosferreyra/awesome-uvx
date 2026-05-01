@@ -33,7 +33,7 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 
 | Name | Description | Executable(s) | Latest Release |
 |:-----|:------------|:--------------|:--------------|
-{% for pkg_name, pkg in category.tools.items() %}| [{{ pkg_name }}]({{ pkg.url }}) | {{ pkg.description }}{% if pkg.examples %}<br><details><summary><strong><a href="#">Examples</a></strong></summary>{% for ex in pkg.examples %}<br>`{{ ex.cmd | escape_pipe }}`{% if ex.description %} — {{ ex.description }}{% endif %}{% endfor %}<br></details>{% endif %} | {% for exec in pkg.execs %}```{{ exec }}```{% if not loop.last %}, {% endif %}{% endfor %} | {% if pkg.version %}{{ pkg.version }}<br>{{ pkg.last_release }}{% else %}—{% endif %} |
+{% for pkg_name, pkg in category.tools.items() %}| [{{ pkg_name }}]({{ pkg.url }}) | {{ pkg.description }}{% if pkg.examples %}<br><details><summary><strong><a href="#">Examples</a></strong></summary>{% for ex in pkg.examples %}<br>`{{ ex.cmd | escape_pipe }}`{% if ex.description %} — {{ ex.description }}{% endif %}{% endfor %}<br></details>{% endif %} | {% for exec in pkg.execs %}```{{ exec }}```{% if not loop.last %}, {% endif %}{% endfor %} | {% if pkg.version %}{{ pkg.version }} \|<br>{{ pkg.last_release }}{% else %}—{% endif %} |
 {% endfor %}
 
 {% endfor %}
