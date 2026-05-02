@@ -7,7 +7,7 @@
 import json
 from pathlib import Path
 
-from jinja2 import Environment, FileSystemLoader
+from jinja2 import Environment, FileSystemLoader  # type: ignore[ty:unresolved-import]
 
 
 def load_tools(tools_path: Path) -> list:
@@ -23,12 +23,14 @@ def generate_readme():
 
         categories = load_tools(tools_path)
         for cat in categories:
-            cat["tools"] = dict(sorted(cat["tools"].items(), key=lambda x: x[0].lower()))
+            cat["tools"] = dict(
+                sorted(cat["tools"].items(), key=lambda x: x[0].lower())
+            )
         total_tools = sum(len(cat["tools"]) for cat in categories)
 
         env = Environment(loader=FileSystemLoader(template_dir))
         env.filters["escape_pipe"] = lambda s: s.replace("|", "\\|")
-        template = env.get_template("README.md.jinja2")
+        template = env.get_template("README.md.j2")
 
         readme_content = template.render(
             categories=categories,
