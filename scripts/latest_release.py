@@ -7,8 +7,9 @@
 import json
 import logging
 from pathlib import Path
+from typing import Any
 
-import httpx
+import httpx  # type: ignore[ty:unresolved-import]
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
 log = logging.getLogger(__name__)
@@ -22,18 +23,18 @@ def pypi_package_name(name: str) -> str:
     return name.split("[")[0]
 
 
-def fetch_latest(package: str) -> tuple[str, str] | None:
+def fetch_latest(package: str) -> tuple[str, str | None] | None:
     url = PYPI_URL.format(package=pypi_package_name(package))
     try:
         r = httpx.get(url, timeout=10, follow_redirects=True)
         r.raise_for_status()
-        info = r.json()
-        version = info["info"]["version"]
+        info: dict[str, Any] = r.json()
+        version: str = info["info"]["version"]
         # upload_time of the latest version's first file
         releases = info["releases"].get(version, [])
         upload_time = releases[0]["upload_time"] if releases else None
         date = upload_time[:10] if upload_time else None
-        return version, date
+        return (version, date)
     except Exception as e:
         log.warning("Failed to fetch %s: %s", package, e)
         return None
