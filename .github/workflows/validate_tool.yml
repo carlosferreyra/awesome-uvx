@@ -20,39 +20,19 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set up UV
+      - name: Set up uv
         uses: astral-sh/setup-uv@v7
 
       - name: Validate tools.json schema
         run: uv run scripts/checks.py
 
-      - name: Extract added tools from diff
-        id: diff
-        run: |
-          TOOLS=$(uv run scripts/diff_tools.py --base origin/main)
-          EXIT=$?
-          if [ $EXIT -eq 2 ]; then
-            echo "no_new_tools=true" >> $GITHUB_OUTPUT
-            echo "No new tools in this PR — schema-only change."
-          elif [ $EXIT -ne 0 ]; then
-            echo "diff_error=true" >> $GITHUB_OUTPUT
-          else
-            echo "tools=$TOOLS" >> $GITHUB_OUTPUT
-            echo "no_new_tools=false" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Test new tools via uvx
-        if: steps.diff.outputs.no_new_tools != 'true' && steps.diff.outputs.diff_error != 'true'
+      - name: Test newly added tools via uvx
         id: test
         continue-on-error: true
-        run: |
-          uv run scripts/test_clients.py \
-            --tools '${{ steps.diff.outputs.tools }}' \
-            --output output.log
+        run: uv run scripts/test_clients.py --diff origin/main --output output.log
 
       - name: Set up Bun
-        if: steps.test.outcome == 'failure' || steps.test.outcome == 'success' || steps.diff.outputs.no_new_tools == 'true'
-        uses: oven-sh/setup-bun@v2.2.0
+        uses: oven-sh/setup-bun@v2
 
       - name: Comment on PR — tool failure
         if: steps.test.outcome == 'failure'
@@ -63,7 +43,7 @@ jobs:
         run: bun run scripts/check_and_comment.ts
 
       - name: Auto-approve PR
-        if: steps.test.outcome == 'success' || steps.diff.outputs.no_new_tools == 'true'
+        if: steps.test.outcome == 'success'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
