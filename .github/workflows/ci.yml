@@ -23,33 +23,23 @@ jobs:
         uses: actions/checkout@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 2
 
-      - name: Set up UV
+      - name: Set up uv
         uses: astral-sh/setup-uv@v7
 
       - name: Validate tools.json schema
         run: uv run scripts/checks.py
 
-      - name: Build full tools list
-        id: tools
-        run: |
-          TOOLS=$(uv run - <<'EOF'
-          import json, sys
-          with open("tools.json") as f:
-              cats = json.load(f)["categories"]
-          tools = [{"package": k, "execs": v["execs"]} for c in cats for k, v in c["tools"].items()]
-          print(json.dumps(tools))
-          EOF
-          )
-          echo "json=$TOOLS" >> $GITHUB_OUTPUT
-
-      - name: Test all tools via uvx
-        continue-on-error: true
+      - name: Test tools via uvx
         id: test
+        continue-on-error: true
         run: |
-          uv run scripts/test_clients.py \
-            --tools '${{ steps.tools.outputs.json }}' \
-            --output output.log
+          if [ "${{ github.event_name }}" = "push" ]; then
+            uv run scripts/test_clients.py --diff HEAD~1 --output output.log
+          else
+            uv run scripts/test_clients.py --all --output output.log
+          fi
 
       - name: Upload validation report
         if: always()
@@ -65,10 +55,25 @@ jobs:
         if: always()
         run: rm -f checks.log output.log
 
+      - name: Detect README-affecting changes
+        id: readme_changed
+        run: |
+          if [ "${{ github.event_name }}" = "push" ]; then
+            if git diff --name-only HEAD~1 HEAD | grep -qE '^(tools\.json|template/)'; then
+              echo "changed=true" >> $GITHUB_OUTPUT
+            else
+              echo "changed=false" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
       - name: Generate README
+        if: steps.readme_changed.outputs.changed == 'true'
         run: uv run scripts/readme.py
 
       - name: Commit README if changed
+        if: steps.readme_changed.outputs.changed == 'true'
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: 'chore(readme): regenerate from tools.json [skip ci]'
