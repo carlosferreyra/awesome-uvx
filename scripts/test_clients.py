@@ -6,24 +6,18 @@
 Test that tools in the list are installable and executable via uvx.
 
 Usage:
-    uv run scripts/test-clients.py --tools '<json>'
+    uv run scripts/test_clients.py --all
+    uv run scripts/test_clients.py --diff origin/main
+    uv run scripts/test_clients.py --tools '<json>'
 
-The --tools argument accepts a JSON array of tool objects matching the
-tools.json schema. Each object must have at minimum:
-    {"package": "<name>", "execs": ["<binary>", ...]}
+Modes (mutually exclusive):
+    --all              Test every tool in tools.json.
+    --diff <ref>       Test only tools added vs. <ref> (uses diff_tools.py).
+    --tools '<json>'   Explicit JSON array of {"package", "execs"} objects.
 
-Examples:
-    # Test a single tool (e.g. from a PR diff):
-    uv run scripts/test-clients.py --tools '[{"package":"ruff","execs":["ruff"]}]'
-
-    # Test all tools from tools.json (e.g. monthly run):
-    uv run scripts/test-clients.py --tools "$(python -c "
-    import json
-    with open('tools.json') as f:
-        cats = json.load(f)['categories']
-    tools = [{'package': k, 'execs': v['execs']} for c in cats for k, v in c['tools'].items()]
-    print(json.dumps(tools))
-    ")"
+Exit codes:
+    0  all tested tools passed (or nothing to test in --diff mode)
+    1  one or more tools failed, or invalid input
 """
 
 import json
@@ -95,25 +89,63 @@ def test_tool(package: str, exec_name: str) -> tuple[bool, str]:
     return False, classify_failure(out + out2, err + err2)
 
 
+def load_all_tools(tools_path: Path) -> list[dict]:
+    with open(tools_path) as f:
+        cats = json.load(f)["categories"]
+    return [
+        {"package": pkg, "execs": data["execs"]}
+        for cat in cats
+        for pkg, data in cat["tools"].items()
+    ]
+
+
+def load_diff_tools(base_ref: str) -> list[dict]:
+    """Delegate to diff_tools.py to extract added tools vs. base_ref."""
+    script = Path(__file__).parent / "diff_tools.py"
+    result = subprocess.run(
+        ["uv", "run", str(script), "--base", base_ref],
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode == 2:
+        return []
+    if result.returncode != 0:
+        print(f"diff_tools.py failed: {result.stderr}", file=sys.stderr)
+        sys.exit(1)
+    return json.loads(result.stdout)
+
+
 def main():
     parser = ArgumentParser(description="Test uvx tool installations.")
-    parser.add_argument(
-        "--tools",
-        required=True,
-        help='JSON array of {"package": str, "execs": [str, ...]} objects',
-    )
+    src = parser.add_mutually_exclusive_group(required=True)
+    src.add_argument("--all", action="store_true", help="Test every tool in tools.json")
+    src.add_argument("--diff", metavar="REF", help="Test only tools added vs. REF")
+    src.add_argument("--tools", help='JSON array of {"package", "execs"} objects')
     parser.add_argument(
         "--output",
         default="output.log",
         help="Path to write failure log (default: output.log)",
     )
+    parser.add_argument(
+        "--tools-path",
+        default="tools.json",
+        help="Path to tools.json (default: tools.json)",
+    )
     args = parser.parse_args()
 
-    try:
-        tools = json.loads(args.tools)
-    except json.JSONDecodeError as e:
-        print(f"Error: --tools is not valid JSON: {e}", file=sys.stderr)
-        sys.exit(1)
+    if args.all:
+        tools = load_all_tools(Path(args.tools_path))
+    elif args.diff:
+        tools = load_diff_tools(args.diff)
+        if not tools:
+            print("No new tools to test.")
+            return
+    else:
+        try:
+            tools = json.loads(args.tools)
+        except json.JSONDecodeError as e:
+            print(f"Error: --tools is not valid JSON: {e}", file=sys.stderr)
+            sys.exit(1)
 
     # Ensure uv is available
     ok, version, _ = run("uv --version")
@@ -135,11 +167,13 @@ def main():
         success, failure_type = test_tool(package, exec_name)
 
         if success:
-            print(f"    ✓ ok")
+            print("    ✓ ok")
             results.append({"package": package, "success": True})
         else:
             print(f"    ✗ failed ({failure_type})")
-            results.append({"package": package, "success": False, "reason": failure_type})
+            results.append(
+                {"package": package, "success": False, "reason": failure_type}
+            )
 
     # Summary
     passed = [r for r in results if r["success"]]
