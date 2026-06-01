@@ -397,6 +397,13 @@
           ],
           "version": "0.11.7",
           "last_release": "2026-04-15"
+        },
+        "uv-upsync": {
+          "description": "uv-upsync is a uv-native tool for automated dependency updates and version bumping in pyproject.toml",
+          "url": "https://github.com/pivoshenko/uv-upsync",
+          "execs": [
+            "uv-upsync"
+          ]
         }
       }
     },
