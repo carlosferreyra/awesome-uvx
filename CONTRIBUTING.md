@@ -7,7 +7,7 @@ contributing to this curated list of Python CLI tools.
 
 To add a new CLI tool to the list:
 
-1. The tool must be installable via UVX or PIPX
+1. The tool must be installable via UVX or PIPX, and it must pass this repo's `uvx` validation
 2. The tool must be a command-line interface (CLI) tool
 3. The tool must be actively maintained
 4. The tool should be useful for a general audience
@@ -117,10 +117,12 @@ Keep the slug lowercase, hyphen-separated, and consistent with the name.
 2. Create a new branch for your changes
 3. Edit `tools.json` to add your tool to the appropriate category
 4. Run `uv run scripts/checks.py` locally to validate your changes
-5. Make sure all checks pass
-6. Create a pull request with a clear description of the tool you're adding
+5. Run `uv run scripts/test_clients.py --diff origin/main --output output.log` to test newly added tools with `uvx`
+6. Make sure all checks pass
+7. Create a pull request with a clear description of the tool you're adding
 
-The GitHub Actions workflow will automatically validate `tools.json` on every PR.
+The GitHub Actions workflow will automatically validate `tools.json` and test newly added tools with
+`uvx` on every PR.
 
 ## Validation Checks
 
@@ -130,6 +132,14 @@ Your contribution will be automatically checked for:
 - Valid URL format (must start with `http://` or `https://`)
 - Non-empty executable list
 - Valid JSON structure
+- Newly added tools can be installed and executed with `uvx`
+
+To run the same validation locally before opening a PR:
+
+```bash
+uv run scripts/checks.py
+uv run scripts/test_clients.py --diff origin/main --output output.log
+```
 
 ## Code of Conduct
 
