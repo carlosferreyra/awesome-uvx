@@ -124,6 +124,19 @@ Keep the slug lowercase, hyphen-separated, and consistent with the name.
 The GitHub Actions workflow will automatically validate `tools.json` and test newly added tools with
 `uvx` on every PR.
 
+### Choosing a Pull Request Template
+
+Use the template that best matches your change:
+
+- [Add a new tool](https://github.com/carlosferreyra/awesome-uvx/compare/main...main?quick_pull=1&template=add-tool.md)
+- [Update existing tool metadata](https://github.com/carlosferreyra/awesome-uvx/compare/main...main?quick_pull=1&template=update-tool.md)
+- [Repo maintenance or refactor](https://github.com/carlosferreyra/awesome-uvx/compare/main...main?quick_pull=1&template=repo-maintenance.md)
+
+After opening one of these links, choose your branch as the compare branch if GitHub does not select
+it automatically.
+
+If none of these fit, use the default pull request template and explain the change clearly.
+
 ## Validation Checks
 
 Your contribution will be automatically checked for:

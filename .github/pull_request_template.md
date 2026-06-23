@@ -1,26 +1,24 @@
-## What tool are you adding?
+## Choose the right pull request template
 
-Package name:
+Thanks for contributing! This repository has focused templates for common contribution types:
 
-Tool homepage or repository:
+- [Add a new tool](https://github.com/carlosferreyra/awesome-uvx/compare/main...main?quick_pull=1&template=add-tool.md)
+- [Update existing tool metadata](https://github.com/carlosferreyra/awesome-uvx/compare/main...main?quick_pull=1&template=update-tool.md)
+- [Repo maintenance or refactor](https://github.com/carlosferreyra/awesome-uvx/compare/main...main?quick_pull=1&template=repo-maintenance.md)
 
-Category added to:
+After opening one of these links, choose your branch as the compare branch if GitHub does not select
+it automatically.
 
-## Why should it be included?
+If you already opened this pull request, you can still use the sections below.
 
-Please write one or two sentences about what this CLI helps people do.
+## Summary
+
+Describe what this PR changes.
 
 ## Checklist
 
-- [ ] I added the tool to `tools.json`.
-- [ ] The package name matches the name used on PyPI.
-- [ ] The `url` points to the official docs, homepage, or repository.
-- [ ] The `execs` list contains the command users can run.
-- [ ] I ran `uv run scripts/checks.py`.
-- [ ] I ran `uv run scripts/test_clients.py --diff origin/main --output output.log`.
-- [ ] Both commands passed locally, or I explained below why I could not run them.
+- [ ] I chose the template that best matches this PR, or this general template is enough.
+- [ ] I ran the validation that applies to this change.
+- [ ] I added notes below for anything the maintainer should know.
 
 ## Notes for the maintainer
-
-Add anything helpful here, such as why you chose the category, whether the binary name differs from
-the package name, or any validation issue you want help with.
