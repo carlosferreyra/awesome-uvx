@@ -99,6 +99,7 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 | [shiv](https://github.com/linkedin/shiv) | Build fully self-contained Python zipapps | ```shiv```, ```shiv-info``` | 1.0.8 \|<br>2024-11-01 |
 | [ty](https://github.com/astral-sh/ty) | An extremely fast Python type checker and language server | ```ty``` | 0.0.32 \|<br>2026-04-20 |
 | [uv](https://github.com/astral-sh/uv) | Extremely fast Python package installer and resolver, written in Rust | ```uv``` | 0.11.7 \|<br>2026-04-15 |
+| [uv-upsync](https://github.com/pivoshenko/uv-upsync) | uv-upsync is a uv-native tool for automated dependency updates and version bumping in pyproject.toml | ```uv-upsync``` | — |
 
 
 

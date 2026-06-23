@@ -14,6 +14,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   validate:
@@ -72,12 +73,16 @@ jobs:
         if: steps.readme_changed.outputs.changed == 'true'
         run: uv run scripts/readme.py
 
-      - name: Commit README if changed
+      - name: Create README pull request if changed
         if: steps.readme_changed.outputs.changed == 'true'
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: peter-evans/create-pull-request@v7
         with:
-          commit_message: 'chore(readme): regenerate from tools.json [skip ci]'
-          file_pattern: README.md
+          commit-message: 'chore(readme): regenerate from tools.json'
+          title: 'chore(readme): regenerate from tools.json'
+          body: 'Automated README regeneration from tools.json.'
+          branch: chore/regenerate-readme
+          delete-branch: true
+          add-paths: README.md
 
       - name: Fail job if any tools failed
         if: steps.test.outcome == 'failure'
