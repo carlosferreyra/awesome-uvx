@@ -31,16 +31,13 @@ jobs:
         continue-on-error: true
         run: uv run scripts/test_clients.py --diff origin/main --output output.log
 
-      - name: Set up Bun
-        uses: oven-sh/setup-bun@v2
-
       - name: Comment on PR — tool failure
         if: steps.test.outcome == 'failure'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
           ACTION: comment_failure
-        run: bun run scripts/check_and_comment.ts
+        run: uv run scripts/check_and_comment.py
 
       - name: Auto-approve PR
         if: steps.test.outcome == 'success'
@@ -48,7 +45,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
           ACTION: approve
-        run: bun run scripts/check_and_comment.ts
+        run: uv run scripts/check_and_comment.py
 
       - name: Fail job if tool tests failed
         if: steps.test.outcome == 'failure'
