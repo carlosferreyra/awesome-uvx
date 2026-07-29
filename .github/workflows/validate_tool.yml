@@ -41,14 +41,6 @@ jobs:
           ACTION: comment_failure
         run: uv run scripts/check_and_comment.py
 
-      - name: Auto-approve PR
-        if: steps.test.outcome == 'success'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PR_NUMBER: ${{ github.event.pull_request.number }}
-          ACTION: approve
-        run: uv run scripts/check_and_comment.py
-
       - name: Fail job if tool tests failed
         if: steps.test.outcome == 'failure'
         run: exit 1

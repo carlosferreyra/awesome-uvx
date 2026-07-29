@@ -2,7 +2,7 @@
 # requires-python = ">=3.12"
 # dependencies = []
 # ///
-"""Comment on or approve a pull request after tool validation."""
+"""Comment on a pull request after tool validation fails."""
 
 import json
 import os
@@ -90,20 +90,7 @@ def comment_failure() -> None:
     post(f"/issues/{PR_NUMBER}/comments", {"body": body})
 
 
-def approve() -> None:
-    post(
-        f"/pulls/{PR_NUMBER}/reviews",
-        {
-            "event": "APPROVE",
-            "body": "✅ All proposed tools validated successfully via `uvx`. "
-            "Ready for merge.",
-        },
-    )
-
-
 if ACTION == "comment_failure":
     comment_failure()
-elif ACTION == "approve":
-    approve()
 else:
     raise ValueError(f"Unknown ACTION: {ACTION}")
