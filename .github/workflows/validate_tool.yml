@@ -6,6 +6,8 @@ on:
       - main
     paths:
       - 'tools.json'
+      - 'scripts/check_and_comment.py'
+      - '.github/workflows/validate_tool.yml'
 
 permissions:
   contents: read
