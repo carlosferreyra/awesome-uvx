@@ -31,3 +31,4 @@ jobs:
           branch: chore/sync-pypi-release-metadata
           delete-branch: true
           add-paths: tools.json
+          reviewers: carlosferreyra
