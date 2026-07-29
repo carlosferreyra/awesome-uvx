@@ -144,8 +144,8 @@
           "execs": [
             "mycli"
           ],
-          "version": "1.76.0",
-          "last_release": "2026-06-20"
+          "version": "2.7.0",
+          "last_release": "2026-07-25"
         },
         "peewee": {
           "description": "Peewee is a small, expressive ORM for Python.",
@@ -159,8 +159,8 @@
               "description": "Introspect a SQLite database and generate model code"
             }
           ],
-          "version": "4.1.1",
-          "last_release": "2026-06-28"
+          "version": "4.2.6",
+          "last_release": "2026-07-17"
         },
         "pgcli": {
           "description": "Pgcli is a command line interface for PostgreSQL with auto-completion and syntax highlighting.",
@@ -192,8 +192,8 @@
           "execs": [
             "sqlite-utils"
           ],
-          "version": "3.39",
-          "last_release": "2025-11-24"
+          "version": "4.1.1",
+          "last_release": "2026-07-12"
         }
       }
     },
@@ -216,8 +216,8 @@
           "execs": [
             "cement"
           ],
-          "version": "3.0.14",
-          "last_release": "2025-05-05"
+          "version": "3.0.16",
+          "last_release": "2026-07-13"
         },
         "black": {
           "description": "The uncompromising Python code formatter",
@@ -272,8 +272,8 @@
             "mypy",
             "mypy-langserver"
           ],
-          "version": "2.1.0",
-          "last_release": "2026-05-11"
+          "version": "2.3.0",
+          "last_release": "2026-07-13"
         },
         "poetry": {
           "description": "Python packaging and dependency management",
@@ -290,8 +290,8 @@
           "execs": [
             "pre-commit"
           ],
-          "version": "4.6.0",
-          "last_release": "2026-04-21"
+          "version": "4.6.1",
+          "last_release": "2026-07-21"
         },
         "pudb": {
           "description": "Full-screen, console-based visual debugger for Python",
@@ -326,8 +326,8 @@
             "pyarmor-8",
             "pyarmor-auth"
           ],
-          "version": "9.2.5",
-          "last_release": "2026-06-01"
+          "version": "9.2.6",
+          "last_release": "2026-07-27"
         },
         "pyinstaller": {
           "description": "Convert Python programs into stand-alone executables",
@@ -367,8 +367,8 @@
           "execs": [
             "ruff"
           ],
-          "version": "0.15.20",
-          "last_release": "2026-06-25"
+          "version": "0.16.0",
+          "last_release": "2026-07-23"
         },
         "shiv": {
           "description": "Build fully self-contained Python zipapps",
@@ -386,8 +386,8 @@
           "execs": [
             "ty"
           ],
-          "version": "0.0.55",
-          "last_release": "2026-06-27"
+          "version": "0.0.63",
+          "last_release": "2026-07-23"
         },
         "uv": {
           "description": "Extremely fast Python package installer and resolver, written in Rust",
@@ -395,8 +395,8 @@
           "execs": [
             "uv"
           ],
-          "version": "0.11.25",
-          "last_release": "2026-06-27"
+          "version": "0.11.32",
+          "last_release": "2026-07-23"
         },
         "uv-upsync": {
           "description": "uv-upsync is a uv-native tool for automated dependency updates and version bumping in pyproject.toml",
@@ -476,8 +476,8 @@
           "execs": [
             "sqlmap"
           ],
-          "version": "1.10.6",
-          "last_release": "2026-06-02"
+          "version": "1.10.7",
+          "last_release": "2026-07-01"
         },
         "uncompyle6": {
           "description": "Native Python cross-version decompiler that translates Python bytecode back into equivalent Python source code",
@@ -506,8 +506,8 @@
               "description": "Check the installed Ansible community version"
             }
           ],
-          "version": "14.0.0",
-          "last_release": "2026-06-02"
+          "version": "14.2.0",
+          "last_release": "2026-07-14"
         },
         "awscli": {
           "description": "Official command-line interface for Amazon Web Services",
@@ -515,8 +515,8 @@
           "execs": [
             "aws"
           ],
-          "version": "1.45.36",
-          "last_release": "2026-06-23"
+          "version": "1.45.56",
+          "last_release": "2026-07-24"
         },
         "bpytop": {
           "description": "Resource monitor that shows usage and stats for processor, memory, disks, network, and processes",
@@ -551,8 +551,8 @@
           "execs": [
             "pipx"
           ],
-          "version": "1.15.0",
-          "last_release": "2026-06-24"
+          "version": "1.16.3",
+          "last_release": "2026-07-27"
         },
         "platformio": {
           "description": "Open source ecosystem for IoT development with cross-platform IDE and unified debugger",
@@ -573,8 +573,8 @@
             "xonsh-uname",
             "xonsh-uptime"
           ],
-          "version": "0.23.8",
-          "last_release": "2026-05-30"
+          "version": "0.24.0",
+          "last_release": "2026-07-02"
         }
       }
     },
@@ -590,8 +590,8 @@
             "coverage-3.13",
             "coverage3"
           ],
-          "version": "7.14.3",
-          "last_release": "2026-06-22"
+          "version": "7.15.2",
+          "last_release": "2026-07-15"
         },
         "nox": {
           "description": "Flexible test automation",
@@ -600,8 +600,8 @@
             "nox",
             "tox-to-nox"
           ],
-          "version": "2026.4.10",
-          "last_release": "2026-04-10"
+          "version": "2026.7.11",
+          "last_release": "2026-07-12"
         },
         "pytest": {
           "description": "Testing framework",
@@ -620,8 +620,8 @@
             "schemathesis",
             "st"
           ],
-          "version": "4.21.10",
-          "last_release": "2026-06-19"
+          "version": "4.24.3",
+          "last_release": "2026-07-25"
         },
         "tavern": {
           "description": "pytest plugin, command-line tool, and Python library for automated testing of APIs",
@@ -638,8 +638,8 @@
           "execs": [
             "tox"
           ],
-          "version": "4.56.1",
-          "last_release": "2026-06-25"
+          "version": "4.58.0",
+          "last_release": "2026-07-21"
         }
       }
     },
@@ -694,8 +694,8 @@
           "execs": [
             "copier"
           ],
-          "version": "9.16.0",
-          "last_release": "2026-06-23"
+          "version": "9.17.0",
+          "last_release": "2026-07-13"
         },
         "doitlive": {
           "description": "Tool for live presentations in the terminal",
@@ -712,8 +712,8 @@
           "execs": [
             "faker"
           ],
-          "version": "40.23.0",
-          "last_release": "2026-06-10"
+          "version": "40.36.0",
+          "last_release": "2026-07-24"
         },
         "howdoi": {
           "description": "Instant coding answers via the command line",
@@ -767,8 +767,8 @@
           "execs": [
             "prefect"
           ],
-          "version": "3.7.6",
-          "last_release": "2026-06-25"
+          "version": "3.8.0",
+          "last_release": "2026-07-23"
         },
         "pyclean": {
           "description": "Pure Python cross-platform pycache cleaner",
@@ -853,8 +853,8 @@
               "description": "Load a tmux session from a YAML config file"
             }
           ],
-          "version": "1.73.0",
-          "last_release": "2026-06-28"
+          "version": "1.74.0",
+          "last_release": "2026-07-04"
         },
         "typer": {
           "description": "Build CLI applications",
@@ -862,8 +862,8 @@
           "execs": [
             "typer"
           ],
-          "version": "0.26.8",
-          "last_release": "2026-06-26"
+          "version": "0.27.0",
+          "last_release": "2026-07-15"
         },
         "unp": {
           "description": "Command line tool that can unpack archives",
@@ -887,8 +887,8 @@
               "description": "Open a CSV file in the interactive terminal UI"
             }
           ],
-          "version": "3.3",
-          "last_release": "2025-09-08"
+          "version": "3.4",
+          "last_release": "2026-07-01"
         },
         "youtube-dl": {
           "description": "Download videos from YouTube and other video sites",
@@ -915,8 +915,8 @@
               "description": "Extract audio as MP3 from a YouTube video"
             }
           ],
-          "version": "2026.6.9",
-          "last_release": "2026-06-09"
+          "version": "2026.7.4",
+          "last_release": "2026-07-04"
         }
       }
     },
@@ -936,8 +936,8 @@
               "description": "Create a new Django project scaffold"
             }
           ],
-          "version": "6.0.6",
-          "last_release": "2026-06-03"
+          "version": "6.0.7",
+          "last_release": "2026-07-07"
         },
         "fastapi[standard]": {
           "description": "Modern, fast web framework for building APIs",
@@ -945,8 +945,8 @@
           "execs": [
             "fastapi"
           ],
-          "version": "0.138.1",
-          "last_release": "2026-06-25"
+          "version": "0.140.0",
+          "last_release": "2026-07-24"
         },
         "flask": {
           "description": "Lightweight WSGI web application framework",
@@ -995,8 +995,8 @@
           "execs": [
             "uvicorn"
           ],
-          "version": "0.49.0",
-          "last_release": "2026-06-03"
+          "version": "0.51.0",
+          "last_release": "2026-07-08"
         },
         "websockets": {
           "description": "Library for building WebSocket servers and clients",
@@ -1004,8 +1004,8 @@
           "execs": [
             "websockets"
           ],
-          "version": "16.0",
-          "last_release": "2026-01-10"
+          "version": "16.1.1",
+          "last_release": "2026-07-17"
         }
       }
     },
