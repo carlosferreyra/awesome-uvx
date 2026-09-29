@@ -14,7 +14,6 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
 
 jobs:
   validate:
@@ -56,6 +55,10 @@ jobs:
         if: always()
         run: rm -f checks.log output.log
 
+      - name: Fail job if any tools failed
+        if: steps.test.outcome == 'failure'
+        run: exit 1
+
       - name: Detect README-affecting changes
         id: readme_changed
         run: |
@@ -73,17 +76,14 @@ jobs:
         if: steps.readme_changed.outputs.changed == 'true'
         run: uv run scripts/readme.py
 
-      - name: Create README pull request if changed
+      - name: Commit README if changed
         if: steps.readme_changed.outputs.changed == 'true'
-        uses: peter-evans/create-pull-request@v7
-        with:
-          commit-message: 'chore(readme): regenerate from tools.json'
-          title: 'chore(readme): regenerate from tools.json'
-          body: 'Automated README regeneration from tools.json.'
-          branch: chore/regenerate-readme
-          delete-branch: true
-          add-paths: README.md
-
-      - name: Fail job if any tools failed
-        if: steps.test.outcome == 'failure'
-        run: exit 1
+        run: |
+          if git diff --quiet -- README.md; then
+            exit 0
+          fi
+          git add -- README.md
+          git -c user.name='github-actions[bot]' \
+              -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+              commit -m 'chore(readme): regenerate from tools.json'
+          git push origin HEAD:main
