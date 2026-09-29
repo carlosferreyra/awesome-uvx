@@ -361,6 +361,23 @@
           "version": "1.1.414",
           "last_release": "2026-09-10"
         },
+        "rote-cli": {
+          "description": "Compile an AI agent skill into a typed, deterministic pipeline with per-step tests",
+          "url": "https://github.com/trevhud/rote",
+          "execs": [
+            "rote"
+          ],
+          "examples": [
+            {
+              "cmd": "uvx --from rote-cli rote analyze ./my-skill",
+              "description": "Report what a skill would compile to without emitting code"
+            },
+            {
+              "cmd": "uvx --from rote-cli rote compile ./my-skill --runtime python --out ./build",
+              "description": "Compile a skill into a runnable Python pipeline"
+            }
+          ]
+        },
         "ruff": {
           "description": "An extremely fast Python linter",
           "url": "https://github.com/astral-sh/ruff",
