@@ -664,6 +664,21 @@
       "name": "Utilities",
       "slug": "utilities",
       "tools": {
+        "aihawk": {
+          "description": "AI browser agent that browses, clicks, types and reads web pages from plain-English instructions; also an MCP server",
+          "url": "https://github.com/feder-cr/AIHawk",
+          "execs": ["aihawk"],
+          "examples": [
+            {
+              "cmd": "uvx aihawk",
+              "description": "Start the MCP server over stdio, for Claude Code, Codex or Gemini CLI"
+            },
+            {
+              "cmd": "uvx aihawk ui --openrouter-key sk-or-...",
+              "description": "Start the standalone web UI with a model from OpenRouter"
+            }
+          ]
+        },
         "asciinema": {
           "description": "Terminal session recorder",
           "url": "https://asciinema.org",
