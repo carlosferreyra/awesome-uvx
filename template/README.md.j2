@@ -6,7 +6,7 @@
     <a href="https://awesome.re">
         <img src="https://awesome.re/badge.svg" alt="Awesome">
     </a>
-    <p>A collection of Awesome Python CLI Tools available from UVX/PIPX.</p>
+    <p>A collection of {{ total_tools }} Python CLI tools across {{ categories | length }} categories, available from UVX/PIPX.</p>
     <p>you can use this list to find useful Python CLI tools that are available for installation via UVX or
     PIPX. The list is curated and maintained by the community, so feel free to contribute by adding your
     own favorite tools.</p>
@@ -24,11 +24,15 @@
 Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>.
 
 
+## Contents
+
 {% for category in categories %}
-- [{{ category.name }}](#{{ category.slug }})
+- [{{ category.name }}](#{{ category.slug }}) ({{ category.tools | length }} tools)
 {% endfor %}
 
 {% for category in categories %}
+<a id="{{ category.slug }}"></a>
+
 ## {{ category.name }}
 
 | Name | Description | Executable(s) | Latest Release |

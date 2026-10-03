@@ -14,16 +14,16 @@ jobs:
     runs-on: ubuntu-slim
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Set up uv
-        uses: astral-sh/setup-uv@v7
+        uses: astral-sh/setup-uv@v10.2.0
 
       - name: Fetch latest release info from PyPI
         run: uv run scripts/latest_release.py
 
       - name: Create pull request if metadata changed
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           commit-message: 'chore(tools): sync latest PyPI release metadata'
           title: 'chore(tools): sync latest PyPI release metadata'
