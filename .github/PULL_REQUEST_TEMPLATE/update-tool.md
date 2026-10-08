@@ -25,8 +25,10 @@ Please briefly explain what was incorrect, outdated, unclear, or missing.
 - [ ] I updated only the relevant metadata in `tools.json`.
 - [ ] I kept the package name as it appears on PyPI.
 - [ ] I ran `uv run scripts/checks.py`.
-- [ ] If I changed `execs`, I ran `uv run scripts/test_clients.py --diff origin/main --output output.log` or explained below why it does not apply.
+- [ ] If I changed `execs`, I validated the affected commands with `uvx --from <package> <binary> --help` and recorded the commands and results below.
 
 ## Notes for the maintainer
 
 Add any source links, context, or validation notes that will make this easier to review.
+The `--diff` validator checks newly added packages; it does not validate executable changes to an
+existing tool.

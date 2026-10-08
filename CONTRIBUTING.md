@@ -68,6 +68,9 @@ The `examples` field is optional but encouraged when the invocation is non-obvio
 when the package name differs from the binary, piped input is required, or a subcommand is needed
 to do anything useful.
 
+Keep examples inside their tool definition in `tools.json`. The README template displays them in
+collapsible blocks below the category table.
+
 Each example is an object with a required `cmd` and an optional `description`:
 
 ```json
@@ -96,6 +99,23 @@ Guidelines for writing good examples:
 - Always use the full `uvx --from <package> <binary>` form so the command works out of the box
 - Prefer short, realistic commands over exhaustive flag lists
 - Add multiple examples only when they demonstrate meaningfully different use cases
+
+### Choosing a Category
+
+Choose one existing category based on the tool's primary purpose. Categories reflect this Python
+catalog; they do not need to match the JavaScript or Rust lists.
+
+- **Development Tools** covers project generators such as `cookiecutter` and `copier`, debuggers,
+  and general developer CLIs. Framework launch and server commands belong in **Web Frameworks &
+  Servers**.
+- **Packaging & Releases** covers dependency environments, package builds and distribution,
+  versioning, and commit conventions used in release workflows, including `commitizen`.
+- **Testing & Code Quality** covers test-focused workflows such as `tox` and `nox`.
+  General-purpose task execution and orchestration belong in **Automation & Task Runners**.
+
+Keep category-only reorganizations separate from adding tools. When two categories fit, explain
+the main use case in the PR. Preserve existing category slugs when changing display names so
+README links keep working.
 
 ### Adding a New Category
 
