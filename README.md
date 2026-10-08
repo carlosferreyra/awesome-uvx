@@ -75,7 +75,7 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 | [dvc](https://github.com/iterative/dvc) | Command-line tool for version control over data used in machine learning projects | ```dvc``` | 3.67.1 \|<br>2026-03-31 |
 | [llm](https://llm.datasette.io/) | Run prompts and conversations with hosted or local language models<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --from llm llm --help`<br></details> | ```llm``` | 0.36 \|<br>2026-09-22 |
 | [mlflow](https://github.com/mlflow/mlflow) | Open source platform for managing the end-to-end machine learning lifecycle | ```mlflow``` | 3.16.1 \|<br>2026-09-16 |
-| [rote-cli](https://github.com/trevhud/rote) | Compile an AI agent skill into a typed, deterministic pipeline with per-step tests<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --from rote-cli rote analyze ./my-skill` — Report what a skill would compile to without emitting code<br>`uvx --from rote-cli rote compile ./my-skill --runtime python --out ./build` — Compile a skill into a runnable Python pipeline<br></details> | ```rote``` | — |
+| [rote-cli](https://github.com/trevhud/rote) | Compile an AI agent skill into a typed, deterministic pipeline with per-step tests<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --from rote-cli rote analyze ./my-skill` — Report what a skill would compile to without emitting code<br>`uvx --from rote-cli rote compile ./my-skill --runtime python --out ./build` — Compile a skill into a runnable Python pipeline<br></details> | ```rote``` | 0.13.0 \|<br>2026-07-31 |
 
 
 
@@ -100,10 +100,10 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 |:-----|:------------|:--------------|:--------------|
 | [datasette](https://datasette.io/) | Explore and publish SQLite databases through a web interface<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --from datasette datasette data.db`<br></details> | ```datasette``` | 0.65.5 \|<br>2026-09-17 |
 | [fake2db](https://github.com/emirozer/fake2db) | Fake2db is a fake database generator for testing purposes. | ```fake2db``` | 0.5.4 \|<br>2018-02-09 |
-| [harlequin](https://github.com/tconbeer/harlequin) | The SQL IDE for your terminal. A TUI for DuckDB, SQLite, Postgres, and more | ```harlequin``` | 2.15.0 \|<br>2026-09-16 |
+| [harlequin](https://github.com/tconbeer/harlequin) | The SQL IDE for your terminal. A TUI for DuckDB, SQLite, Postgres, and more | ```harlequin``` | 2.16.1 \|<br>2026-10-02 |
 | [iredis](https://github.com/laixintao/iredis) | Iredis is a Redis terminal client with auto-completion and syntax highlighting. | ```iredis``` | 1.16.1 \|<br>2026-03-27 |
 | [litecli](https://litecli.com/) | Litecli is a command line interface for SQLite with auto-completion and syntax highlighting. | ```litecli``` | 1.17.1 \|<br>2026-01-31 |
-| [mycli](https://www.mycli.net/) | Mycli is a command line interface for MySQL with auto-completion and syntax highlighting. | ```mycli``` | 2.26.0 \|<br>2026-09-26 |
+| [mycli](https://www.mycli.net/) | Mycli is a command line interface for MySQL with auto-completion and syntax highlighting. | ```mycli``` | 2.28.1 \|<br>2026-10-03 |
 | [peewee](http://docs.peewee-orm.com/) | Peewee is a small, expressive ORM for Python.<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --from peewee pwiz.py -e sqlite mydb.db` — Introspect a SQLite database and generate model code<br></details> | ```pwiz.py``` | 4.5.2 \|<br>2026-09-27 |
 | [pgcli](https://www.pgcli.com/) | Pgcli is a command line interface for PostgreSQL with auto-completion and syntax highlighting. | ```pgcli``` | 4.7.1 \|<br>2026-09-20 |
 | [sqlfluff](https://www.sqlfluff.com/) | Lint and format SQL across multiple dialects<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --from sqlfluff sqlfluff lint --dialect sqlite query.sql`<br></details> | ```sqlfluff``` | 4.4.0 \|<br>2026-10-02 |
@@ -163,8 +163,8 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 |:-----|:------------|:--------------|:--------------|
 | [httpie](https://httpie.io/) | User-friendly command-line HTTP client<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --from httpie http GET https://httpbin.org/get` — Make a GET request and pretty-print the response<br>`uvx --from httpie http POST https://httpbin.org/post name=alice` — Send a POST request with a JSON body field<br></details> | ```http```, ```httpie```, ```https``` | 3.2.4 \|<br>2024-11-01 |
 | [mitmproxy](https://github.com/mitmproxy/mitmproxy) | Free and open source interactive HTTPS proxy for penetration testers and software developers | ```mitmproxy```, ```mitmdump```, ```mitmweb``` | 12.2.3 \|<br>2026-05-12 |
-| [posting](https://posting.sh/) | Terminal HTTP client with saved request collections and OpenAPI imports<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --python 3.13 --from posting posting` — Launch the terminal HTTP client with Python 3.13<br></details> | ```posting``` | 2.11.0 \|<br>2026-09-26 |
-| [websockets](https://github.com/aaugustin/websockets) | Library for building WebSocket servers and clients | ```websockets``` | 17.1 \|<br>2026-08-26 |
+| [posting](https://posting.sh/) | Terminal HTTP client with saved request collections and OpenAPI imports<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --python 3.13 --from posting posting` — Launch the terminal HTTP client with Python 3.13<br></details> | ```posting``` | 2.11.1 \|<br>2026-10-05 |
+| [websockets](https://github.com/aaugustin/websockets) | Library for building WebSocket servers and clients | ```websockets``` | 17.2 \|<br>2026-10-03 |
 
 
 
@@ -175,7 +175,7 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 | Name | Description | Executable(s) | Latest Release |
 |:-----|:------------|:--------------|:--------------|
 | [django](https://www.djangoproject.com/) | High-level Python web framework<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --from django django-admin startproject myproject` — Create a new Django project scaffold<br></details> | ```django-admin``` | 6.1.1 \|<br>2026-09-02 |
-| [fastapi[standard]](https://fastapi.tiangolo.com/) | Modern, fast web framework for building APIs | ```fastapi``` | 0.141.1 \|<br>2026-07-29 |
+| [fastapi[standard]](https://fastapi.tiangolo.com/) | Modern, fast web framework for building APIs | ```fastapi``` | 0.142.2 \|<br>2026-09-30 |
 | [flask](https://flask.palletsprojects.com/) | Lightweight WSGI web application framework | ```flask``` | 3.1.3 \|<br>2026-02-19 |
 | [uvicorn](https://www.uvicorn.org/) | Lightning-fast ASGI server | ```uvicorn``` | 0.54.0 \|<br>2026-09-25 |
 
@@ -187,18 +187,18 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 
 | Name | Description | Executable(s) | Latest Release |
 |:-----|:------------|:--------------|:--------------|
-| [black](https://github.com/psf/black) | The uncompromising Python code formatter | ```black``` | 26.5.1 \|<br>2026-05-18 |
+| [black](https://github.com/psf/black) | The uncompromising Python code formatter | ```black``` | 26.10.0 \|<br>2026-10-04 |
 | [coverage](https://coverage.readthedocs.io/) | Code coverage measurement | ```coverage```, ```coverage-3.13```, ```coverage3``` | 7.16.2 \|<br>2026-09-27 |
 | [deptry](https://deptry.com/) | Check Python projects for dependency declaration issues<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --from deptry deptry .`<br></details> | ```deptry``` | 0.25.1 \|<br>2026-03-18 |
-| [mypy](https://mypy.readthedocs.io/) | Optional static typing for Python | ```mypy```, ```mypy-langserver``` | 2.3.1 \|<br>2026-08-15 |
+| [mypy](https://mypy.readthedocs.io/) | Optional static typing for Python | ```mypy```, ```mypy-langserver``` | 2.4.0 \|<br>2026-10-01 |
 | [nox](https://nox.thea.codes/) | Flexible test automation | ```nox```, ```tox-to-nox``` | 2026.8.17 \|<br>2026-08-18 |
 | [pre-commit](https://github.com/pre-commit/pre-commit) | Framework for managing and maintaining multi-language git hooks | ```pre-commit``` | 4.6.2 \|<br>2026-08-10 |
 | [pyright](https://github.com/microsoft/pyright) | Static type checker for Python | ```pyright```, ```pyright-langserver```, ```pyright-python```, ```pyright-python-langserver``` | 1.1.414 \|<br>2026-09-10 |
 | [pytest](https://docs.pytest.org/) | Testing framework | ```pytest```, ```py.test``` | 9.1.1 \|<br>2026-06-19 |
-| [ruff](https://github.com/astral-sh/ruff) | An extremely fast Python linter | ```ruff``` | 0.16.9 \|<br>2026-09-24 |
-| [schemathesis](https://schemathesis.readthedocs.io/) | Property-based testing for APIs | ```schemathesis```, ```st``` | 4.28.0 \|<br>2026-09-22 |
+| [ruff](https://github.com/astral-sh/ruff) | An extremely fast Python linter | ```ruff``` | 0.16.10 \|<br>2026-10-01 |
+| [schemathesis](https://schemathesis.readthedocs.io/) | Property-based testing for APIs | ```schemathesis```, ```st``` | 4.29.3 \|<br>2026-10-05 |
 | [tavern](https://github.com/taverntesting/tavern) | pytest plugin, command-line tool, and Python library for automated testing of APIs | ```tavern-ci``` | 3.7.0 \|<br>2026-09-25 |
-| [tox](https://tox.wiki/) | Automate and standardize testing | ```tox``` | 4.64.4 \|<br>2026-09-27 |
+| [tox](https://tox.wiki/) | Automate and standardize testing | ```tox``` | 4.64.9 \|<br>2026-10-05 |
 | [ty](https://github.com/astral-sh/ty) | An extremely fast Python type checker and language server | ```ty``` | 0.0.84 \|<br>2026-09-24 |
 | [vulture](https://github.com/jendrikseipp/vulture) | Find unused code in Python projects<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --from vulture vulture src`<br></details> | ```vulture``` | 2.16 \|<br>2026-03-25 |
 
@@ -222,14 +222,14 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 | Name | Description | Executable(s) | Latest Release |
 |:-----|:------------|:--------------|:--------------|
 | [bump-my-version](https://callowayproject.github.io/bump-my-version/) | Update version numbers across project files<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --from bump-my-version bump-my-version --help`<br></details> | ```bump-my-version``` | 1.5.1 \|<br>2026-08-06 |
-| [commitizen](https://commitizen-tools.github.io/commitizen/) | Standardize commit messages, version bumps, and changelogs<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --from commitizen cz --help`<br></details> | ```cz```, ```git-cz``` | 4.19.0 \|<br>2026-09-22 |
-| [pipx](https://pypa.github.io/pipx/) | Install and run Python applications in isolated environments | ```pipx``` | 1.17.7 \|<br>2026-09-28 |
+| [commitizen](https://commitizen-tools.github.io/commitizen/) | Standardize commit messages, version bumps, and changelogs<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --from commitizen cz --help`<br></details> | ```cz```, ```git-cz``` | 4.19.1 \|<br>2026-10-03 |
+| [pipx](https://pypa.github.io/pipx/) | Install and run Python applications in isolated environments | ```pipx``` | 1.17.11 \|<br>2026-10-03 |
 | [poetry](https://python-poetry.org/) | Python packaging and dependency management | ```poetry``` | 2.5.1 \|<br>2026-09-20 |
 | [py2app](https://py2app.readthedocs.io/) | Create standalone Mac OS X applications<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --from py2app py2applet --make-setup myscript.py` — Generate a setup.py for bundling a script into a Mac app<br></details> | ```py2applet``` | 0.28.10 \|<br>2026-02-13 |
 | [pyarmor](https://pyarmor.dashingsoft.com/) | Tool for obfuscating Python scripts | ```pyarmor```, ```pyarmor-7```, ```pyarmor-8```, ```pyarmor-auth``` | 9.2.7 \|<br>2026-08-29 |
 | [pyinstaller](https://www.pyinstaller.org/) | Convert Python programs into stand-alone executables<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --from pyinstaller pyinstaller --onefile myscript.py` — Bundle a script into a single standalone executable<br></details> | ```pyi-archive_viewer```, ```pyi-bindepend```, ```pyi-grab_version```, ```pyi-makespec```, ```pyi-set_version```, ```pyinstaller``` | 6.22.3 \|<br>2026-09-12 |
 | [shiv](https://github.com/linkedin/shiv) | Build fully self-contained Python zipapps | ```shiv```, ```shiv-info``` | 1.0.8 \|<br>2024-11-01 |
-| [uv](https://github.com/astral-sh/uv) | Extremely fast Python package installer and resolver, written in Rust | ```uv``` | 0.12.19 \|<br>2026-09-25 |
+| [uv](https://github.com/astral-sh/uv) | Extremely fast Python package installer and resolver, written in Rust | ```uv``` | 0.12.23 \|<br>2026-10-03 |
 | [uv-upsync](https://github.com/pivoshenko/uv-upsync) | uv-upsync is a uv-native tool for automated dependency updates and version bumping in pyproject.toml | ```uv-upsync``` | 2.4.2 \|<br>2026-09-20 |
 
 
@@ -244,7 +244,7 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 | [detect-secrets](https://github.com/Yelp/detect-secrets) | Enterprise-friendly CLI for auditing, detecting, and preventing secrets in code | ```detect-secrets``` | 1.5.0 \|<br>2024-05-06 |
 | [fsociety](https://github.com/fsociety-team/fsociety) | Modular penetration testing framework | ```fsociety``` | 3.2.9 \|<br>2023-06-16 |
 | [pip-audit](https://github.com/pypa/pip-audit) | Audit Python dependencies for known vulnerabilities<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --from pip-audit pip-audit -r requirements.txt`<br></details> | ```pip-audit``` | 2.10.1 \|<br>2026-06-10 |
-| [scapy](https://scapy.net/) | Packet manipulation program | ```scapy``` | 2.7.0 \|<br>2025-12-26 |
+| [scapy](https://scapy.net/) | Packet manipulation program | ```scapy``` | 2.8.0 \|<br>2026-10-02 |
 | [sqlmap](https://sqlmap.org/) | Automatic SQL injection and database takeover tool | ```sqlmap``` | 1.10.9 \|<br>2026-09-02 |
 | [uncompyle6](https://github.com/rocky/python-uncompyle6) | Native Python cross-version decompiler that translates Python bytecode back into equivalent Python source code | ```uncompyle6``` | 3.9.3 \|<br>2025-09-29 |
 
@@ -313,7 +313,7 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 
 | Name | Description | Executable(s) | Latest Release |
 |:-----|:------------|:--------------|:--------------|
-| [faker](https://faker.readthedocs.io/) | Generator for fake data | ```faker``` | 40.39.0 \|<br>2026-09-14 |
+| [faker](https://faker.readthedocs.io/) | Generator for fake data | ```faker``` | 40.40.0 \|<br>2026-09-29 |
 | [howdoi](https://github.com/gleitz/howdoi) | Instant coding answers via the command line | ```howdoi``` | 2.0.20 \|<br>2022-10-03 |
 | [magic-wormhole](https://github.com/magic-wormhole/magic-wormhole) | Tool to get things from one computer to another, safely<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx --from magic-wormhole wormhole send myfile.txt` — Send a file to another computer via a one-time code<br>`uvx --from magic-wormhole wormhole receive` — Receive a file using the one-time code from the sender<br></details> | ```wormhole``` | 0.24.0 \|<br>2026-05-05 |
 | [pyclean](https://github.com/bittner/pyclean) | Pure Python cross-platform pycache cleaner | ```pyclean``` | 3.7.0 \|<br>2026-05-23 |
@@ -330,7 +330,7 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 
 | Name | Description | Executable(s) | Latest Release |
 |:-----|:------------|:--------------|:--------------|
-| [carlosferreyra](https://github.com/carlosferreyra/carlosferreyra) | Interactive CLI business card for Carlos Ferreyra<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx carlosferreyra --open github` — Open GitHub profile directly<br></details> | ```carlosferreyra``` | 1.2.15 \|<br>2026-06-23 |
+| [carlosferreyra](https://github.com/carlosferreyra/carlosferreyra) | Interactive CLI business card for Carlos Ferreyra<br><details><summary><strong><a href="#">Examples</a></strong></summary><br>`uvx carlosferreyra --open github` — Open GitHub profile directly<br></details> | ```carlosferreyra``` | 1.2.17 \|<br>2026-10-04 |
 
 
 
