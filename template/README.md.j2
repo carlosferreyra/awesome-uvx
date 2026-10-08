@@ -6,7 +6,7 @@
     <a href="https://awesome.re">
         <img src="https://awesome.re/badge.svg" alt="Awesome">
     </a>
-    <p>A collection of {{ total_tools }} Python CLI tools across {{ categories | length }} categories, available from UVX/PIPX.</p>
+    <p>A collection of Python CLI tools available from UVX/PIPX.</p>
     <p>you can use this list to find useful Python CLI tools that are available for installation via UVX or
     PIPX. The list is curated and maintained by the community, so feel free to contribute by adding your
     own favorite tools.</p>
@@ -21,14 +21,17 @@
     </a>
 </div>
 
-Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>.
+Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>,
+<a href="https://github.com/carlosferreyra/awesome-bunx">awesome-bunx</a> and
+<a href="https://github.com/carlosferreyra/awesome-cargo-install">awesome-cargo-install</a>.
 
+**{{ total_tools }} tools across {{ categories | length }} categories.**
 
 ## Contents
 
 {% for category in categories %}
-- [{{ category.name }}](#{{ category.slug }}) ({{ category.tools | length }} tools)
-{% endfor %}
+- [{{ category.name }}](#{{ category.slug }}) ({{ category.tools | length }})
+{%- endfor %}
 
 {% for category in categories %}
 <a id="{{ category.slug }}"></a>
@@ -37,9 +40,21 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 
 | Name | Description | Executable(s) | Latest Release |
 |:-----|:------------|:--------------|:--------------|
-{% for pkg_name, pkg in category.tools.items() %}| [{{ pkg_name }}]({{ pkg.url }}) | {{ pkg.description }}{% if pkg.examples %}<br><details><summary><strong><a href="#">Examples</a></strong></summary>{% for ex in pkg.examples %}<br>`{{ ex.cmd | escape_pipe }}`{% if ex.description %} — {{ ex.description }}{% endif %}{% endfor %}<br></details>{% endif %} | {% for exec in pkg.execs %}```{{ exec }}```{% if not loop.last %}, {% endif %}{% endfor %} | {% if pkg.version %}{{ pkg.version }} \|<br>{{ pkg.last_release }}{% else %}—{% endif %} |
+{% for pkg_name, pkg in category.tools.items() %}| [{{ pkg_name }}]({{ pkg.url }}) | {{ pkg.description | escape_pipe }} | {% for exec in pkg.execs %}`{{ exec }}`{% if not loop.last %}, {% endif %}{% endfor %} | {% if pkg.version %}{{ pkg.version }}{% if pkg.last_release %}<br>{{ pkg.last_release }}{% endif %}{% else %}—{% endif %} |
 {% endfor %}
+{% for pkg_name, pkg in category.tools.items() %}{% if pkg.examples %}
+<details>
+<summary>{{ pkg_name }} examples</summary>
 
+{% for ex in pkg.examples %}{% if ex.description %}{{ ex.description }}
+
+{% endif %}```sh
+{{ ex.cmd }}
+```
+
+{% endfor %}</details>
+
+{% endif %}{% endfor %}
 {% endfor %}
 
 ## Contributing
