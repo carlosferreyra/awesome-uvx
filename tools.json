@@ -51,6 +51,23 @@
           "version": "3.16.1",
           "last_release": "2026-09-16"
         },
+        "orbi-cli": {
+          "description": "Run a self-hosted coding agent on GitHub issues: label one ai-ready and it writes the code, opens a PR, reviews it in a separate session, merges, and tags a release",
+          "url": "https://github.com/orbi-build/orbi",
+          "execs": [
+            "orbi"
+          ],
+          "examples": [
+            {
+              "cmd": "uvx --python 3.14 --from orbi-cli orbi --help",
+              "description": "Requires Python 3.14; without --python, uvx falls back to an older release"
+            },
+            {
+              "cmd": "uvx --python 3.14 --from orbi-cli orbi status",
+              "description": "Show the in-progress issue, the next ready issue and the latest result per repo"
+            }
+          ]
+        },
         "rote-cli": {
           "description": "Compile an AI agent skill into a typed, deterministic pipeline with per-step tests",
           "url": "https://github.com/trevhud/rote",
