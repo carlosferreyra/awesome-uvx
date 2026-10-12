@@ -48,8 +48,8 @@
           "execs": [
             "mlflow"
           ],
-          "version": "3.16.1",
-          "last_release": "2026-09-16"
+          "version": "3.17.0",
+          "last_release": "2026-10-07"
         },
         "orbi-cli": {
           "description": "Run a self-hosted coding agent on GitHub issues: label one ai-ready and it writes the code, opens a PR, reviews it in a separate session, merges, and tags a release",
@@ -66,7 +66,9 @@
               "cmd": "uvx --python 3.14 --from orbi-cli orbi status",
               "description": "Show the in-progress issue, the next ready issue and the latest result per repo"
             }
-          ]
+          ],
+          "version": "0.6.15",
+          "last_release": "2026-10-12"
         },
         "rote-cli": {
           "description": "Compile an AI agent skill into a typed, deterministic pipeline with per-step tests",
@@ -231,8 +233,8 @@
           "execs": [
             "mycli"
           ],
-          "version": "2.28.1",
-          "last_release": "2026-10-03"
+          "version": "2.29.4",
+          "last_release": "2026-10-11"
         },
         "peewee": {
           "description": "Peewee is a small, expressive ORM for Python.",
@@ -246,8 +248,8 @@
               "description": "Introspect a SQLite database and generate model code"
             }
           ],
-          "version": "4.5.2",
-          "last_release": "2026-09-27"
+          "version": "4.5.3",
+          "last_release": "2026-10-07"
         },
         "pgcli": {
           "description": "Pgcli is a command line interface for PostgreSQL with auto-completion and syntax highlighting.",
@@ -371,8 +373,8 @@
           "execs": [
             "typer"
           ],
-          "version": "0.27.2",
-          "last_release": "2026-08-28"
+          "version": "0.27.3",
+          "last_release": "2026-10-06"
         }
       }
     },
@@ -577,8 +579,8 @@
               "description": "Create a new Django project scaffold"
             }
           ],
-          "version": "6.1.1",
-          "last_release": "2026-09-02"
+          "version": "6.1.2",
+          "last_release": "2026-10-06"
         },
         "fastapi[standard]": {
           "description": "Modern, fast web framework for building APIs",
@@ -586,8 +588,8 @@
           "execs": [
             "fastapi"
           ],
-          "version": "0.142.2",
-          "last_release": "2026-09-30"
+          "version": "0.143.0",
+          "last_release": "2026-10-08"
         },
         "flask": {
           "description": "Lightweight WSGI web application framework",
@@ -619,8 +621,8 @@
           "execs": [
             "black"
           ],
-          "version": "26.10.0",
-          "last_release": "2026-10-04"
+          "version": "26.10.1",
+          "last_release": "2026-10-10"
         },
         "coverage": {
           "description": "Code coverage measurement",
@@ -704,8 +706,8 @@
           "execs": [
             "ruff"
           ],
-          "version": "0.16.10",
-          "last_release": "2026-10-01"
+          "version": "0.17.0",
+          "last_release": "2026-10-09"
         },
         "schemathesis": {
           "description": "Property-based testing for APIs",
@@ -714,8 +716,8 @@
             "schemathesis",
             "st"
           ],
-          "version": "4.29.3",
-          "last_release": "2026-10-05"
+          "version": "4.31.0",
+          "last_release": "2026-10-12"
         },
         "tavern": {
           "description": "pytest plugin, command-line tool, and Python library for automated testing of APIs",
@@ -732,8 +734,8 @@
           "execs": [
             "tox"
           ],
-          "version": "4.64.9",
-          "last_release": "2026-10-05"
+          "version": "4.65.4",
+          "last_release": "2026-10-12"
         },
         "ty": {
           "description": "An extremely fast Python type checker and language server",
@@ -741,8 +743,8 @@
           "execs": [
             "ty"
           ],
-          "version": "0.0.84",
-          "last_release": "2026-09-24"
+          "version": "0.0.86",
+          "last_release": "2026-10-09"
         },
         "vulture": {
           "description": "Find unused code in Python projects",
@@ -809,8 +811,8 @@
               "cmd": "uvx --from bump-my-version bump-my-version --help"
             }
           ],
-          "version": "1.5.1",
-          "last_release": "2026-08-06"
+          "version": "1.6.0",
+          "last_release": "2026-10-11"
         },
         "commitizen": {
           "description": "Standardize commit messages, version bumps, and changelogs",
@@ -824,8 +826,8 @@
               "cmd": "uvx --from commitizen cz --help"
             }
           ],
-          "version": "4.19.1",
-          "last_release": "2026-10-03"
+          "version": "4.19.2",
+          "last_release": "2026-10-07"
         },
         "pipx": {
           "description": "Install and run Python applications in isolated environments",
@@ -833,8 +835,8 @@
           "execs": [
             "pipx"
           ],
-          "version": "1.17.11",
-          "last_release": "2026-10-03"
+          "version": "1.17.14",
+          "last_release": "2026-10-12"
         },
         "poetry": {
           "description": "Python packaging and dependency management",
@@ -908,8 +910,8 @@
           "execs": [
             "uv"
           ],
-          "version": "0.12.23",
-          "last_release": "2026-10-03"
+          "version": "0.13.0",
+          "last_release": "2026-10-09"
         },
         "uv-upsync": {
           "description": "uv-upsync is a uv-native tool for automated dependency updates and version bumping in pyproject.toml",
@@ -989,8 +991,8 @@
           "execs": [
             "sqlmap"
           ],
-          "version": "1.10.9",
-          "last_release": "2026-09-02"
+          "version": "1.10.10",
+          "last_release": "2026-10-05"
         },
         "uncompyle6": {
           "description": "Native Python cross-version decompiler that translates Python bytecode back into equivalent Python source code",
@@ -1019,8 +1021,8 @@
               "description": "Check the installed Ansible community version"
             }
           ],
-          "version": "14.4.0",
-          "last_release": "2026-09-08"
+          "version": "14.5.0",
+          "last_release": "2026-10-06"
         },
         "awscli": {
           "description": "Official command-line interface for Amazon Web Services",
@@ -1046,8 +1048,8 @@
           "execs": [
             "glances"
           ],
-          "version": "4.5.7",
-          "last_release": "2026-09-26"
+          "version": "4.5.8",
+          "last_release": "2026-10-11"
         },
         "mamba": {
           "description": "Fast, cross-platform package manager",
@@ -1108,8 +1110,8 @@
           "execs": [
             "prefect"
           ],
-          "version": "3.8.7",
-          "last_release": "2026-09-27"
+          "version": "3.8.8",
+          "last_release": "2026-10-06"
         },
         "rq": {
           "description": "Simple job queues for Python",
@@ -1241,8 +1243,8 @@
           "execs": [
             "streamlink"
           ],
-          "version": "8.6.1",
-          "last_release": "2026-09-16"
+          "version": "8.6.2",
+          "last_release": "2026-10-07"
         },
         "youtube-dl": {
           "description": "Download videos from YouTube and other video sites",
@@ -1284,8 +1286,8 @@
           "execs": [
             "faker"
           ],
-          "version": "40.40.0",
-          "last_release": "2026-09-29"
+          "version": "40.43.0",
+          "last_release": "2026-10-09"
         },
         "howdoi": {
           "description": "Instant coding answers via the command line",
