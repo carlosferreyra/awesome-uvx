@@ -20,6 +20,8 @@ List the checks you ran, or explain why no local validation was needed.
 
 ## Checklist
 
+- [ ] If I changed catalog data or the README template, I ran `uv run scripts/readme.py` and included the generated `README.md`.
+
 - [ ] This PR does not add a new tool.
 - [ ] This PR does not unintentionally change generated files.
 - [ ] I ran the validation that applies to this change.

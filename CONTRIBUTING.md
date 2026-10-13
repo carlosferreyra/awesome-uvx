@@ -131,6 +131,17 @@ If your tool doesn't fit any existing category, add a new object to the `"catego
 
 Keep the slug lowercase, hyphen-separated, and consistent with the name.
 
+## Generated README
+
+After changing `tools.json` or `template/README.md.j2`, run:
+
+```bash
+uv run scripts/readme.py
+```
+
+Include the generated `README.md` in the same PR. Do not edit it by hand. CI regenerates
+it and fails if the committed README is out of date; it does not commit or push updates.
+
 ## Pull Request Process
 
 1. Fork the repository
@@ -138,8 +149,9 @@ Keep the slug lowercase, hyphen-separated, and consistent with the name.
 3. Edit `tools.json` to add your tool to the appropriate category
 4. Run `uv run scripts/checks.py` locally to validate your changes
 5. Run `uv run scripts/test_clients.py --diff origin/main --output output.log` to test newly added tools with `uvx`
-6. Make sure all checks pass
-7. Create a pull request with a clear description of the tool you're adding
+6. Run `uv run scripts/readme.py` and include the generated `README.md`.
+7. Make sure all checks pass
+8. Create a pull request with a clear description of the tool you're adding
 
 The GitHub Actions workflow will automatically validate `tools.json` and test newly added tools with
 `uvx` on every PR.
@@ -172,6 +184,7 @@ To run the same validation locally before opening a PR:
 ```bash
 uv run scripts/checks.py
 uv run scripts/test_clients.py --diff origin/main --output output.log
+uv run scripts/readme.py
 ```
 
 ## Code of Conduct

@@ -17,6 +17,8 @@ Describe what this PR changes.
 
 ## Checklist
 
+- [ ] If I changed catalog data or the README template, I ran `uv run scripts/readme.py` and included the generated `README.md`.
+
 - [ ] I chose the template that best matches this PR, or this general template is enough.
 - [ ] I ran the validation that applies to this change.
 - [ ] I added notes below for anything the maintainer should know.

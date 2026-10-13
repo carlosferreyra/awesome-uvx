@@ -6,6 +6,9 @@ on:
       - main
     paths:
       - 'tools.json'
+      - 'README.md'
+      - 'template/**'
+      - 'scripts/readme.py'
       - 'scripts/check_and_comment.py'
       - '.github/workflows/validate_tool.yml'
 
@@ -27,6 +30,11 @@ jobs:
 
       - name: Validate tools.json schema
         run: uv run scripts/checks.py
+
+      - name: Check generated README is current
+        run: |
+          uv run scripts/readme.py
+          git diff --exit-code -- README.md
 
       - name: Test newly added tools via uvx
         id: test

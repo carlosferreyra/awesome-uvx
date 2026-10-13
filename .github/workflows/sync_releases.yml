@@ -22,6 +22,9 @@ jobs:
       - name: Fetch latest release info from PyPI
         run: uv run scripts/latest_release.py
 
+      - name: Generate README with updated metadata
+        run: uv run scripts/readme.py
+
       - name: Create pull request if metadata changed
         uses: peter-evans/create-pull-request@v8
         with:
@@ -30,5 +33,7 @@ jobs:
           body: 'Automated PyPI release metadata sync.'
           branch: chore/sync-pypi-release-metadata
           delete-branch: true
-          add-paths: tools.json
+          add-paths: |
+            tools.json
+            README.md
           reviewers: carlosferreyra

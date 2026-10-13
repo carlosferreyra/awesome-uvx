@@ -14,6 +14,8 @@ Please write one or two sentences about what this CLI helps people do.
 
 ## Checklist
 
+- [ ] If I changed catalog data or the README template, I ran `uv run scripts/readme.py` and included the generated `README.md`.
+
 - [ ] I added the tool to `tools.json`.
 - [ ] The package name matches the name used on PyPI.
 - [ ] The `url` points to the official docs, homepage, or repository.
