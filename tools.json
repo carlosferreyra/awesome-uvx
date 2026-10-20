@@ -759,6 +759,19 @@
           ],
           "version": "2.16",
           "last_release": "2026-03-25"
+        },
+        "check-jsonschema": {
+          "description": "Validate JSON and YAML files against JSON Schema",
+          "url": "https://check-jsonschema.readthedocs.io/",
+          "execs": [
+            "check-jsonschema"
+          ],
+          "examples": [
+            {
+              "cmd": "uvx --from check-jsonschema check-jsonschema --schemafile schema.json data.json",
+              "description": "Validate data.json against a local JSON Schema"
+            }
+          ]
         }
       }
     },
@@ -1002,6 +1015,19 @@
           ],
           "version": "3.9.3",
           "last_release": "2025-09-29"
+        },
+        "zizmor": {
+          "description": "Find security problems in GitHub Actions workflows",
+          "url": "https://docs.zizmor.sh/",
+          "execs": [
+            "zizmor"
+          ],
+          "examples": [
+            {
+              "cmd": "uvx --from zizmor zizmor --offline .",
+              "description": "Analyze local workflows without network access; online-only checks are omitted"
+            }
+          ]
         }
       }
     },
@@ -1050,15 +1076,6 @@
           ],
           "version": "4.5.8",
           "last_release": "2026-10-11"
-        },
-        "mamba": {
-          "description": "Fast, cross-platform package manager",
-          "url": "https://github.com/mamba-org/mamba",
-          "execs": [
-            "mamba"
-          ],
-          "version": "0.11.3",
-          "last_release": "2023-11-09"
         },
         "platformio": {
           "description": "Open source ecosystem for IoT development with cross-platform IDE and unified debugger",
