@@ -1,0 +1,85 @@
+name: Validate Installs
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'tools.json'
+      - 'scripts/test_clients.py'
+      - 'scripts/diff_tools.py'
+      - '.github/workflows/validate_installs.yml'
+  schedule:
+    - cron: '0 0 1 * *'
+  workflow_dispatch:
+    inputs:
+      base_ref:
+        description: 'Optional Git base ref; leave empty to test the full catalog'
+        type: string
+        required: false
+        default: ''
+
+permissions:
+  contents: read
+
+concurrency:
+  group: installs-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v10.2.0
+
+      - name: Validate catalog
+        id: catalog
+        run: uv run scripts/checks.py 2>&1 | tee validation.log
+
+      - name: Test tool installations
+        id: installs
+        env:
+          PR_BASE: ${{ github.event.pull_request.base.sha }}
+          MANUAL_BASE: ${{ inputs.base_ref }}
+          HUSKY: '0'
+        run: |
+          args=(--all)
+          if [ "$GITHUB_EVENT_NAME" = "pull_request" ]; then
+            args=(--diff "$PR_BASE")
+          elif [ -n "$MANUAL_BASE" ]; then
+            base=$(git rev-parse --verify --end-of-options "$MANUAL_BASE^{commit}")
+            args=(--diff "$base")
+          fi
+          uv run scripts/test_clients.py "${args[@]}" --output output.log 2>&1 | tee install.log
+
+      - name: Summarize install validation
+        if: always()
+        env:
+          JOB_STATUS: ${{ job.status }}
+          CATALOG_STATUS: ${{ steps.catalog.outcome }}
+          INSTALLS_STATUS: ${{ steps.installs.outcome }}
+        run: python3 scripts/actions_summary.py installs
+
+      - name: Upload failure details
+        if: failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: install-validation-failure
+          path: |
+            checks.log
+            validation.log
+            output.log
+            install.log
+          retention-days: 14
+          if-no-files-found: ignore

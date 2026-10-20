@@ -185,8 +185,9 @@ it and fails if the committed README is out of date; it does not commit or push 
 7. Make sure all checks pass
 8. Create a pull request with a clear description of the tool you're adding
 
-The GitHub Actions workflow will automatically validate `tools.json` and test newly added tools with
-`uvx` on every PR.
+GitHub Actions runs fast catalog checks on relevant PRs. A separate **Validate Installs**
+workflow checks newly added tools through `uvx`; it reports failures in the job summary and
+artifacts without commenting on or approving the PR.
 
 ### Choosing a Pull Request Template
 
@@ -215,9 +216,36 @@ To run the same validation locally before opening a PR:
 
 ```bash
 uv run scripts/checks.py
+uv run --with httpx python -m unittest discover -s tests -v
 uv run scripts/test_clients.py --diff origin/main --output output.log
 uv run scripts/readme.py
 ```
+
+## Validation Workflow Structure
+
+All three catalogs separate fast checks from installation work:
+
+- **Validate Catalog** (`ci.yml`) runs on relevant PRs, pushes to `main`, and manual requests.
+  It validates the catalog, runs maintenance-script tests, and checks generated README freshness.
+  The job has a 20-minute timeout and does not install catalog packages.
+- **Validate Installs** (`validate_installs.yml`) performs package installation checks separately.
+  Manual runs accept an optional `base_ref`: leave it empty for the full catalog, or provide a
+  Git ref to select newly added package names relative to that commit. Changes to existing
+  entries and examples still need targeted maintainer validation.
+- Both validation workflows use read-only repository permissions, discard checkout credentials,
+  write an Actions summary even after failure, and upload available failure logs for 14 days.
+  Missing/partial reports are shown as incomplete; they are not treated as successful coverage.
+  Validation never approves or merges PRs and does not require permission to post comments.
+
+UVX and Bunx run install checks automatically for relevant PRs and run a full check on the
+first day of each month at 00:00 UTC. Their install jobs have a 30-minute timeout.
+
+A green installation check is limited to the probes implemented by the ecosystem validator;
+it does not prove every documented command or platform works. Use meaningful fixtures before
+accepting a candidate. Job timeouts and permission failures require inspecting the logs; they
+do not by themselves establish that a catalog tool is broken.
+
+Release-metadata publication keeps this repository's existing behavior and schedule.
 
 ## Code of Conduct
 
