@@ -6,26 +6,49 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
+
+concurrency:
+  group: release-metadata-main
+  cancel-in-progress: false
 
 jobs:
   sync:
-    runs-on: ubuntu-slim
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v7
+        with:
+          ref: main
 
       - name: Set up uv
         uses: astral-sh/setup-uv@v10.2.0
 
+      - name: Validate catalog before sync
+        id: before
+        run: uv run scripts/checks.py
+
       - name: Fetch latest release info from PyPI
+        id: metadata
         run: uv run scripts/latest_release.py
 
-      - name: Generate README with updated metadata
-        run: uv run scripts/readme.py
+      - name: Validate updated catalog
+        id: after
+        run: uv run scripts/checks.py
+
+      - name: Generate and check README
+        id: readme
+        run: |
+          uv run scripts/readme.py
+          git diff --check -- README.md
 
       - name: Create pull request if metadata changed
+        id: publish
         uses: peter-evans/create-pull-request@v8
         with:
           commit-message: 'chore(tools): sync latest PyPI release metadata'
@@ -37,3 +60,15 @@ jobs:
             tools.json
             README.md
           reviewers: carlosferreyra
+
+      - name: Upload failure details
+        if: failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: release-sync-failure
+          path: |
+            checks.log
+            tools.json
+            README.md
+          retention-days: 14
+          if-no-files-found: ignore

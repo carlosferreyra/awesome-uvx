@@ -62,31 +62,34 @@ def run(command: str) -> tuple[bool, str, str]:
     return result.returncode == 0, result.stdout.strip(), result.stderr.strip()
 
 
-def test_tool(package: str, exec_name: str) -> tuple[bool, str]:
+def test_tool(package: str, exec_name: str) -> tuple[bool, str, str]:
     """
-    Try two methods. Returns (success, failure_type).
+    Try two methods. Returns (success, failure_type, diagnostic_output).
     failure_type is one of: network, not_found, wrong_binary, execution_error
     On success, failure_type is empty string.
     """
     # Method 1: uv tool install
     ok, out, err = run(f"uv tool install --force {package}")
+    details = f"uv tool install --force {package}\n{out}\n{err}\n"
     if ok:
-        return True, ""
+        return True, "", ""
 
     # Retry once on network errors before giving up
     if NETWORK_PATTERNS.search(out + err):
         ok, out, err = run(f"uv tool install --force {package}")
+        details += f"Retry install\n{out}\n{err}\n"
         if ok:
-            return True, ""
-        return False, "network"
+            return True, "", ""
+        return False, "network", details
 
     # Method 2: uvx --from
     ok2, out2, err2 = run(f"uvx --from {package} {exec_name} --help")
     if ok2:
-        return True, ""
+        return True, "", ""
 
     # Classify based on combined output of both attempts
-    return False, classify_failure(out + out2, err + err2)
+    details += f"uvx --from {package} {exec_name} --help\n{out2}\n{err2}\n"
+    return False, classify_failure(out + out2, err + err2), details
 
 
 def load_all_tools(tools_path: Path) -> list[dict]:
@@ -164,15 +167,16 @@ def main():
         exec_name = tool["execs"][0] if tool.get("execs") else package.split("[")[0]
         print(f"  Testing: {package} ({exec_name})")
 
-        success, failure_type = test_tool(package, exec_name)
+        success, failure_type, details = test_tool(package, exec_name)
 
         if success:
             print("    ✓ ok")
             results.append({"package": package, "success": True})
         else:
             print(f"    ✗ failed ({failure_type})")
+            print(details, file=sys.stderr)
             results.append(
-                {"package": package, "success": False, "reason": failure_type}
+                {"package": package, "success": False, "reason": failure_type, "details": details}
             )
 
     # Summary
