@@ -25,7 +25,7 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 <a href="https://github.com/carlosferreyra/awesome-bunx">awesome-bunx</a> and
 <a href="https://github.com/carlosferreyra/awesome-cargo-install">awesome-cargo-install</a>.
 
-**108 tools across 18 categories.**
+**109 tools across 18 categories.**
 
 ## Contents
 
@@ -38,11 +38,11 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 - [Documents & Conversion](#documents-and-conversion) (6)
 - [HTTP & API Tools](#http-and-api-tools) (4)
 - [Web Frameworks & Servers](#web-frameworks-and-servers) (4)
-- [Testing & Code Quality](#testing-and-code-quality) (14)
+- [Testing & Code Quality](#testing-and-code-quality) (15)
 - [Profiling & Performance](#profiling-and-performance) (2)
 - [Packaging & Releases](#packaging-and-releases) (10)
-- [Security & Auditing](#security-and-auditing) (7)
-- [System & Infrastructure](#system-and-infrastructure) (6)
+- [Security & Auditing](#security-and-auditing) (8)
+- [System & Infrastructure](#system-and-infrastructure) (5)
 - [Automation & Task Runners](#automation-and-task-runners) (5)
 - [Terminal & Shell Tools](#terminal-and-shell-tools) (7)
 - [Media & Downloads](#media-and-downloads) (3)
@@ -434,6 +434,7 @@ uvx --from django django-admin startproject myproject
 | Name | Description | Executable(s) | Latest Release |
 |:-----|:------------|:--------------|:--------------|
 | [black](https://github.com/psf/black) | The uncompromising Python code formatter | `black` | 26.10.1<br>2026-10-10 |
+| [check-jsonschema](https://check-jsonschema.readthedocs.io/) | Validate JSON and YAML files against JSON Schema | `check-jsonschema` | — |
 | [coverage](https://coverage.readthedocs.io/) | Code coverage measurement | `coverage`, `coverage-3.13`, `coverage3` | 7.16.2<br>2026-09-27 |
 | [deptry](https://deptry.com/) | Check Python projects for dependency declaration issues | `deptry` | 0.25.1<br>2026-03-18 |
 | [mypy](https://mypy.readthedocs.io/) | Optional static typing for Python | `mypy`, `mypy-langserver` | 2.4.0<br>2026-10-01 |
@@ -447,6 +448,18 @@ uvx --from django django-admin startproject myproject
 | [tox](https://tox.wiki/) | Automate and standardize testing | `tox` | 4.67.1<br>2026-10-18 |
 | [ty](https://github.com/astral-sh/ty) | An extremely fast Python type checker and language server | `ty` | 0.0.89<br>2026-10-16 |
 | [vulture](https://github.com/jendrikseipp/vulture) | Find unused code in Python projects | `vulture` | 2.16<br>2026-03-25 |
+
+
+<details>
+<summary>check-jsonschema examples</summary>
+
+Validate data.json against a local JSON Schema
+
+```sh
+uvx --from check-jsonschema check-jsonschema --schemafile schema.json data.json
+```
+
+</details>
 
 
 <details>
@@ -577,6 +590,7 @@ uvx --from pyinstaller pyinstaller --onefile myscript.py
 | [scapy](https://scapy.net/) | Packet manipulation program | `scapy` | 2.8.0<br>2026-10-02 |
 | [sqlmap](https://sqlmap.org/) | Automatic SQL injection and database takeover tool | `sqlmap` | 1.10.10<br>2026-10-05 |
 | [uncompyle6](https://github.com/rocky/python-uncompyle6) | Native Python cross-version decompiler that translates Python bytecode back into equivalent Python source code | `uncompyle6` | 3.9.3<br>2025-09-29 |
+| [zizmor](https://docs.zizmor.sh/) | Find security problems in GitHub Actions workflows | `zizmor` | — |
 
 
 <details>
@@ -599,6 +613,18 @@ uvx --from pip-audit pip-audit -r requirements.txt
 </details>
 
 
+<details>
+<summary>zizmor examples</summary>
+
+Analyze local workflows without network access; online-only checks are omitted
+
+```sh
+uvx --from zizmor zizmor --offline .
+```
+
+</details>
+
+
 
 <a id="system-and-infrastructure"></a>
 
@@ -610,7 +636,6 @@ uvx --from pip-audit pip-audit -r requirements.txt
 | [awscli](https://aws.amazon.com/cli/) | Official command-line interface for Amazon Web Services | `aws` | 1.46.1<br>2026-08-27 |
 | [bpytop](https://github.com/aristocratos/bpytop) | Resource monitor that shows usage and stats for processor, memory, disks, network, and processes | `bpytop` | 1.0.68<br>2021-12-22 |
 | [glances](https://github.com/nicolargo/glances) | Cross-platform monitoring tool with curses or Web based interface | `glances` | 4.5.8<br>2026-10-11 |
-| [mamba](https://github.com/mamba-org/mamba) | Fast, cross-platform package manager | `mamba` | 0.11.3<br>2023-11-09 |
 | [platformio](https://github.com/platformio/platformio-core) | Open source ecosystem for IoT development with cross-platform IDE and unified debugger | `platformio`, `pio` | 6.2.0<br>2026-09-05 |
 
 
