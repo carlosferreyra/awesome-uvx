@@ -48,8 +48,8 @@
           "execs": [
             "mlflow"
           ],
-          "version": "3.17.0",
-          "last_release": "2026-10-07"
+          "version": "3.17.1",
+          "last_release": "2026-10-13"
         },
         "orbi-cli": {
           "description": "Run a self-hosted coding agent on GitHub issues: label one ai-ready and it writes the code, opens a PR, reviews it in a separate session, merges, and tags a release",
@@ -67,8 +67,8 @@
               "description": "Show the in-progress issue, the next ready issue and the latest result per repo"
             }
           ],
-          "version": "0.6.15",
-          "last_release": "2026-10-12"
+          "version": "0.7.7",
+          "last_release": "2026-10-18"
         },
         "rote-cli": {
           "description": "Compile an AI agent skill into a typed, deterministic pipeline with per-step tests",
@@ -86,8 +86,8 @@
               "description": "Compile a skill into a runnable Python pipeline"
             }
           ],
-          "version": "0.13.0",
-          "last_release": "2026-07-31"
+          "version": "0.14.0",
+          "last_release": "2026-10-18"
         }
       }
     },
@@ -138,8 +138,8 @@
               "cmd": "uvx --from jc jc --help"
             }
           ],
-          "version": "1.26.0",
-          "last_release": "2026-09-19"
+          "version": "1.26.1",
+          "last_release": "2026-10-18"
         },
         "jello": {
           "description": "Filter JSON and JSON Lines using Python expressions",
@@ -206,8 +206,8 @@
           "execs": [
             "harlequin"
           ],
-          "version": "2.16.1",
-          "last_release": "2026-10-02"
+          "version": "2.16.2",
+          "last_release": "2026-10-18"
         },
         "iredis": {
           "description": "Iredis is a Redis terminal client with auto-completion and syntax highlighting.",
@@ -233,8 +233,8 @@
           "execs": [
             "mycli"
           ],
-          "version": "2.29.4",
-          "last_release": "2026-10-11"
+          "version": "2.30.0",
+          "last_release": "2026-10-17"
         },
         "peewee": {
           "description": "Peewee is a small, expressive ORM for Python.",
@@ -328,8 +328,8 @@
           "execs": [
             "copier"
           ],
-          "version": "9.18.2",
-          "last_release": "2026-09-07"
+          "version": "9.19.1",
+          "last_release": "2026-10-13"
         },
         "ipython": {
           "description": "Enhanced interactive Python shell",
@@ -364,8 +364,8 @@
           "execs": [
             "pudb"
           ],
-          "version": "2025.1.5",
-          "last_release": "2025-12-06"
+          "version": "2026.1",
+          "last_release": "2026-10-13"
         },
         "typer": {
           "description": "Build CLI applications",
@@ -394,8 +394,8 @@
               "description": "Convert a Markdown file to HTML"
             }
           ],
-          "version": "3.11",
-          "last_release": "2026-09-25"
+          "version": "3.11.1",
+          "last_release": "2026-10-13"
         },
         "pdoc": {
           "description": "Auto-generate API documentation for Python projects",
@@ -588,8 +588,8 @@
           "execs": [
             "fastapi"
           ],
-          "version": "0.143.0",
-          "last_release": "2026-10-08"
+          "version": "0.148.0",
+          "last_release": "2026-10-19"
         },
         "flask": {
           "description": "Lightweight WSGI web application framework",
@@ -675,8 +675,8 @@
           "execs": [
             "pre-commit"
           ],
-          "version": "4.6.2",
-          "last_release": "2026-08-10"
+          "version": "4.7.0",
+          "last_release": "2026-10-12"
         },
         "pyright": {
           "description": "Static type checker for Python",
@@ -706,8 +706,8 @@
           "execs": [
             "ruff"
           ],
-          "version": "0.17.0",
-          "last_release": "2026-10-09"
+          "version": "0.17.1",
+          "last_release": "2026-10-15"
         },
         "schemathesis": {
           "description": "Property-based testing for APIs",
@@ -716,8 +716,8 @@
             "schemathesis",
             "st"
           ],
-          "version": "4.31.0",
-          "last_release": "2026-10-12"
+          "version": "4.32.1",
+          "last_release": "2026-10-19"
         },
         "tavern": {
           "description": "pytest plugin, command-line tool, and Python library for automated testing of APIs",
@@ -725,8 +725,8 @@
           "execs": [
             "tavern-ci"
           ],
-          "version": "3.7.0",
-          "last_release": "2026-09-25"
+          "version": "3.7.1",
+          "last_release": "2026-10-17"
         },
         "tox": {
           "description": "Automate and standardize testing",
@@ -734,8 +734,8 @@
           "execs": [
             "tox"
           ],
-          "version": "4.65.4",
-          "last_release": "2026-10-12"
+          "version": "4.67.1",
+          "last_release": "2026-10-18"
         },
         "ty": {
           "description": "An extremely fast Python type checker and language server",
@@ -743,8 +743,8 @@
           "execs": [
             "ty"
           ],
-          "version": "0.0.86",
-          "last_release": "2026-10-09"
+          "version": "0.0.89",
+          "last_release": "2026-10-16"
         },
         "vulture": {
           "description": "Find unused code in Python projects",
@@ -811,8 +811,8 @@
               "cmd": "uvx --from bump-my-version bump-my-version --help"
             }
           ],
-          "version": "1.6.0",
-          "last_release": "2026-10-11"
+          "version": "1.6.3",
+          "last_release": "2026-10-18"
         },
         "commitizen": {
           "description": "Standardize commit messages, version bumps, and changelogs",
@@ -835,8 +835,8 @@
           "execs": [
             "pipx"
           ],
-          "version": "1.17.14",
-          "last_release": "2026-10-12"
+          "version": "1.18.4",
+          "last_release": "2026-10-18"
         },
         "poetry": {
           "description": "Python packaging and dependency management",
@@ -910,8 +910,8 @@
           "execs": [
             "uv"
           ],
-          "version": "0.13.0",
-          "last_release": "2026-10-09"
+          "version": "0.13.1",
+          "last_release": "2026-10-14"
         },
         "uv-upsync": {
           "description": "uv-upsync is a uv-native tool for automated dependency updates and version bumping in pyproject.toml",

@@ -59,9 +59,9 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 | [aider-chat](https://github.com/Aider-AI/aider) | AI pair programming in your terminal | `aider` | 0.86.2<br>2026-02-12 |
 | [dvc](https://github.com/iterative/dvc) | Command-line tool for version control over data used in machine learning projects | `dvc` | 3.67.1<br>2026-03-31 |
 | [llm](https://llm.datasette.io/) | Run prompts and conversations with hosted or local language models | `llm` | 0.36<br>2026-09-22 |
-| [mlflow](https://github.com/mlflow/mlflow) | Open source platform for managing the end-to-end machine learning lifecycle | `mlflow` | 3.17.0<br>2026-10-07 |
-| [orbi-cli](https://github.com/orbi-build/orbi) | Run a self-hosted coding agent on GitHub issues: label one ai-ready and it writes the code, opens a PR, reviews it in a separate session, merges, and tags a release | `orbi` | 0.6.15<br>2026-10-12 |
-| [rote-cli](https://github.com/trevhud/rote) | Compile an AI agent skill into a typed, deterministic pipeline with per-step tests | `rote` | 0.13.0<br>2026-07-31 |
+| [mlflow](https://github.com/mlflow/mlflow) | Open source platform for managing the end-to-end machine learning lifecycle | `mlflow` | 3.17.1<br>2026-10-13 |
+| [orbi-cli](https://github.com/orbi-build/orbi) | Run a self-hosted coding agent on GitHub issues: label one ai-ready and it writes the code, opens a PR, reviews it in a separate session, merges, and tags a release | `orbi` | 0.7.7<br>2026-10-18 |
+| [rote-cli](https://github.com/trevhud/rote) | Compile an AI agent skill into a typed, deterministic pipeline with per-step tests | `rote` | 0.14.0<br>2026-10-18 |
 
 
 <details>
@@ -130,7 +130,7 @@ uvx --from rote-cli rote compile ./my-skill --runtime python --out ./build
 | Name | Description | Executable(s) | Latest Release |
 |:-----|:------------|:--------------|:--------------|
 | [csvkit](https://csvkit.readthedocs.io/) | Suite of command-line tools for CSV files | `csvclean`, `csvcut`, `csvformat`, `csvgrep`, `csvjoin`, `csvjson`, `csvlook`, `csvpy`, `csvsort`, `csvsql`, `csvstack`, `csvstat`, `in2csv`, `sql2csv` | 2.2.0<br>2025-12-15 |
-| [jc](https://github.com/kellyjonbrazil/jc) | Convert command output and file formats to structured JSON | `jc` | 1.26.0<br>2026-09-19 |
+| [jc](https://github.com/kellyjonbrazil/jc) | Convert command output and file formats to structured JSON | `jc` | 1.26.1<br>2026-10-18 |
 | [jello](https://github.com/kellyjonbrazil/jello) | Filter JSON and JSON Lines using Python expressions | `jello` | 1.6.1<br>2025-05-30 |
 | [visidata](https://github.com/saulpw/visidata) | Interactive multitool for exploring, analyzing, and converting datasets in the terminal | `vd`, `visidata` | 3.4<br>2026-07-01 |
 
@@ -194,10 +194,10 @@ uvx --from visidata vd data.csv
 |:-----|:------------|:--------------|:--------------|
 | [datasette](https://datasette.io/) | Explore and publish SQLite databases through a web interface | `datasette` | 0.65.5<br>2026-09-17 |
 | [fake2db](https://github.com/emirozer/fake2db) | Fake2db is a fake database generator for testing purposes. | `fake2db` | 0.5.4<br>2018-02-09 |
-| [harlequin](https://github.com/tconbeer/harlequin) | The SQL IDE for your terminal. A TUI for DuckDB, SQLite, Postgres, and more | `harlequin` | 2.16.1<br>2026-10-02 |
+| [harlequin](https://github.com/tconbeer/harlequin) | The SQL IDE for your terminal. A TUI for DuckDB, SQLite, Postgres, and more | `harlequin` | 2.16.2<br>2026-10-18 |
 | [iredis](https://github.com/laixintao/iredis) | Iredis is a Redis terminal client with auto-completion and syntax highlighting. | `iredis` | 1.16.1<br>2026-03-27 |
 | [litecli](https://litecli.com/) | Litecli is a command line interface for SQLite with auto-completion and syntax highlighting. | `litecli` | 1.17.1<br>2026-01-31 |
-| [mycli](https://www.mycli.net/) | Mycli is a command line interface for MySQL with auto-completion and syntax highlighting. | `mycli` | 2.29.4<br>2026-10-11 |
+| [mycli](https://www.mycli.net/) | Mycli is a command line interface for MySQL with auto-completion and syntax highlighting. | `mycli` | 2.30.0<br>2026-10-17 |
 | [peewee](http://docs.peewee-orm.com/) | Peewee is a small, expressive ORM for Python. | `pwiz.py` | 4.5.3<br>2026-10-07 |
 | [pgcli](https://www.pgcli.com/) | Pgcli is a command line interface for PostgreSQL with auto-completion and syntax highlighting. | `pgcli` | 4.7.1<br>2026-09-20 |
 | [sqlfluff](https://www.sqlfluff.com/) | Lint and format SQL across multiple dialects | `sqlfluff` | 4.4.0<br>2026-10-02 |
@@ -258,10 +258,10 @@ uvx --from sqlparse sqlformat --reindent --keywords upper query.sql
 |:-----|:------------|:--------------|:--------------|
 | [cement](https://docs.builtoncement.com) | Advanced CLI Application Framework for Python | `cement` | 3.0.16<br>2026-07-13 |
 | [cookiecutter](https://cookiecutter.readthedocs.io/) | Project template tool | `cookiecutter` | 2.7.1<br>2026-03-04 |
-| [copier](https://copier.readthedocs.io/) | Library for rendering project templates | `copier` | 9.18.2<br>2026-09-07 |
+| [copier](https://copier.readthedocs.io/) | Library for rendering project templates | `copier` | 9.19.1<br>2026-10-13 |
 | [ipython](https://ipython.org/) | Enhanced interactive Python shell | `ipython`, `ipython3` | 9.17.1<br>2026-09-01 |
 | [jupyter-core](https://jupyter.org/) | Core functionality for Jupyter projects | `jupyter`, `jupyter-migrate`, `jupyter-troubleshoot` | 5.9.1<br>2025-10-16 |
-| [pudb](https://github.com/inducer/pudb) | Full-screen, console-based visual debugger for Python | `pudb` | 2025.1.5<br>2025-12-06 |
+| [pudb](https://github.com/inducer/pudb) | Full-screen, console-based visual debugger for Python | `pudb` | 2026.1<br>2026-10-13 |
 | [typer](https://typer.tiangolo.com/) | Build CLI applications | `typer` | 0.27.3<br>2026-10-06 |
 
 
@@ -284,7 +284,7 @@ uvx --from jupyter-core jupyter notebook
 
 | Name | Description | Executable(s) | Latest Release |
 |:-----|:------------|:--------------|:--------------|
-| [markdown](https://python-markdown.github.io/) | Python implementation of Markdown | `markdown_py` | 3.11<br>2026-09-25 |
+| [markdown](https://python-markdown.github.io/) | Python implementation of Markdown | `markdown_py` | 3.11.1<br>2026-10-13 |
 | [pdoc](https://pdoc.dev/) | Auto-generate API documentation for Python projects | `pdoc` | 16.0.0<br>2025-10-27 |
 | [sphinx](https://www.sphinx-doc.org/) | Build project and API documentation in multiple output formats | `sphinx-apidoc`, `sphinx-autogen`, `sphinx-build`, `sphinx-quickstart` | 9.1.0<br>2025-12-31 |
 
@@ -409,7 +409,7 @@ uvx --python 3.13 --from posting posting
 | Name | Description | Executable(s) | Latest Release |
 |:-----|:------------|:--------------|:--------------|
 | [django](https://www.djangoproject.com/) | High-level Python web framework | `django-admin` | 6.1.2<br>2026-10-06 |
-| [fastapi[standard]](https://fastapi.tiangolo.com/) | Modern, fast web framework for building APIs | `fastapi` | 0.143.0<br>2026-10-08 |
+| [fastapi[standard]](https://fastapi.tiangolo.com/) | Modern, fast web framework for building APIs | `fastapi` | 0.148.0<br>2026-10-19 |
 | [flask](https://flask.palletsprojects.com/) | Lightweight WSGI web application framework | `flask` | 3.1.3<br>2026-02-19 |
 | [uvicorn](https://www.uvicorn.org/) | Lightning-fast ASGI server | `uvicorn` | 0.54.0<br>2026-09-25 |
 
@@ -438,14 +438,14 @@ uvx --from django django-admin startproject myproject
 | [deptry](https://deptry.com/) | Check Python projects for dependency declaration issues | `deptry` | 0.25.1<br>2026-03-18 |
 | [mypy](https://mypy.readthedocs.io/) | Optional static typing for Python | `mypy`, `mypy-langserver` | 2.4.0<br>2026-10-01 |
 | [nox](https://nox.thea.codes/) | Flexible test automation | `nox`, `tox-to-nox` | 2026.8.17<br>2026-08-18 |
-| [pre-commit](https://github.com/pre-commit/pre-commit) | Framework for managing and maintaining multi-language git hooks | `pre-commit` | 4.6.2<br>2026-08-10 |
+| [pre-commit](https://github.com/pre-commit/pre-commit) | Framework for managing and maintaining multi-language git hooks | `pre-commit` | 4.7.0<br>2026-10-12 |
 | [pyright](https://github.com/microsoft/pyright) | Static type checker for Python | `pyright`, `pyright-langserver`, `pyright-python`, `pyright-python-langserver` | 1.1.414<br>2026-09-10 |
 | [pytest](https://docs.pytest.org/) | Testing framework | `pytest`, `py.test` | 9.1.1<br>2026-06-19 |
-| [ruff](https://github.com/astral-sh/ruff) | An extremely fast Python linter | `ruff` | 0.17.0<br>2026-10-09 |
-| [schemathesis](https://schemathesis.readthedocs.io/) | Property-based testing for APIs | `schemathesis`, `st` | 4.31.0<br>2026-10-12 |
-| [tavern](https://github.com/taverntesting/tavern) | pytest plugin, command-line tool, and Python library for automated testing of APIs | `tavern-ci` | 3.7.0<br>2026-09-25 |
-| [tox](https://tox.wiki/) | Automate and standardize testing | `tox` | 4.65.4<br>2026-10-12 |
-| [ty](https://github.com/astral-sh/ty) | An extremely fast Python type checker and language server | `ty` | 0.0.86<br>2026-10-09 |
+| [ruff](https://github.com/astral-sh/ruff) | An extremely fast Python linter | `ruff` | 0.17.1<br>2026-10-15 |
+| [schemathesis](https://schemathesis.readthedocs.io/) | Property-based testing for APIs | `schemathesis`, `st` | 4.32.1<br>2026-10-19 |
+| [tavern](https://github.com/taverntesting/tavern) | pytest plugin, command-line tool, and Python library for automated testing of APIs | `tavern-ci` | 3.7.1<br>2026-10-17 |
+| [tox](https://tox.wiki/) | Automate and standardize testing | `tox` | 4.67.1<br>2026-10-18 |
+| [ty](https://github.com/astral-sh/ty) | An extremely fast Python type checker and language server | `ty` | 0.0.89<br>2026-10-16 |
 | [vulture](https://github.com/jendrikseipp/vulture) | Find unused code in Python projects | `vulture` | 2.16<br>2026-03-25 |
 
 
@@ -507,15 +507,15 @@ uvx --from scalene scalene script.py
 
 | Name | Description | Executable(s) | Latest Release |
 |:-----|:------------|:--------------|:--------------|
-| [bump-my-version](https://callowayproject.github.io/bump-my-version/) | Update version numbers across project files | `bump-my-version` | 1.6.0<br>2026-10-11 |
+| [bump-my-version](https://callowayproject.github.io/bump-my-version/) | Update version numbers across project files | `bump-my-version` | 1.6.3<br>2026-10-18 |
 | [commitizen](https://commitizen-tools.github.io/commitizen/) | Standardize commit messages, version bumps, and changelogs | `cz`, `git-cz` | 4.19.2<br>2026-10-07 |
-| [pipx](https://pypa.github.io/pipx/) | Install and run Python applications in isolated environments | `pipx` | 1.17.14<br>2026-10-12 |
+| [pipx](https://pypa.github.io/pipx/) | Install and run Python applications in isolated environments | `pipx` | 1.18.4<br>2026-10-18 |
 | [poetry](https://python-poetry.org/) | Python packaging and dependency management | `poetry` | 2.5.1<br>2026-09-20 |
 | [py2app](https://py2app.readthedocs.io/) | Create standalone Mac OS X applications | `py2applet` | 0.28.10<br>2026-02-13 |
 | [pyarmor](https://pyarmor.dashingsoft.com/) | Tool for obfuscating Python scripts | `pyarmor`, `pyarmor-7`, `pyarmor-8`, `pyarmor-auth` | 9.2.7<br>2026-08-29 |
 | [pyinstaller](https://www.pyinstaller.org/) | Convert Python programs into stand-alone executables | `pyi-archive_viewer`, `pyi-bindepend`, `pyi-grab_version`, `pyi-makespec`, `pyi-set_version`, `pyinstaller` | 6.22.3<br>2026-09-12 |
 | [shiv](https://github.com/linkedin/shiv) | Build fully self-contained Python zipapps | `shiv`, `shiv-info` | 1.0.8<br>2024-11-01 |
-| [uv](https://github.com/astral-sh/uv) | Extremely fast Python package installer and resolver, written in Rust | `uv` | 0.13.0<br>2026-10-09 |
+| [uv](https://github.com/astral-sh/uv) | Extremely fast Python package installer and resolver, written in Rust | `uv` | 0.13.1<br>2026-10-14 |
 | [uv-upsync](https://github.com/pivoshenko/uv-upsync) | uv-upsync is a uv-native tool for automated dependency updates and version bumping in pyproject.toml | `uv-upsync` | 2.4.2<br>2026-09-20 |
 
 
