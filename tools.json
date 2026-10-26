@@ -48,8 +48,8 @@
           "execs": [
             "mlflow"
           ],
-          "version": "3.17.1",
-          "last_release": "2026-10-13"
+          "version": "3.17.2",
+          "last_release": "2026-10-21"
         },
         "orbi-cli": {
           "description": "Run a self-hosted coding agent on GitHub issues: label one ai-ready and it writes the code, opens a PR, reviews it in a separate session, merges, and tags a release",
@@ -67,8 +67,8 @@
               "description": "Show the in-progress issue, the next ready issue and the latest result per repo"
             }
           ],
-          "version": "0.7.7",
-          "last_release": "2026-10-18"
+          "version": "0.7.18",
+          "last_release": "2026-10-26"
         },
         "rote-cli": {
           "description": "Compile an AI agent skill into a typed, deterministic pipeline with per-step tests",
@@ -86,8 +86,8 @@
               "description": "Compile a skill into a runnable Python pipeline"
             }
           ],
-          "version": "0.14.0",
-          "last_release": "2026-10-18"
+          "version": "0.16.0",
+          "last_release": "2026-10-22"
         }
       }
     },
@@ -233,8 +233,8 @@
           "execs": [
             "mycli"
           ],
-          "version": "2.30.0",
-          "last_release": "2026-10-17"
+          "version": "2.30.1",
+          "last_release": "2026-10-24"
         },
         "peewee": {
           "description": "Peewee is a small, expressive ORM for Python.",
@@ -394,8 +394,8 @@
               "description": "Convert a Markdown file to HTML"
             }
           ],
-          "version": "3.11.1",
-          "last_release": "2026-10-13"
+          "version": "3.11.2",
+          "last_release": "2026-10-19"
         },
         "pdoc": {
           "description": "Auto-generate API documentation for Python projects",
@@ -420,8 +420,8 @@
               "cmd": "uvx --from sphinx sphinx-build -b html docs docs/_build/html"
             }
           ],
-          "version": "9.1.0",
-          "last_release": "2025-12-31"
+          "version": "9.2.0",
+          "last_release": "2026-10-21"
         }
       }
     },
@@ -473,8 +473,8 @@
               "description": "Convert a document with optional format dependencies installed"
             }
           ],
-          "version": "0.1.8",
-          "last_release": "2026-09-21"
+          "version": "0.1.9",
+          "last_release": "2026-10-21"
         },
         "ocrmypdf": {
           "description": "Add a searchable OCR text layer to scanned PDF files",
@@ -534,8 +534,8 @@
             "mitmdump",
             "mitmweb"
           ],
-          "version": "12.2.3",
-          "last_release": "2026-05-12"
+          "version": "12.3.1",
+          "last_release": "2026-10-25"
         },
         "posting": {
           "description": "Terminal HTTP client with saved request collections and OpenAPI imports",
@@ -558,8 +558,8 @@
           "execs": [
             "websockets"
           ],
-          "version": "17.2",
-          "last_release": "2026-10-03"
+          "version": "17.3",
+          "last_release": "2026-10-19"
         }
       }
     },
@@ -588,8 +588,8 @@
           "execs": [
             "fastapi"
           ],
-          "version": "0.148.0",
-          "last_release": "2026-10-19"
+          "version": "0.162.0",
+          "last_release": "2026-10-23"
         },
         "flask": {
           "description": "Lightweight WSGI web application framework",
@@ -632,8 +632,8 @@
             "coverage-3.13",
             "coverage3"
           ],
-          "version": "7.16.2",
-          "last_release": "2026-09-27"
+          "version": "7.17.0",
+          "last_release": "2026-10-22"
         },
         "deptry": {
           "description": "Check Python projects for dependency declaration issues",
@@ -666,8 +666,8 @@
             "nox",
             "tox-to-nox"
           ],
-          "version": "2026.8.17",
-          "last_release": "2026-08-18"
+          "version": "2026.10.20",
+          "last_release": "2026-10-20"
         },
         "pre-commit": {
           "description": "Framework for managing and maintaining multi-language git hooks",
@@ -706,8 +706,8 @@
           "execs": [
             "ruff"
           ],
-          "version": "0.17.1",
-          "last_release": "2026-10-15"
+          "version": "0.17.2",
+          "last_release": "2026-10-22"
         },
         "schemathesis": {
           "description": "Property-based testing for APIs",
@@ -716,8 +716,8 @@
             "schemathesis",
             "st"
           ],
-          "version": "4.32.1",
-          "last_release": "2026-10-19"
+          "version": "4.32.5",
+          "last_release": "2026-10-25"
         },
         "tavern": {
           "description": "pytest plugin, command-line tool, and Python library for automated testing of APIs",
@@ -743,8 +743,8 @@
           "execs": [
             "ty"
           ],
-          "version": "0.0.89",
-          "last_release": "2026-10-16"
+          "version": "0.0.92",
+          "last_release": "2026-10-26"
         },
         "vulture": {
           "description": "Find unused code in Python projects",
@@ -771,7 +771,9 @@
               "cmd": "uvx --from check-jsonschema check-jsonschema --schemafile schema.json data.json",
               "description": "Validate data.json against a local JSON Schema"
             }
-          ]
+          ],
+          "version": "0.38.2",
+          "last_release": "2026-09-23"
         }
       }
     },
@@ -804,8 +806,8 @@
               "cmd": "uvx --from scalene scalene script.py"
             }
           ],
-          "version": "2.3.0",
-          "last_release": "2026-05-12"
+          "version": "2.4.0",
+          "last_release": "2026-10-23"
         }
       }
     },
@@ -824,8 +826,8 @@
               "cmd": "uvx --from bump-my-version bump-my-version --help"
             }
           ],
-          "version": "1.6.3",
-          "last_release": "2026-10-18"
+          "version": "1.6.7",
+          "last_release": "2026-10-25"
         },
         "commitizen": {
           "description": "Standardize commit messages, version bumps, and changelogs",
@@ -839,8 +841,8 @@
               "cmd": "uvx --from commitizen cz --help"
             }
           ],
-          "version": "4.19.2",
-          "last_release": "2026-10-07"
+          "version": "4.19.3",
+          "last_release": "2026-10-24"
         },
         "pipx": {
           "description": "Install and run Python applications in isolated environments",
@@ -884,8 +886,8 @@
             "pyarmor-8",
             "pyarmor-auth"
           ],
-          "version": "9.2.7",
-          "last_release": "2026-08-29"
+          "version": "9.2.8",
+          "last_release": "2026-10-22"
         },
         "pyinstaller": {
           "description": "Convert Python programs into stand-alone executables",
@@ -923,8 +925,8 @@
           "execs": [
             "uv"
           ],
-          "version": "0.13.1",
-          "last_release": "2026-10-14"
+          "version": "0.13.5",
+          "last_release": "2026-10-22"
         },
         "uv-upsync": {
           "description": "uv-upsync is a uv-native tool for automated dependency updates and version bumping in pyproject.toml",
@@ -1027,7 +1029,9 @@
               "cmd": "uvx --from zizmor zizmor --offline .",
               "description": "Analyze local workflows without network access; online-only checks are omitted"
             }
-          ]
+          ],
+          "version": "1.31.1",
+          "last_release": "2026-10-15"
         }
       }
     },
@@ -1056,8 +1060,8 @@
           "execs": [
             "aws"
           ],
-          "version": "1.46.1",
-          "last_release": "2026-08-27"
+          "version": "1.46.2",
+          "last_release": "2026-10-21"
         },
         "bpytop": {
           "description": "Resource monitor that shows usage and stats for processor, memory, disks, network, and processes",
@@ -1127,8 +1131,8 @@
           "execs": [
             "prefect"
           ],
-          "version": "3.8.8",
-          "last_release": "2026-10-06"
+          "version": "3.9.0",
+          "last_release": "2026-10-21"
         },
         "rq": {
           "description": "Simple job queues for Python",
@@ -1233,8 +1237,8 @@
               "description": "Load a tmux session from a YAML config file"
             }
           ],
-          "version": "1.74.0",
-          "last_release": "2026-07-04"
+          "version": "1.76.0",
+          "last_release": "2026-10-24"
         },
         "xonsh": {
           "description": "Python-powered shell",
@@ -1245,8 +1249,8 @@
             "xonsh-uname",
             "xonsh-uptime"
           ],
-          "version": "0.24.2",
-          "last_release": "2026-08-23"
+          "version": "0.25.0",
+          "last_release": "2026-10-22"
         }
       }
     },
@@ -1288,8 +1292,8 @@
               "description": "Extract audio as MP3 from a YouTube video"
             }
           ],
-          "version": "2026.8.19",
-          "last_release": "2026-08-19"
+          "version": "2026.10.21",
+          "last_release": "2026-10-21"
         }
       }
     },
