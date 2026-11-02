@@ -40,8 +40,9 @@ def fetch_latest(package: str) -> tuple[str, str | None] | None:
         return None
 
 
-def main() -> None:
+def main() -> int:
     data = json.loads(TOOLS_JSON.read_text())
+    failed: list[str] = []
 
     for category in data["categories"]:
         for name, tool in category["tools"].items():
@@ -51,16 +52,22 @@ def main() -> None:
 
             result = fetch_latest(name)
             if result is None:
+                failed.append(name)
                 continue
 
             version, date = result
             tool["version"] = version
-            tool["last_release"] = date
+            if date:
+                tool["last_release"] = date
             log.info("%-30s %s  %s", name, version, date)
 
     TOOLS_JSON.write_text(json.dumps(data, indent=2) + "\n")
     log.info("tools.json updated.")
+    if failed:
+        log.error("Release metadata sync incomplete: %s", ", ".join(failed))
+        return 1
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

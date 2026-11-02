@@ -1,67 +1,83 @@
-name: Catalog Validation
+name: Validate Catalog
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
     paths:
       - 'tools.json'
       - 'README.md'
-      - '.github/workflows/ci.yml'
       - 'scripts/**'
+      - 'tests/**'
       - 'template/**'
-  schedule:
-    - cron: '0 0 1 * *'
+      - '.github/workflows/**'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'tools.json'
+      - 'README.md'
+      - 'scripts/**'
+      - 'tests/**'
+      - 'template/**'
+      - '.github/workflows/**'
   workflow_dispatch:
 
 permissions:
   contents: read
 
+concurrency:
+  group: catalog-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
 jobs:
   validate:
-    runs-on: ubuntu-slim
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - name: Checkout code
         uses: actions/checkout@v7
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          fetch-depth: 2
+          fetch-depth: 0
+          persist-credentials: false
 
       - name: Set up uv
         uses: astral-sh/setup-uv@v10.2.0
 
-      - name: Validate tools.json schema
-        run: uv run scripts/checks.py
+      - name: Validate catalog
+        id: catalog
+        run: uv run scripts/checks.py 2>&1 | tee validation.log
 
-      - name: Test tools via uvx
-        id: test
-        continue-on-error: true
+      - name: Test maintenance scripts
+        id: tests
         run: |
-          if [ "${{ github.event_name }}" = "push" ]; then
-            uv run scripts/test_clients.py --diff HEAD~1 --output output.log
-          else
-            uv run scripts/test_clients.py --all --output output.log
-          fi
+          { uv run --with httpx python -m unittest discover -s tests -v; } 2>&1 | tee tests.log
 
-      - name: Upload validation report
+      - name: Check README freshness
+        id: readme
+        run: |
+          { uv run scripts/readme.py && git diff --exit-code -- README.md; } 2>&1 | tee readme.log
+
+      - name: Summarize validation
         if: always()
+        env:
+          JOB_STATUS: ${{ job.status }}
+          CATALOG_STATUS: ${{ steps.catalog.outcome }}
+          TESTS_STATUS: ${{ steps.tests.outcome }}
+          README_STATUS: ${{ steps.readme.outcome }}
+        run: python3 scripts/actions_summary.py catalog
+
+      - name: Upload failure details
+        if: failure()
         uses: actions/upload-artifact@v7
         with:
-          name: validation-report
+          name: catalog-validation-failure
           path: |
             checks.log
-            output.log
-          retention-days: 30
-
-      - name: Remove logs from workspace
-        if: always()
-        run: rm -f checks.log output.log
-
-      - name: Fail job if any tools failed
-        if: steps.test.outcome == 'failure'
-        run: exit 1
-
-      - name: Check generated README is current
-        run: |
-          uv run scripts/readme.py
-          git diff --exit-code -- README.md
+            validation.log
+            tests.log
+            readme.log
+          retention-days: 14
+          if-no-files-found: ignore
