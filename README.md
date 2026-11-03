@@ -198,7 +198,7 @@ uvx --from visidata vd data.csv
 | [iredis](https://github.com/laixintao/iredis) | Iredis is a Redis terminal client with auto-completion and syntax highlighting. | `iredis` | 1.16.1<br>2026-03-27 |
 | [litecli](https://litecli.com/) | Litecli is a command line interface for SQLite with auto-completion and syntax highlighting. | `litecli` | 1.17.1<br>2026-01-31 |
 | [mycli](https://www.mycli.net/) | Mycli is a command line interface for MySQL with auto-completion and syntax highlighting. | `mycli` | 2.30.2<br>2026-10-28 |
-| [peewee](http://docs.peewee-orm.com/) | Peewee is a small, expressive ORM for Python. | `pwiz.py` | 4.5.3<br>2026-10-07 |
+| [peewee](http://docs.peewee-orm.com/) | Generate Peewee model code by introspecting existing databases | `pwiz` | 4.5.3<br>2026-10-07 |
 | [pgcli](https://www.pgcli.com/) | Pgcli is a command line interface for PostgreSQL with auto-completion and syntax highlighting. | `pgcli` | 4.7.1<br>2026-09-20 |
 | [sqlfluff](https://www.sqlfluff.com/) | Lint and format SQL across multiple dialects | `sqlfluff` | 4.5.0<br>2026-10-30 |
 | [sqlite-utils](https://github.com/simonw/sqlite-utils) | Python CLI utility and library for manipulating SQLite databases | `sqlite-utils` | 4.2.1<br>2026-08-13 |
@@ -221,7 +221,7 @@ uvx --from datasette datasette data.db
 Introspect a SQLite database and generate model code
 
 ```sh
-uvx --from peewee pwiz.py -e sqlite mydb.db
+uvx --from peewee pwiz -e sqlite mydb.db
 ```
 
 </details>
@@ -268,10 +268,10 @@ uvx --from sqlparse sqlformat --reindent --keywords upper query.sql
 <details>
 <summary>jupyter-core examples</summary>
 
-Launch the Jupyter notebook server
+Show Jupyter configuration, data, and runtime paths; Notebook is a separate application
 
 ```sh
-uvx --from jupyter-core jupyter notebook
+uvx --from jupyter-core jupyter --paths
 ```
 
 </details>
@@ -435,9 +435,9 @@ uvx --from django django-admin startproject myproject
 |:-----|:------------|:--------------|:--------------|
 | [black](https://github.com/psf/black) | The uncompromising Python code formatter | `black` | 26.10.1<br>2026-10-10 |
 | [check-jsonschema](https://check-jsonschema.readthedocs.io/) | Validate JSON and YAML files against JSON Schema | `check-jsonschema` | 0.39.0<br>2026-10-26 |
-| [coverage](https://coverage.readthedocs.io/) | Code coverage measurement | `coverage`, `coverage-3.13`, `coverage3` | 7.17.0<br>2026-10-22 |
+| [coverage](https://coverage.readthedocs.io/) | Code coverage measurement | `coverage`, `coverage3` | 7.17.0<br>2026-10-22 |
 | [deptry](https://deptry.com/) | Check Python projects for dependency declaration issues | `deptry` | 0.25.1<br>2026-03-18 |
-| [mypy](https://mypy.readthedocs.io/) | Optional static typing for Python | `mypy`, `mypy-langserver` | 2.4.1<br>2026-10-28 |
+| [mypy](https://mypy.readthedocs.io/) | Optional static typing for Python | `mypy` | 2.4.1<br>2026-10-28 |
 | [nox](https://nox.thea.codes/) | Flexible test automation | `nox`, `tox-to-nox` | 2026.10.20<br>2026-10-20 |
 | [pre-commit](https://github.com/pre-commit/pre-commit) | Framework for managing and maintaining multi-language git hooks | `pre-commit` | 4.7.0<br>2026-10-12 |
 | [pyright](https://github.com/microsoft/pyright) | Static type checker for Python | `pyright`, `pyright-langserver`, `pyright-python`, `pyright-python-langserver` | 1.1.414<br>2026-09-10 |
@@ -762,7 +762,7 @@ Download a YouTube video
 uvx yt-dlp https://www.youtube.com/watch?v=dQw4w9WgXcQ
 ```
 
-Extract audio as MP3 from a YouTube video
+Extract audio as MP3; requires external ffmpeg and ffprobe binaries. Site support may also require a supported JavaScript runtime and yt-dlp-ejs
 
 ```sh
 uvx yt-dlp -x --audio-format mp3 https://www.youtube.com/watch?v=dQw4w9WgXcQ
