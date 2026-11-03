@@ -237,14 +237,14 @@
           "last_release": "2026-10-28"
         },
         "peewee": {
-          "description": "Peewee is a small, expressive ORM for Python.",
+          "description": "Generate Peewee model code by introspecting existing databases",
           "url": "http://docs.peewee-orm.com/",
           "execs": [
-            "pwiz.py"
+            "pwiz"
           ],
           "examples": [
             {
-              "cmd": "uvx --from peewee pwiz.py -e sqlite mydb.db",
+              "cmd": "uvx --from peewee pwiz -e sqlite mydb.db",
               "description": "Introspect a SQLite database and generate model code"
             }
           ],
@@ -351,8 +351,8 @@
           ],
           "examples": [
             {
-              "cmd": "uvx --from jupyter-core jupyter notebook",
-              "description": "Launch the Jupyter notebook server"
+              "cmd": "uvx --from jupyter-core jupyter --paths",
+              "description": "Show Jupyter configuration, data, and runtime paths; Notebook is a separate application"
             }
           ],
           "version": "5.9.1",
@@ -629,7 +629,6 @@
           "url": "https://coverage.readthedocs.io/",
           "execs": [
             "coverage",
-            "coverage-3.13",
             "coverage3"
           ],
           "version": "7.17.0",
@@ -653,8 +652,7 @@
           "description": "Optional static typing for Python",
           "url": "https://mypy.readthedocs.io/",
           "execs": [
-            "mypy",
-            "mypy-langserver"
+            "mypy"
           ],
           "version": "2.4.1",
           "last_release": "2026-10-28"
@@ -1289,7 +1287,7 @@
             },
             {
               "cmd": "uvx yt-dlp -x --audio-format mp3 https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-              "description": "Extract audio as MP3 from a YouTube video"
+              "description": "Extract audio as MP3; requires external ffmpeg and ffprobe binaries. Site support may also require a supported JavaScript runtime and yt-dlp-ejs"
             }
           ],
           "version": "2026.10.26",
