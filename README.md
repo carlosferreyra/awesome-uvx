@@ -530,7 +530,7 @@ uvx --from scalene scalene script.py
 | [shiv](https://github.com/linkedin/shiv) | Build fully self-contained Python zipapps | `shiv`, `shiv-info` | 1.0.8<br>2024-11-01 |
 | [uv](https://github.com/astral-sh/uv) | Extremely fast Python package installer and resolver, written in Rust | `uv` | 0.13.6<br>2026-10-27 |
 | [uv-upsync](https://github.com/pivoshenko/uv-upsync) | uv-upsync is a uv-native tool for automated dependency updates and version bumping in pyproject.toml | `uv-upsync` | 2.4.2<br>2026-09-20 |
-| [wheelgap](https://github.com/patrickballard/wheelgap) | Find dependencies in a lockfile that have no prebuilt wheel for your target platform (ARM, Alpine, Windows ARM, free-threaded Python) | `wheelgap` | 0.1.0<br>2026-11-08 |
+| [wheelgap](https://github.com/wheelgap/wheelgap) | Find dependencies in a lockfile that have no prebuilt wheel for your target platform (ARM, Alpine, Windows ARM, free-threaded Python) | `wheelgap` | 0.6.2<br>2026-11-09 |
 
 
 <details>

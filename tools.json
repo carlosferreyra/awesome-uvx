@@ -937,7 +937,7 @@
         },
         "wheelgap": {
           "description": "Find dependencies in a lockfile that have no prebuilt wheel for your target platform (ARM, Alpine, Windows ARM, free-threaded Python)",
-          "url": "https://github.com/patrickballard/wheelgap",
+          "url": "https://github.com/wheelgap/wheelgap",
           "execs": [
             "wheelgap"
           ],
@@ -946,8 +946,8 @@
               "cmd": "uvx wheelgap numpy psycopg2 -p 3.13 -t linux-aarch64,musl-x86_64"
             }
           ],
-          "version": "0.1.0",
-          "last_release": "2026-11-08"
+          "version": "0.6.2",
+          "last_release": "2026-11-09"
         }
       }
     },
