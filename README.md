@@ -25,7 +25,7 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 <a href="https://github.com/carlosferreyra/awesome-bunx">awesome-bunx</a> and
 <a href="https://github.com/carlosferreyra/awesome-cargo-install">awesome-cargo-install</a>.
 
-**109 tools across 18 categories.**
+**110 tools across 18 categories.**
 
 ## Contents
 
@@ -40,7 +40,7 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 - [Web Frameworks & Servers](#web-frameworks-and-servers) (4)
 - [Testing & Code Quality](#testing-and-code-quality) (15)
 - [Profiling & Performance](#profiling-and-performance) (2)
-- [Packaging & Releases](#packaging-and-releases) (10)
+- [Packaging & Releases](#packaging-and-releases) (11)
 - [Security & Auditing](#security-and-auditing) (8)
 - [System & Infrastructure](#system-and-infrastructure) (5)
 - [Automation & Task Runners](#automation-and-task-runners) (5)
@@ -530,6 +530,7 @@ uvx --from scalene scalene script.py
 | [shiv](https://github.com/linkedin/shiv) | Build fully self-contained Python zipapps | `shiv`, `shiv-info` | 1.0.8<br>2024-11-01 |
 | [uv](https://github.com/astral-sh/uv) | Extremely fast Python package installer and resolver, written in Rust | `uv` | 0.13.6<br>2026-10-27 |
 | [uv-upsync](https://github.com/pivoshenko/uv-upsync) | uv-upsync is a uv-native tool for automated dependency updates and version bumping in pyproject.toml | `uv-upsync` | 2.4.2<br>2026-09-20 |
+| [wheelgap](https://github.com/wheelgap/wheelgap) | Find dependencies in a lockfile that have no prebuilt wheel for your target platform (ARM, Alpine, Windows ARM, free-threaded Python) | `wheelgap` | 0.6.2<br>2026-11-09 |
 
 
 <details>
@@ -571,6 +572,16 @@ Bundle a script into a single standalone executable
 
 ```sh
 uvx --from pyinstaller pyinstaller --onefile myscript.py
+```
+
+</details>
+
+
+<details>
+<summary>wheelgap examples</summary>
+
+```sh
+uvx wheelgap numpy psycopg2 -p 3.13 -t linux-aarch64,musl-x86_64
 ```
 
 </details>
