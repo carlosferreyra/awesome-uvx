@@ -39,8 +39,8 @@
               "cmd": "uvx --from llm llm --help"
             }
           ],
-          "version": "0.36",
-          "last_release": "2026-09-22"
+          "version": "0.37.1",
+          "last_release": "2026-11-03"
         },
         "mlflow": {
           "description": "Open source platform for managing the end-to-end machine learning lifecycle",
@@ -48,8 +48,8 @@
           "execs": [
             "mlflow"
           ],
-          "version": "3.17.2",
-          "last_release": "2026-10-21"
+          "version": "3.18.0",
+          "last_release": "2026-11-03"
         },
         "orbi-cli": {
           "description": "Run a self-hosted coding agent on GitHub issues: label one ai-ready and it writes the code, opens a PR, reviews it in a separate session, merges, and tags a release",
@@ -67,8 +67,8 @@
               "description": "Show the in-progress issue, the next ready issue and the latest result per repo"
             }
           ],
-          "version": "0.7.34",
-          "last_release": "2026-11-02"
+          "version": "0.7.41",
+          "last_release": "2026-11-08"
         },
         "rote-cli": {
           "description": "Compile an AI agent skill into a typed, deterministic pipeline with per-step tests",
@@ -233,8 +233,8 @@
           "execs": [
             "mycli"
           ],
-          "version": "2.30.2",
-          "last_release": "2026-10-28"
+          "version": "2.30.3",
+          "last_release": "2026-11-05"
         },
         "peewee": {
           "description": "Generate Peewee model code by introspecting existing databases",
@@ -373,8 +373,8 @@
           "execs": [
             "typer"
           ],
-          "version": "0.27.3",
-          "last_release": "2026-10-06"
+          "version": "0.28.0",
+          "last_release": "2026-11-06"
         }
       }
     },
@@ -394,8 +394,8 @@
               "description": "Convert a Markdown file to HTML"
             }
           ],
-          "version": "3.11.2",
-          "last_release": "2026-10-19"
+          "version": "3.11.3",
+          "last_release": "2026-11-05"
         },
         "pdoc": {
           "description": "Auto-generate API documentation for Python projects",
@@ -487,8 +487,8 @@
               "cmd": "uvx --from ocrmypdf ocrmypdf scanned.pdf searchable.pdf"
             }
           ],
-          "version": "17.13.0",
-          "last_release": "2026-09-28"
+          "version": "17.14.0",
+          "last_release": "2026-11-08"
         },
         "textract": {
           "description": "Extract text from various document formats",
@@ -579,8 +579,8 @@
               "description": "Create a new Django project scaffold"
             }
           ],
-          "version": "6.1.2",
-          "last_release": "2026-10-06"
+          "version": "6.1.3",
+          "last_release": "2026-11-03"
         },
         "fastapi[standard]": {
           "description": "Modern, fast web framework for building APIs",
@@ -588,8 +588,8 @@
           "execs": [
             "fastapi"
           ],
-          "version": "0.162.0",
-          "last_release": "2026-10-23"
+          "version": "0.162.2",
+          "last_release": "2026-11-07"
         },
         "flask": {
           "description": "Lightweight WSGI web application framework",
@@ -631,8 +631,8 @@
             "coverage",
             "coverage3"
           ],
-          "version": "7.17.0",
-          "last_release": "2026-10-22"
+          "version": "7.17.2",
+          "last_release": "2026-11-04"
         },
         "deptry": {
           "description": "Check Python projects for dependency declaration issues",
@@ -704,8 +704,8 @@
           "execs": [
             "ruff"
           ],
-          "version": "0.17.3",
-          "last_release": "2026-10-27"
+          "version": "0.17.4",
+          "last_release": "2026-11-05"
         },
         "schemathesis": {
           "description": "Property-based testing for APIs",
@@ -714,8 +714,8 @@
             "schemathesis",
             "st"
           ],
-          "version": "4.33.0",
-          "last_release": "2026-11-01"
+          "version": "4.33.1",
+          "last_release": "2026-11-04"
         },
         "tavern": {
           "description": "pytest plugin, command-line tool, and Python library for automated testing of APIs",
@@ -732,8 +732,8 @@
           "execs": [
             "tox"
           ],
-          "version": "4.67.5",
-          "last_release": "2026-10-31"
+          "version": "4.67.13",
+          "last_release": "2026-11-06"
         },
         "ty": {
           "description": "An extremely fast Python type checker and language server",
@@ -741,8 +741,8 @@
           "execs": [
             "ty"
           ],
-          "version": "0.0.95",
-          "last_release": "2026-10-29"
+          "version": "0.0.99",
+          "last_release": "2026-11-06"
         },
         "vulture": {
           "description": "Find unused code in Python projects",
@@ -848,8 +848,8 @@
           "execs": [
             "pipx"
           ],
-          "version": "1.18.11",
-          "last_release": "2026-10-30"
+          "version": "1.18.16",
+          "last_release": "2026-11-07"
         },
         "poetry": {
           "description": "Python packaging and dependency management",
@@ -923,8 +923,8 @@
           "execs": [
             "uv"
           ],
-          "version": "0.13.6",
-          "last_release": "2026-10-27"
+          "version": "0.13.7",
+          "last_release": "2026-11-03"
         },
         "uv-upsync": {
           "description": "uv-upsync is a uv-native tool for automated dependency updates and version bumping in pyproject.toml",
@@ -1028,8 +1028,8 @@
               "description": "Analyze local workflows without network access; online-only checks are omitted"
             }
           ],
-          "version": "1.31.1",
-          "last_release": "2026-10-15"
+          "version": "1.32.0",
+          "last_release": "2026-11-02"
         }
       }
     },
@@ -1049,8 +1049,8 @@
               "description": "Check the installed Ansible community version"
             }
           ],
-          "version": "14.5.0",
-          "last_release": "2026-10-06"
+          "version": "14.6.0",
+          "last_release": "2026-11-04"
         },
         "awscli": {
           "description": "Official command-line interface for Amazon Web Services",
@@ -1058,8 +1058,8 @@
           "execs": [
             "aws"
           ],
-          "version": "1.46.2",
-          "last_release": "2026-10-21"
+          "version": "1.46.3",
+          "last_release": "2026-11-05"
         },
         "bpytop": {
           "description": "Resource monitor that shows usage and stats for processor, memory, disks, network, and processes",
@@ -1076,8 +1076,8 @@
           "execs": [
             "glances"
           ],
-          "version": "4.5.8",
-          "last_release": "2026-10-11"
+          "version": "4.5.9",
+          "last_release": "2026-11-07"
         },
         "platformio": {
           "description": "Open source ecosystem for IoT development with cross-platform IDE and unified debugger",
@@ -1101,8 +1101,8 @@
           "execs": [
             "celery"
           ],
-          "version": "5.6.3",
-          "last_release": "2026-03-26"
+          "version": "5.7.0",
+          "last_release": "2026-11-05"
         },
         "invoke": {
           "description": "Tool for managing shell-oriented subprocesses and organizing executable Python code into CLI-invokable tasks",
@@ -1129,8 +1129,8 @@
           "execs": [
             "prefect"
           ],
-          "version": "3.9.1",
-          "last_release": "2026-10-30"
+          "version": "3.9.2",
+          "last_release": "2026-11-06"
         },
         "rq": {
           "description": "Simple job queues for Python",
