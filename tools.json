@@ -39,8 +39,8 @@
               "cmd": "uvx --from llm llm --help"
             }
           ],
-          "version": "0.37.1",
-          "last_release": "2026-11-03"
+          "version": "0.37.2",
+          "last_release": "2026-11-11"
         },
         "mlflow": {
           "description": "Open source platform for managing the end-to-end machine learning lifecycle",
@@ -67,8 +67,8 @@
               "description": "Show the in-progress issue, the next ready issue and the latest result per repo"
             }
           ],
-          "version": "0.7.41",
-          "last_release": "2026-11-08"
+          "version": "0.7.45",
+          "last_release": "2026-11-16"
         },
         "rote-cli": {
           "description": "Compile an AI agent skill into a typed, deterministic pipeline with per-step tests",
@@ -188,8 +188,8 @@
               "cmd": "uvx --from datasette datasette data.db"
             }
           ],
-          "version": "0.65.5",
-          "last_release": "2026-09-17"
+          "version": "0.65.6",
+          "last_release": "2026-11-15"
         },
         "fake2db": {
           "description": "Fake2db is a fake database generator for testing purposes.",
@@ -233,8 +233,8 @@
           "execs": [
             "mycli"
           ],
-          "version": "2.30.3",
-          "last_release": "2026-11-05"
+          "version": "2.31.0",
+          "last_release": "2026-11-14"
         },
         "peewee": {
           "description": "Generate Peewee model code by introspecting existing databases",
@@ -373,8 +373,8 @@
           "execs": [
             "typer"
           ],
-          "version": "0.28.0",
-          "last_release": "2026-11-06"
+          "version": "0.29.1",
+          "last_release": "2026-11-11"
         }
       }
     },
@@ -487,8 +487,8 @@
               "cmd": "uvx --from ocrmypdf ocrmypdf scanned.pdf searchable.pdf"
             }
           ],
-          "version": "17.14.0",
-          "last_release": "2026-11-08"
+          "version": "17.14.2",
+          "last_release": "2026-11-16"
         },
         "textract": {
           "description": "Extract text from various document formats",
@@ -588,8 +588,8 @@
           "execs": [
             "fastapi"
           ],
-          "version": "0.162.2",
-          "last_release": "2026-11-07"
+          "version": "0.163.1",
+          "last_release": "2026-11-15"
         },
         "flask": {
           "description": "Lightweight WSGI web application framework",
@@ -631,8 +631,8 @@
             "coverage",
             "coverage3"
           ],
-          "version": "7.17.2",
-          "last_release": "2026-11-04"
+          "version": "7.17.3",
+          "last_release": "2026-11-12"
         },
         "deptry": {
           "description": "Check Python projects for dependency declaration issues",
@@ -704,8 +704,8 @@
           "execs": [
             "ruff"
           ],
-          "version": "0.17.4",
-          "last_release": "2026-11-05"
+          "version": "0.17.5",
+          "last_release": "2026-11-12"
         },
         "schemathesis": {
           "description": "Property-based testing for APIs",
@@ -714,8 +714,8 @@
             "schemathesis",
             "st"
           ],
-          "version": "4.33.1",
-          "last_release": "2026-11-04"
+          "version": "4.33.4",
+          "last_release": "2026-11-12"
         },
         "tavern": {
           "description": "pytest plugin, command-line tool, and Python library for automated testing of APIs",
@@ -741,8 +741,8 @@
           "execs": [
             "ty"
           ],
-          "version": "0.0.99",
-          "last_release": "2026-11-06"
+          "version": "0.0.104",
+          "last_release": "2026-11-13"
         },
         "vulture": {
           "description": "Find unused code in Python projects",
@@ -885,7 +885,7 @@
             "pyarmor-auth"
           ],
           "version": "9.3.0",
-          "last_release": "2026-10-31"
+          "last_release": "2026-11-13"
         },
         "pyinstaller": {
           "description": "Convert Python programs into stand-alone executables",
@@ -923,8 +923,8 @@
           "execs": [
             "uv"
           ],
-          "version": "0.13.7",
-          "last_release": "2026-11-03"
+          "version": "0.13.8",
+          "last_release": "2026-11-12"
         },
         "uv-upsync": {
           "description": "uv-upsync is a uv-native tool for automated dependency updates and version bumping in pyproject.toml",
@@ -1129,8 +1129,8 @@
           "execs": [
             "prefect"
           ],
-          "version": "3.9.2",
-          "last_release": "2026-11-06"
+          "version": "3.9.3",
+          "last_release": "2026-11-13"
         },
         "rq": {
           "description": "Simple job queues for Python",
@@ -1305,8 +1305,8 @@
           "execs": [
             "faker"
           ],
-          "version": "40.44.0",
-          "last_release": "2026-10-28"
+          "version": "40.54.0",
+          "last_release": "2026-11-10"
         },
         "howdoi": {
           "description": "Instant coding answers via the command line",
