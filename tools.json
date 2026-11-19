@@ -1156,6 +1156,25 @@
           ],
           "version": "3.0.0",
           "last_release": "2026-10-28"
+        },
+        "trapyze": {
+          "description": "Desktop launcher and scheduler for Python scripts, with a settings window per script, plans, a key vault and run history",
+          "url": "https://kapistyn.github.io/trapyze/",
+          "execs": [
+            "trapyze"
+          ],
+          "examples": [
+            {
+              "cmd": "uvx --from \"trapyze[desktop]\" trapyze open",
+              "description": "Open the traPYze desktop in its own window"
+            },
+            {
+              "cmd": "uvx --from trapyze trapyze list",
+              "description": "List your tools from the terminal"
+            }
+          ],
+          "version": "0.17.4",
+          "last_release": "2026-11-19"
         }
       }
     },
