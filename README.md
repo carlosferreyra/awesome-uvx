@@ -674,7 +674,7 @@ uvx --from ansible ansible-community --version
 | [plan](https://github.com/fengsp/plan) | Crontab file manager | `plan-quickstart` | 0.5<br>2015-02-16 |
 | [prefect](https://www.prefect.io/) | Workflow management system | `prefect` | 3.9.3<br>2026-11-13 |
 | [rq](https://python-rq.org/) | Simple job queues for Python | `rq`, `rqinfo`, `rqworker` | 3.0.0<br>2026-10-28 |
-| [trapyze](https://kapistyn.github.io/trapyze/) | Desktop launcher and scheduler for Python scripts, with a settings window per script, plans, a key vault and run history | `trapyze` | 0.17.4<br>2026-11-19 |
+| [trapyze](https://kapistyn.github.io/trapyze/) | Desktop launcher and scheduler for Python scripts, with a settings window per script, plans, a key vault and run history | `trapyze` | 0.22.2<br>2026-11-23 |
 
 
 <details>
@@ -684,6 +684,12 @@ Open the traPYze desktop in its own window
 
 ```sh
 uvx --from "trapyze[desktop]" trapyze open
+```
+
+First time only: create the traPYze home folder with its example scripts
+
+```sh
+uvx --from trapyze trapyze init
 ```
 
 List your tools from the terminal

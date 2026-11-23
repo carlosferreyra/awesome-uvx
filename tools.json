@@ -1169,12 +1169,16 @@
               "description": "Open the traPYze desktop in its own window"
             },
             {
+              "cmd": "uvx --from trapyze trapyze init",
+              "description": "First time only: create the traPYze home folder with its example scripts"
+            },
+            {
               "cmd": "uvx --from trapyze trapyze list",
               "description": "List your tools from the terminal"
             }
           ],
-          "version": "0.17.4",
-          "last_release": "2026-11-19"
+          "version": "0.22.2",
+          "last_release": "2026-11-23"
         }
       }
     },
