@@ -25,7 +25,7 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 <a href="https://github.com/carlosferreyra/awesome-bunx">awesome-bunx</a> and
 <a href="https://github.com/carlosferreyra/awesome-cargo-install">awesome-cargo-install</a>.
 
-**110 tools across 18 categories.**
+**111 tools across 18 categories.**
 
 ## Contents
 
@@ -43,7 +43,7 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 - [Packaging & Releases](#packaging-and-releases) (11)
 - [Security & Auditing](#security-and-auditing) (8)
 - [System & Infrastructure](#system-and-infrastructure) (5)
-- [Automation & Task Runners](#automation-and-task-runners) (5)
+- [Automation & Task Runners](#automation-and-task-runners) (6)
 - [Terminal & Shell Tools](#terminal-and-shell-tools) (7)
 - [Media & Downloads](#media-and-downloads) (3)
 - [Utilities](#utilities) (8)
@@ -674,6 +674,31 @@ uvx --from ansible ansible-community --version
 | [plan](https://github.com/fengsp/plan) | Crontab file manager | `plan-quickstart` | 0.5<br>2015-02-16 |
 | [prefect](https://www.prefect.io/) | Workflow management system | `prefect` | 3.9.4<br>2026-11-19 |
 | [rq](https://python-rq.org/) | Simple job queues for Python | `rq`, `rqinfo`, `rqworker` | 3.0.0<br>2026-10-28 |
+| [trapyze](https://kapistyn.github.io/trapyze/) | Desktop launcher and scheduler for Python scripts, with a settings window per script, plans, a key vault and run history | `trapyze` | 0.22.2<br>2026-11-23 |
+
+
+<details>
+<summary>trapyze examples</summary>
+
+Open the traPYze desktop in its own window
+
+```sh
+uvx --from "trapyze[desktop]" trapyze open
+```
+
+First time only: create the traPYze home folder with its example scripts
+
+```sh
+uvx --from trapyze trapyze init
+```
+
+List your tools from the terminal
+
+```sh
+uvx --from trapyze trapyze list
+```
+
+</details>
 
 
 
