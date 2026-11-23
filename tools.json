@@ -39,8 +39,8 @@
               "cmd": "uvx --from llm llm --help"
             }
           ],
-          "version": "0.37.2",
-          "last_release": "2026-11-11"
+          "version": "0.38",
+          "last_release": "2026-11-17"
         },
         "mlflow": {
           "description": "Open source platform for managing the end-to-end machine learning lifecycle",
@@ -67,8 +67,8 @@
               "description": "Show the in-progress issue, the next ready issue and the latest result per repo"
             }
           ],
-          "version": "0.7.45",
-          "last_release": "2026-11-16"
+          "version": "0.7.61",
+          "last_release": "2026-11-22"
         },
         "rote-cli": {
           "description": "Compile an AI agent skill into a typed, deterministic pipeline with per-step tests",
@@ -233,8 +233,8 @@
           "execs": [
             "mycli"
           ],
-          "version": "2.31.0",
-          "last_release": "2026-11-14"
+          "version": "2.32.0",
+          "last_release": "2026-11-21"
         },
         "peewee": {
           "description": "Generate Peewee model code by introspecting existing databases",
@@ -338,8 +338,8 @@
             "ipython",
             "ipython3"
           ],
-          "version": "9.18.1",
-          "last_release": "2026-11-02"
+          "version": "9.19.1",
+          "last_release": "2026-11-23"
         },
         "jupyter-core": {
           "description": "Core functionality for Jupyter projects",
@@ -373,8 +373,8 @@
           "execs": [
             "typer"
           ],
-          "version": "0.29.1",
-          "last_release": "2026-11-11"
+          "version": "0.29.2",
+          "last_release": "2026-11-18"
         }
       }
     },
@@ -588,8 +588,8 @@
           "execs": [
             "fastapi"
           ],
-          "version": "0.163.1",
-          "last_release": "2026-11-15"
+          "version": "0.165.0",
+          "last_release": "2026-11-18"
         },
         "flask": {
           "description": "Lightweight WSGI web application framework",
@@ -631,8 +631,8 @@
             "coverage",
             "coverage3"
           ],
-          "version": "7.17.3",
-          "last_release": "2026-11-12"
+          "version": "7.17.5",
+          "last_release": "2026-11-23"
         },
         "deptry": {
           "description": "Check Python projects for dependency declaration issues",
@@ -704,8 +704,8 @@
           "execs": [
             "ruff"
           ],
-          "version": "0.17.5",
-          "last_release": "2026-11-12"
+          "version": "0.17.6",
+          "last_release": "2026-11-19"
         },
         "schemathesis": {
           "description": "Property-based testing for APIs",
@@ -714,8 +714,8 @@
             "schemathesis",
             "st"
           ],
-          "version": "4.33.4",
-          "last_release": "2026-11-12"
+          "version": "4.34.0",
+          "last_release": "2026-11-22"
         },
         "tavern": {
           "description": "pytest plugin, command-line tool, and Python library for automated testing of APIs",
@@ -732,8 +732,8 @@
           "execs": [
             "tox"
           ],
-          "version": "4.67.13",
-          "last_release": "2026-11-06"
+          "version": "4.67.15",
+          "last_release": "2026-11-17"
         },
         "ty": {
           "description": "An extremely fast Python type checker and language server",
@@ -741,8 +741,8 @@
           "execs": [
             "ty"
           ],
-          "version": "0.0.104",
-          "last_release": "2026-11-13"
+          "version": "0.0.108",
+          "last_release": "2026-11-22"
         },
         "vulture": {
           "description": "Find unused code in Python projects",
@@ -839,8 +839,8 @@
               "cmd": "uvx --from commitizen cz --help"
             }
           ],
-          "version": "4.19.3",
-          "last_release": "2026-10-24"
+          "version": "4.20.0",
+          "last_release": "2026-11-23"
         },
         "pipx": {
           "description": "Install and run Python applications in isolated environments",
@@ -848,8 +848,8 @@
           "execs": [
             "pipx"
           ],
-          "version": "1.18.16",
-          "last_release": "2026-11-07"
+          "version": "1.18.19",
+          "last_release": "2026-11-17"
         },
         "poetry": {
           "description": "Python packaging and dependency management",
@@ -857,8 +857,8 @@
           "execs": [
             "poetry"
           ],
-          "version": "2.5.1",
-          "last_release": "2026-09-20"
+          "version": "2.5.2",
+          "last_release": "2026-11-21"
         },
         "py2app": {
           "description": "Create standalone Mac OS X applications",
@@ -923,8 +923,8 @@
           "execs": [
             "uv"
           ],
-          "version": "0.13.8",
-          "last_release": "2026-11-12"
+          "version": "0.13.9",
+          "last_release": "2026-11-17"
         },
         "uv-upsync": {
           "description": "uv-upsync is a uv-native tool for automated dependency updates and version bumping in pyproject.toml",
@@ -932,8 +932,8 @@
           "execs": [
             "uv-upsync"
           ],
-          "version": "2.4.2",
-          "last_release": "2026-09-20"
+          "version": "2.4.3",
+          "last_release": "2026-11-20"
         },
         "wheelgap": {
           "description": "Find dependencies in a lockfile that have no prebuilt wheel for your target platform (ARM, Alpine, Windows ARM, free-threaded Python)",
@@ -946,8 +946,8 @@
               "cmd": "uvx wheelgap numpy psycopg2 -p 3.13 -t linux-aarch64,musl-x86_64"
             }
           ],
-          "version": "0.6.2",
-          "last_release": "2026-11-09"
+          "version": "0.13.0",
+          "last_release": "2026-11-16"
         }
       }
     },
@@ -1042,8 +1042,8 @@
               "description": "Analyze local workflows without network access; online-only checks are omitted"
             }
           ],
-          "version": "1.32.0",
-          "last_release": "2026-11-02"
+          "version": "1.33.1",
+          "last_release": "2026-11-22"
         }
       }
     },
@@ -1063,8 +1063,8 @@
               "description": "Check the installed Ansible community version"
             }
           ],
-          "version": "14.6.0",
-          "last_release": "2026-11-04"
+          "version": "15.0.0",
+          "last_release": "2026-11-17"
         },
         "awscli": {
           "description": "Official command-line interface for Amazon Web Services",
@@ -1143,8 +1143,8 @@
           "execs": [
             "prefect"
           ],
-          "version": "3.9.3",
-          "last_release": "2026-11-13"
+          "version": "3.9.4",
+          "last_release": "2026-11-19"
         },
         "rq": {
           "description": "Simple job queues for Python",
@@ -1249,8 +1249,8 @@
               "description": "Load a tmux session from a YAML config file"
             }
           ],
-          "version": "1.76.0",
-          "last_release": "2026-10-24"
+          "version": "1.81.0",
+          "last_release": "2026-11-23"
         },
         "xonsh": {
           "description": "Python-powered shell",
@@ -1319,8 +1319,8 @@
           "execs": [
             "faker"
           ],
-          "version": "40.54.0",
-          "last_release": "2026-11-10"
+          "version": "40.63.0",
+          "last_release": "2026-11-20"
         },
         "howdoi": {
           "description": "Instant coding answers via the command line",
