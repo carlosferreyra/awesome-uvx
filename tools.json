@@ -989,6 +989,21 @@
           "version": "3.2.9",
           "last_release": "2023-06-16"
         },
+        "iotaudit": {
+          "description": "Audit your own smart home devices: who they talk to, unencrypted traffic, open ports, default passwords, known CVEs and UPnP port forwards, with an A to F grade and an HTML report",
+          "url": "https://github.com/emirmrkaljevic/iotaudit",
+          "execs": [
+            "iotaudit"
+          ],
+          "examples": [
+            {
+              "cmd": "uvx --from iotaudit iotaudit analyze capture.pcap",
+              "description": "Grade every device seen in an existing packet capture, no root needed"
+            }
+          ],
+          "version": "0.1.26",
+          "last_release": "2026-11-24"
+        },
         "pip-audit": {
           "description": "Audit Python dependencies for known vulnerabilities",
           "url": "https://github.com/pypa/pip-audit",

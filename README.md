@@ -25,7 +25,7 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 <a href="https://github.com/carlosferreyra/awesome-bunx">awesome-bunx</a> and
 <a href="https://github.com/carlosferreyra/awesome-cargo-install">awesome-cargo-install</a>.
 
-**110 tools across 18 categories.**
+**111 tools across 18 categories.**
 
 ## Contents
 
@@ -41,7 +41,7 @@ Inspired by <a href="https://github.com/vinta/awesome-python">awesome-python</a>
 - [Testing & Code Quality](#testing-and-code-quality) (15)
 - [Profiling & Performance](#profiling-and-performance) (2)
 - [Packaging & Releases](#packaging-and-releases) (11)
-- [Security & Auditing](#security-and-auditing) (8)
+- [Security & Auditing](#security-and-auditing) (9)
 - [System & Infrastructure](#system-and-infrastructure) (5)
 - [Automation & Task Runners](#automation-and-task-runners) (5)
 - [Terminal & Shell Tools](#terminal-and-shell-tools) (7)
@@ -597,6 +597,7 @@ uvx wheelgap numpy psycopg2 -p 3.13 -t linux-aarch64,musl-x86_64
 | [bandit](https://bandit.readthedocs.io/) | Scan Python source code for common security issues | `bandit`, `bandit-baseline`, `bandit-config-generator` | 1.9.4<br>2026-02-25 |
 | [detect-secrets](https://github.com/Yelp/detect-secrets) | Enterprise-friendly CLI for auditing, detecting, and preventing secrets in code | `detect-secrets` | 1.5.0<br>2024-05-06 |
 | [fsociety](https://github.com/fsociety-team/fsociety) | Modular penetration testing framework | `fsociety` | 3.2.9<br>2023-06-16 |
+| [iotaudit](https://github.com/emirmrkaljevic/iotaudit) | Audit your own smart home devices: who they talk to, unencrypted traffic, open ports, default passwords, known CVEs and UPnP port forwards, with an A to F grade and an HTML report | `iotaudit` | 0.1.26<br>2026-11-24 |
 | [pip-audit](https://github.com/pypa/pip-audit) | Audit Python dependencies for known vulnerabilities | `pip-audit` | 2.10.1<br>2026-06-10 |
 | [scapy](https://scapy.net/) | Packet manipulation program | `scapy` | 2.8.0<br>2026-10-02 |
 | [sqlmap](https://sqlmap.org/) | Automatic SQL injection and database takeover tool | `sqlmap` | 1.10.11<br>2026-10-30 |
@@ -609,6 +610,18 @@ uvx wheelgap numpy psycopg2 -p 3.13 -t linux-aarch64,musl-x86_64
 
 ```sh
 uvx --from bandit bandit -r src
+```
+
+</details>
+
+
+<details>
+<summary>iotaudit examples</summary>
+
+Grade every device seen in an existing packet capture, no root needed
+
+```sh
+uvx --from iotaudit iotaudit analyze capture.pcap
 ```
 
 </details>
