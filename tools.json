@@ -1001,8 +1001,8 @@
               "description": "Grade every device seen in an existing packet capture, no root needed"
             }
           ],
-          "version": "0.1.25",
-          "last_release": "2026-11-18"
+          "version": "0.1.26",
+          "last_release": "2026-11-24"
         },
         "pip-audit": {
           "description": "Audit Python dependencies for known vulnerabilities",
